@@ -9,7 +9,7 @@ class App extends Component {
   componentDidMount() {
     axios
       .get(
-        "https://brianiswu-unofficial-asos-com-v1.p.rapidapi.com/product/search/v1/?q=jeans&sort=freshness&offset=0&limit=100&sizeschema=EU&currency=EUR",
+        "https://asos2.p.rapidapi.com/products/list?currency=USD&sizeSchema=US&sort=freshness&lang=en-US&country=US&store=2&categoryId=27871&limit=150&offset=0",
         {
           headers: {
             "X-RapidAPI-Key":
@@ -20,8 +20,26 @@ class App extends Component {
       .then(response => {
         console.log(response.data);
       })
-      .catch(error => {
-        console.log(error);
+      // .catch(error => {
+      //   console.log(error);
+      // });
+      .catch(function(error) {
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        } else if (error.request) {
+          // The request was made but no response was received
+          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+          // http.ClientRequest in node.js
+          console.log(error.request);
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          console.log("Error", error.message);
+        }
+        console.log(error.config);
       });
   }
   // unirest
