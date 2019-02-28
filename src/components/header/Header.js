@@ -47,30 +47,15 @@ class Header extends Component {
               </li>
             </ul>
           </div>
-
-          {/* <div className="nav-container">
-          <img className="logo" src="../images/asos.png" alt="logo" />
-
-          <ul className="headerListContainer">
-            <li>
-              <NavLink className="a" to="/women">
-                WOMEN
-              </NavLink>{" "}
-            </li>
-            <li>
-              <NavLink className="a" to="/men">
-                MEN
-              </NavLink>
-            </li>
-          </ul>
-
-          <div className="searchBar">
-            <SearchBar />
-          </div> */}
-          {/* </div> */}
         </nav>
+
+        <div className="HeaderBelow">
+          <Category />
+        </div>
+
         <Switch>
           <Route path="/women" component={Women} />
+          <Route path="/category" component={Category} />
         </Switch>
       </div>
     );
