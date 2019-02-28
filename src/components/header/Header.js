@@ -6,7 +6,7 @@ import { Switch, Route, NavLink } from "react-router-dom";
 import Women from "./Women";
 import SearchBar from "./SearchBar";
 import Category from "./Category";
-import Clothing from "./Clothing";
+// import Clothing from "./Clothing";
 
 import "./Header.css";
 

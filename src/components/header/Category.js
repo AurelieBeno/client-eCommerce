@@ -1,18 +1,25 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+
+import "./Category.css";
+
+import { Switch, Link, Route } from "react-router-dom";
 import Clothing from "./Clothing";
 
 class Category extends Component {
   render() {
     return (
-      <nav className="Category">
-        <ul>
-          <li key="CategoryList">
-            <Link to="#">New in</Link>
-
-            <button>
-              {/* <Clothing /> */}
-              Clothing
+      <div>
+        <nav className="Category">
+          <ul>
+            <button class="hover-button">
+              <span class="hover-button--off">Clothing</span>
+              <span class="hover-button--on">
+                <div>
+                  <li key="CategoryList">
+                    <Link to="/clothing" />
+                  </li>
+                </div>
+              </span>
             </button>
 
             <button>Shoes</button>
@@ -32,9 +39,12 @@ class Category extends Component {
             <Link to="#">Marketplace</Link>
 
             <Link to="#">Inspiration</Link>
-          </li>
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+        <Switch>
+          <Route path="/clothing" component={Clothing} />
+        </Switch>
+      </div>
     );
   }
 }
