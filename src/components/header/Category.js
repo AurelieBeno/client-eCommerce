@@ -4,6 +4,7 @@ import "./Category.css";
 
 import { Switch, Link, Route } from "react-router-dom";
 import Clothing from "./Clothing";
+import Shoes from "./Shoes";
 
 class Category extends Component {
   render() {
@@ -15,14 +16,21 @@ class Category extends Component {
               <span class="hover-button--off">Clothing</span>
               <span class="hover-button--on">
                 <div>
-                  <li key="CategoryList">
+                  <li key="CategoryClothes">
                     <Link to="/clothing" />
                   </li>
                 </div>
               </span>
             </button>
 
-            <button>Shoes</button>
+            <button>
+              Shoes
+              <div>
+                <li key="CategoryShoes">
+                  <Link to="/shoes" />
+                </li>
+              </div>
+            </button>
 
             <Link to="#">Accessories</Link>
 
@@ -43,6 +51,7 @@ class Category extends Component {
         </nav>
         <Switch>
           <Route path="/clothing" component={Clothing} />
+          <Route path="/shoes" component={Shoes} />
         </Switch>
       </div>
     );
