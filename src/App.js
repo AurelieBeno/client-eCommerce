@@ -8,13 +8,6 @@ import { Button } from "react-bootstrap";
 import "./App.css";
 import Header from "./components/header/Header";
 
-// .header(
-//   "X-RapidAPI-Key",
-//   "ef45fc4dc3mshdff74d51a8c42bdp113091jsn9b57133aa5bc"
-// )
-// .end(function(result) {
-//   console.log(result.status, result.headers, result.body);
-// });
 class App extends Component {
   // componentDidMount() {
   //   axios
