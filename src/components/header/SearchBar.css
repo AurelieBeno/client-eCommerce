@@ -1,0 +1,30 @@
+.inline {
+  background-color: yellow;
+  display: flex;
+  align-content: center;
+  width: 100%;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: red;
+}
+
+.search-input {
+  font-family: futura-pt, sans-serif;
+  letter-spacing: 0.4px;
+  font-size: 1rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 0;
+  height: 38px;
+  border-radius: 19px/50%;
+  padding-left: 16px;
+  padding-right: 46px;
+  box-sizing: border-box;
+  color: #2d2d2d;
+  -webkit-appearance: none;
+}
