@@ -5,18 +5,11 @@ import axios from "axios";
 
 import "./App.css";
 
-// .header(
-//   "X-RapidAPI-Key",
-//   "ef45fc4dc3mshdff74d51a8c42bdp113091jsn9b57133aa5bc"
-// )
-// .end(function(result) {
-//   console.log(result.status, result.headers, result.body);
-// });
 class App extends Component {
   componentDidMount() {
     axios
       .get(
-        "https://asos2.p.rapidapi.com/products/list?currency=USD&sizeSchema=US&sort=freshness&lang=en-US&country=US&store=2&categoryId=27871&limit=70&offset=0",
+        "https://brianiswu-unofficial-asos-com-v1.p.rapidapi.com/product/search/v1/?q=jeans&sort=freshness&offset=0&limit=100&sizeschema=EU&currency=EUR",
         {
           headers: {
             "X-RapidAPI-Key":
@@ -26,7 +19,6 @@ class App extends Component {
       )
       .then(response => {
         console.log(response.data);
-        response.json(response.data);
       })
       .catch(error => {
         console.log(error);

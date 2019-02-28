@@ -1,0 +1,119 @@
+[
+  {
+    "category": "dress",
+    "name": "Robe volantée",
+    "color": "Bleu Marine",
+    "size": ["S", "M", "L"],
+    "basePictureUrl": "/images/dress/dess1/1.jpg",
+    "images": [
+      "/images/dress/dress1/2.jpg",
+      "/images/dress/dress1/3.jpg",
+      "/images/dress/dress1/4.jpg"
+    ]
+  },
+  {
+    "category": "pant",
+    "name": "Robe avec ceinture",
+    "color": "Noir/Blanc/Rayé",
+    "size": ["S", "M", "L"],
+    "basePictureUrl": "/images/dress/dress3/1.jpg",
+    "images": [
+      "/images/dress/dress3/2.jpg",
+      "/images/dress/dress3/3.jpg",
+      "/images/dress/dress3/4.jpg"
+    ]
+  },
+  {
+    "category": "dress",
+    "name": "Robe chemise",
+    "color": "Noir/Blanc/Rayé",
+    "size": ["S", "M", "L"],
+    "basePictureUrl": "/images/dress/dress4/1.jpg",
+    "images": [
+      "/images/dress/dress4/2.jpg",
+      "/images/dress/dress4/3.jpg",
+      "/images/dress/dress4/4.jpg"
+    ]
+  },
+  {
+    "category": "dress",
+    "name": "Robe froissée",
+    "color": "Noir",
+    "size": ["S", "M", "L"],
+    "basePictureUrl": "/images/dress/dress5/1.jpg",
+    "images": [
+      "/images/dress/dress5/2.jpg",
+      "/images/dress/dress5/3.jpg",
+      "/images/dress/dress5/4.jpg"
+    ]
+  },
+  {
+    "category": "pant",
+    "name": "Pantalon avec ceinture à nouer",
+    "color": "Vert Kaki",
+    "size": ["S", "M", "L"],
+    "basePictureUrl": "/images/pant/pant1/1.jpg",
+    "images": [
+      "/images/pant/pant1/2.jpg",
+      "images/pant/pant1/3.jpg",
+      "images/pant/pant1/4.jpg"
+    ]
+  },
+  {
+    "category": "pant",
+    "name": "Pantalon avec ceinture à nouer",
+    "color": "Vert Kaki",
+    "size": ["S", "M", "L"],
+    "basePictureUrl": "/images/pant/pant2/1.jpg",
+    "images": [
+      "/images/pant/pant2/2.jpg",
+      "images/pant/pant2/3.jpg",
+      "images/pant/pant2/4.jpg"
+    ],
+    "description": "Pantalon tissé. Modèle taille haute avec braguette zippée et agrafe. Ceinture à nouer et poches latérales avec rabat et bouton décoratifs. Jambes effilées et plutôt amples, de longueur cheville."
+  },
+  {
+    "category": "pant",
+    "name": "Pantalon en cuir",
+    "color": "Noir",
+    "size": ["S", "M", "L"],
+    "basePictureUrl": "/images/pant/pant3/1.jpg",
+    "images": [
+      "/images/pant/pant3/2.jpg",
+      "images/pant/pant3/3.jpg",
+      "images/pant/pant3/4.jpg"
+    ],
+    "description": "QUALITÉ PREMIUM. Pantalon en cuir extensible. Modèle avec élastique dissimulé au niveau de la taille de hauteur classique et fermeture à glissière apparente sur le côté. Jambes très fines terminées par bord à cru."
+  },
+  {
+    "category": "pant",
+    "name": "Pantalon cigarette",
+    "color": "Beige clair",
+    "size": ["S", "M", "L"],
+    "basePictureUrl": "/images/pant/pant4/1.jpg",
+    "images": [
+      "/images/pant/pant4/2.jpg",
+      "images/pant/pant4/3.jpg",
+      "images/pant/pant4/4.jpg"
+    ],
+    "description": "Pantalon cigarette en tissu extensible. Modèle avec taille de hauteur classique et fermeture à glissière dissimulée d’un côté. Fausses poches dans le dos. Jambes effilées de longueur cheville, fendues à la base."
+  },
+  {
+    "category": "shoes",
+    "name": "Chunky loafer ",
+    "color": "Camel",
+    "size": ["37", "38", "39"],
+    "basePictureUrl": "/images/shoes/shoes1/1.jpg",
+
+    "description": "Transforming the coolest looks straight from the catwalk into wardrobe staples, New Look joins the ASOS round up of great British high street brands. Get it or regret it with its weekly drops /nof essential coats, statement partywear and sleek boots, from ankle to over-the-knee styles."
+  },
+  {
+    "category": "shoes",
+    "name": "Wide Fit Vocal studded mules in neon ",
+    "color": "Yellow",
+    "size": ["37", "38", "39"],
+    "basePictureUrl": "/images/shoes/shoes2/1.jpg",
+
+    "description": "Transforming the coolest looks straight from the catwalk into wardrobe staples, New Look joins the ASOS round up of great British high street brands. Get it or regret it with its weekly drops /nof essential coats, statement partywear and sleek boots, from ankle to over-the-knee styles."
+  }
+]
