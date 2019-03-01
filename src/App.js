@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 // import axios from "axios";
 
-import { Switch, Route, NavLink, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 // import { Button } from "react-bootstrap";
 
 import "./App.css";
@@ -12,55 +12,41 @@ import Women from "./components/header/Women";
 import Men from "./components/header/Men";
 import Offers from "./components/Offers";
 import HomePage from "./components/HomePage";
+// import SignupForm from "./components/SignupForm";
+// import LoginForm from "./components/LoginForm";
+import LogOrSign from "./components/LogOrSign";
 
 class App extends Component {
-  // componentDidMount() {
-  //   axios
-  //     .get(
-  //       "https://asos2.p.rapidapi.com/products/list?currency=USD&sizeSchema=US&sort=freshness&lang=en-US&country=US&store=2&categoryId=27871&limit=150&offset=0",
-  //       {
-  //         headers: {
-  //           "X-RapidAPI-Key":
-  //             "ef45fc4dc3mshdff74d51a8c42bdp113091jsn9b57133aa5bc"
-  //         }
-  //       }
-  //     )
-  //     .then(response => {
-  //       console.log(response.data);
-  //     })
-  //     // .catch(error => {
-  //     //   console.log(error);
-  //     // });
-  //     .catch(function(error) {
-  //       if (error.response) {
-  //         // The request was made and the server responded with a status code
-  //         // that falls out of the range of 2xx
-  //         console.log(error.response.data);
-  //         console.log(error.response.status);
-  //         console.log(error.response.headers);
-  //       } else if (error.request) {
-  //         // The request was made but no response was received
-  //         // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-  //         // http.ClientRequest in node.js
-  //         console.log(error.request);
-  //       } else {
-  //         // Something happened in setting up the request that triggered an Error
-  //         console.log("Error", error.message);
-  //       }
-  //       console.log(error.config);
-  //     });
-  // }
-  // unirest
-  //   .get(
-  //     "https://asos2.p.rapidapi.com/products/detail?sizeSchema=US&store=US&lang=en-US&currency=USD&id=<required>"
-  //   )
-  //   .header(
-  //     "X-RapidAPI-Key",
-  //     "ef45fc4dc3mshdff74d51a8c42bdp113091jsn9b57133aa5bc"
-  //   )
-  //   .end(function(result) {
-  //     console.log(result.status, result.headers, result.body);
+  constructor(props) {
+    super(props);
+
+    let userInfo = localStorage.getItem("currentUser");
+    if (userInfo) {
+      userInfo = JSON.parse(userInfo);
+    }
+    this.state = { currentUser: userInfo };
+  }
+  updateUser(newUser) {
+    if (newUser) {
+      // save the user info in localStorage if we are login in4
+      //( Turn it into a JSON string before we save)
+      localStorage.setItem("currentUser", JSON.stringify(newUser));
+    } else {
+      // Delete the user info from localStorage if we are logging off
+      localStorage.removeItem("currentUser");
+    }
+
+    this.setState({ currentUser: newUser });
+  }
+
+  // logoutClick() {
+  //   // Logout to the backend
+  //   getLogOut().then(response => {
+  //     console.log("Log out", response.data);
+  //     // set the currentUser state to empty
+  //     this.updateUser(null);
   //   });
+  // }
 
   render() {
     return (
@@ -73,6 +59,42 @@ class App extends Component {
           <Route path="/women" component={Women} />
           <Route path="/men" component={Men} />
           <Route path="/offers" component={Offers} />
+
+          <Route
+            path="/logOrSign"
+            render={() => {
+              return (
+                <LogOrSign
+                  currentUser={this.state.currentUser}
+                  signupSuccess={user => this.updateUser(user)}
+                  loginSuccess={user => this.updateUser(user)}
+                />
+              );
+            }}
+          />
+          {/* <Route
+            path="/signup"
+            render={() => {
+              return (
+                <SignupForm
+                  currentUser={this.state.currentUser}
+                  // send App update user ()
+                  signupSuccess={user => this.updateUser(user)}
+                />
+              );
+            }}
+          />
+          <Route
+            path="/login"
+            render={() => {
+              return (
+                <LoginForm
+                  currentUser={this.state.currentUser}
+                  loginSuccess={user => this.updateUser(user)}
+                />
+              );
+            }}
+          /> */}
         </Switch>
 
         <Footer />
