@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Switch, Route, NavLink } from "react-router-dom";
+import { Switch, Route, NavLink, Link } from "react-router-dom";
 // import { Navbar, Nav } from "react-bootstrap"
 
 import Women from "./Women";
@@ -9,6 +9,7 @@ import Category from "./Category";
 // import Clothing from "./Clothing";
 
 import "./Header.css";
+import SignupForm from "../SignupForm";
 
 class Header extends Component {
   render() {
@@ -47,6 +48,9 @@ class Header extends Component {
               </li>
             </ul>
           </div>
+          <Link className="nav-link" to="/signup">
+            signup
+          </Link>
         </nav>
 
         <div className="HeaderBelow">
@@ -56,6 +60,7 @@ class Header extends Component {
         <Switch>
           <Route path="/women" component={Women} />
           <Route path="/category" component={Category} />
+          <Route path="/signup" component={SignupForm} />
         </Switch>
       </div>
     );

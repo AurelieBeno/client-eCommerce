@@ -13,13 +13,13 @@ class Category extends Component {
           <ul>
             <button class="hover-button">
               <span class="hover-button--off">Clothing</span>
-              <span class="hover-button--on">
+              <div class="hover-button--on">
                 <div>
                   <li key="CategoryList">
                     <Link to="/clothing" />
                   </li>
                 </div>
-              </span>
+              </div>
             </button>
 
             <button>Shoes</button>
