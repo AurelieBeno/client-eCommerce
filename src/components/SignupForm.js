@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+// import { Switch, Route, Link } from "react-router-dom";
 
 import "./SignupForm.css";
 
+// import LoginPage from "./components/LoginForm";
 import { postSignup } from "../api.js";
 
 class SignupForm extends Component {
@@ -36,10 +38,7 @@ class SignupForm extends Component {
           <p> NOUVEAU CHEZ ASOS ?</p>
           <h5>Inscrivez-vous à l'aide de votre adresse E-mail</h5>
         </div>
-        <form
-          className="signup-form"
-          onSubmit={event => this.handleSubmit(event)}
-        >
+        <form className="signup" onSubmit={event => this.handleSubmit(event)}>
           <label>Email</label>
           <input
             onChange={event => this.genericOnChange(event)}
@@ -83,6 +82,22 @@ class SignupForm extends Component {
           </div>
           <button>REJOIGNEZ ASOS</button>
         </form>
+        {/* <Link className="nav-link" to="/login">
+          Login
+        </Link>
+        <Switch>
+          <Route
+            path="/login-page"
+            render={() => {
+              return (
+                <LoginPage
+                  currentUser={this.state.currentUser}
+                  loginSuccess={user => this.updateUser(user)}
+                />
+              );
+            }}
+          />
+        </Switch> */}
       </div>
     );
   }

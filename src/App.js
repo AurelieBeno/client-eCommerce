@@ -11,6 +11,8 @@ import Footer from "./components/Footer";
 import Women from "./components/header/Women";
 import Men from "./components/header/Men";
 import SignupForm from "./components/SignupForm";
+import LoginForm from "./components/LoginForm";
+// import LoginPage from "./components/LoginForm";
 
 class App extends Component {
   constructor(props) {
@@ -52,13 +54,24 @@ class App extends Component {
           <Route path="/women" component={Women} />
           <Route path="/men" component={Men} />
           <Route
-            path="/signup-page"
+            path="/signup"
             render={() => {
               return (
                 <SignupForm
                   currentUser={this.state.currentUser}
                   // send App update user ()
                   signupSuccess={user => this.updateUser(user)}
+                />
+              );
+            }}
+          />
+          <Route
+            path="/login-page"
+            render={() => {
+              return (
+                <LoginForm
+                  currentUser={this.state.currentUser}
+                  loginSuccess={user => this.updateUser(user)}
                 />
               );
             }}
