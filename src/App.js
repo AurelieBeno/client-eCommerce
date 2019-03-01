@@ -10,9 +10,9 @@ import Header from "./components/header/Header";
 import Footer from "./components/Footer";
 import Women from "./components/header/Women";
 import Men from "./components/header/Men";
-import SignupForm from "./components/SignupForm";
-import LoginForm from "./components/LoginForm";
-// import LoginPage from "./components/LoginForm";
+// import SignupForm from "./components/SignupForm";
+// import LoginForm from "./components/LoginForm";
+import LogOrSign from "./components/LogOrSign";
 
 class App extends Component {
   constructor(props) {
@@ -53,7 +53,20 @@ class App extends Component {
         <Switch>
           <Route path="/women" component={Women} />
           <Route path="/men" component={Men} />
+
           <Route
+            path="/logOrSign"
+            render={() => {
+              return (
+                <LogOrSign
+                  currentUser={this.state.currentUser}
+                  signupSuccess={user => this.updateUser(user)}
+                  loginSuccess={user => this.updateUser(user)}
+                />
+              );
+            }}
+          />
+          {/* <Route
             path="/signup"
             render={() => {
               return (
@@ -66,7 +79,7 @@ class App extends Component {
             }}
           />
           <Route
-            path="/login-page"
+            path="/login"
             render={() => {
               return (
                 <LoginForm
@@ -75,7 +88,7 @@ class App extends Component {
                 />
               );
             }}
-          />
+          /> */}
         </Switch>
 
         <Footer />

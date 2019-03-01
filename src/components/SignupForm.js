@@ -33,56 +33,88 @@ class SignupForm extends Component {
 
   render() {
     return (
-      <div className="SignupForm">
-        <div>
-          <p> NOUVEAU CHEZ ASOS ?</p>
-          <h5>Inscrivez-vous à l'aide de votre adresse E-mail</h5>
+      <div className="containerSign">
+        <div className="Signup-container">
+          <h5 className="title">
+            Inscrivez-vous à l'aide de votre adresse E-mail
+          </h5>
+
+          <form className="signup" onSubmit={event => this.handleSubmit(event)}>
+            <div className="form-group">
+              <label htmlFor="exampleInputEmail1" className="labelForm">
+                Email
+              </label>
+              <input
+                onChange={event => this.genericOnChange(event)}
+                value={this.state.email}
+                name="email"
+                type="email"
+                placeholder="blah@blah.com"
+                className="form-control"
+                id="exampleInputEmail1"
+              />
+              <small id="emailHelp" class="form-text text-muted">
+                We'll never share your email with anyone else.
+              </small>
+            </div>
+
+            <div className="form-group">
+              <label className="labelForm">First Name</label>
+              <input
+                onChange={event => this.genericOnChange(event)}
+                value={this.state.firstName}
+                name="firstName"
+                type="text"
+                placeholder=""
+                className="form-control"
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="labelForm">Last Name</label>
+              <input
+                onChange={event => this.genericOnChange(event)}
+                value={this.state.lastName}
+                name="lastName"
+                type="text"
+                placeholder=""
+                className="form-control"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="exampleInputPassword1" className="labelForm">
+                Password
+              </label>
+              <input
+                onChange={event => this.genericOnChange(event)}
+                value={this.state.orginalPassword}
+                name="originalPassword"
+                type="password"
+                className="form-control"
+                id="exampleInputPassword1"
+              />
+              <small id="emailHelp" class="form-text text-muted">
+                Password must contain 8 caracteres min
+              </small>
+            </div>
+            <div>
+              <small className="form-text text-muted">
+                En créant votre compte, vous acceptez nos
+                <span> termes et condition</span>&
+                <span> politique de confidentialité</span>
+              </small>
+            </div>
+            <button className="btn signBtn submitBtn"> REJOIGNEZ ASOS</button>
+          </form>
         </div>
-        <form className="signup" onSubmit={event => this.handleSubmit(event)}>
-          <label>Email</label>
-          <input
-            onChange={event => this.genericOnChange(event)}
-            value={this.state.email}
-            name="email"
-            type="email"
-            placeholder="blah@blah.com"
-          />
+      </div>
+    );
+  }
+}
 
-          <label>First Name</label>
-          <input
-            onChange={event => this.genericOnChange(event)}
-            value={this.state.firstName}
-            name="firstName"
-            type="text"
-            placeholder=""
-          />
+export default SignupForm;
 
-          <label>Last Name</label>
-          <input
-            onChange={event => this.genericOnChange(event)}
-            value={this.state.lastName}
-            name="lastName"
-            type="text"
-            placeholder=""
-          />
-
-          <label>Password</label>
-          <input
-            onChange={event => this.genericOnChange(event)}
-            value={this.state.orginalPassword}
-            name="originalPassword"
-            type="password"
-          />
-          <div>
-            <p>
-              En créant votre compte, vous acceptez nos
-              <span>termes et condition</span>&{" "}
-              <span>politique de confidentialité</span>
-            </p>
-          </div>
-          <button>REJOIGNEZ ASOS</button>
-        </form>
-        {/* <Link className="nav-link" to="/login">
+/* <Link className="nav-link" to="/login">
           Login
         </Link>
         <Switch>
@@ -97,10 +129,4 @@ class SignupForm extends Component {
               );
             }}
           />
-        </Switch> */}
-      </div>
-    );
-  }
-}
-
-export default SignupForm;
+        </Switch> */

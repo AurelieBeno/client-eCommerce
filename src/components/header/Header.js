@@ -53,8 +53,8 @@ class Header extends Component {
               </button>
             </form>
           </div>
-          <Link className="nav-link" to="/signup">
-            signup
+          <Link className="nav-link" to="/logOrSign">
+            user
           </Link>
         </nav>
 
