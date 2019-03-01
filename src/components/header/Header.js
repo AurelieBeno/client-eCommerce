@@ -4,9 +4,7 @@ import { Switch, Route, NavLink } from "react-router-dom";
 // import { Navbar, Nav } from "react-bootstrap"
 
 import Women from "./Women";
-import SearchBar from "./SearchBar";
-import Category from "./Category";
-// import Clothing from "./Clothing";
+import Men from "./Men";
 
 import "./Header.css";
 
@@ -32,31 +30,60 @@ class Header extends Component {
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
+              <li class="nav-item">
                 <NavLink className="nav-link" to="/women">
-                  Women
+                  Femme
                 </NavLink>
               </li>
               <li class="nav-item">
                 <NavLink className="nav-link" to="/men">
-                  Men
+                  Homme
                 </NavLink>
               </li>
-              <li class="nav-item nav-input">
-                <SearchBar />
-              </li>
             </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button
+                class="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+              >
+                Search
+              </button>
+            </form>
           </div>
         </nav>
 
-        <div className="HeaderBelow">
-          <Category />
-        </div>
-
-        <Switch>
-          <Route path="/women" component={Women} />
-          <Route path="/category" component={Category} />
-        </Switch>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon" />
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="#!">
+                Clothing
+              </a>
+              <a class="nav-item nav-link" href="#!">
+                Shoes
+              </a>
+              <a class="nav-item nav-link" href="#!">
+                Accessories
+              </a>
+            </div>
+          </div>
+        </nav>
       </div>
     );
   }

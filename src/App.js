@@ -2,11 +2,14 @@ import React, { Component } from "react";
 
 // import axios from "axios";
 
-// import { Switch, Route, NavLink, Link } from "react-router-dom";
+import { Switch, Route, NavLink, Link } from "react-router-dom";
 // import { Button } from "react-bootstrap";
 
 import "./App.css";
 import Header from "./components/header/Header";
+import Footer from "./components/Footer";
+import Women from "./components/header/Women";
+import Men from "./components/header/Men";
 
 class App extends Component {
   // componentDidMount() {
@@ -61,6 +64,12 @@ class App extends Component {
     return (
       <header className="App-header">
         <Header />
+        <Switch>
+          <Route path="/women" component={Women} />
+          <Route path="/men" component={Men} />
+        </Switch>
+
+        <Footer />
       </header>
     );
   }

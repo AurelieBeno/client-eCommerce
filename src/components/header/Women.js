@@ -4,7 +4,7 @@ class Women extends Component {
   render() {
     return (
       <div>
-        <p>Coucou</p>
+        <p>Coucou WOMEN</p>
       </div>
     );
   }
