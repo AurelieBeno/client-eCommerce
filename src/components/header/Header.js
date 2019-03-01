@@ -32,12 +32,12 @@ class Header extends Component {
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
                 <NavLink className="nav-link" to="/women">
-                  Femme
+                  Women
                 </NavLink>
               </li>
               <li class="nav-item">
                 <NavLink className="nav-link" to="/men">
-                  Homme
+                  Men
                 </NavLink>
               </li>
             </ul>
@@ -48,13 +48,13 @@ class Header extends Component {
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button
-                class="btn btn-outline-success my-2 my-sm-0"
-                type="submit"
-              >
-                Search
+              <button class="btn btn-inline-success my-2 my-sm-0" type="submit">
+                <i class="fas fa-search" />
               </button>
             </form>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+              <i class="fas fa-user-circle" />
+            </button>
           </div>
         </nav>
 

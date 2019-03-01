@@ -10,6 +10,8 @@ import Header from "./components/header/Header";
 import Footer from "./components/Footer";
 import Women from "./components/header/Women";
 import Men from "./components/header/Men";
+import Offers from "./components/Offers";
+import HomePage from "./components/HomePage";
 
 class App extends Component {
   // componentDidMount() {
@@ -64,9 +66,13 @@ class App extends Component {
     return (
       <header className="App-header">
         <Header />
+        <Offers />
+        <HomePage />
+
         <Switch>
           <Route path="/women" component={Women} />
           <Route path="/men" component={Men} />
+          <Route path="/offers" component={Offers} />
         </Switch>
 
         <Footer />

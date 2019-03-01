@@ -1,0 +1,22 @@
+.myColImg {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.bigImg img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.container-middle {
+  padding: 50px 0;
+}
+
+.container-middle .col-lg-4 {
+  text-align: center;
+}
+
+.container-middle h5 {
+  margin-top: 15px;
+}

@@ -1,0 +1,9 @@
+.offers h6,
+.offers p {
+  text-align: center;
+  margin: 0;
+}
+
+.offers .col-lg-6 {
+  padding: 10px 0;
+}
