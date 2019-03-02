@@ -1,0 +1,32 @@
+body {
+  background-color: #eee;
+}
+.testContainer {
+  /* display: flex;
+  justify-content: center; */
+  width: 600px;
+  /* padding: 20px 50px 0 50px;
+  margin-top: 50px; */
+}
+.testRow {
+  /* width: 540px; */
+  height: 56px;
+  /* display: flex; */
+  align-items: center;
+  font-size: 19px;
+}
+.premier,
+.second {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.premier {
+  border: 1px solid black;
+  border-bottom: 0;
+}
+.second {
+  border-bottom: 1px solid black;
+}

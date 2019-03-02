@@ -35,10 +35,11 @@ class SignupForm extends Component {
     return (
       <div className="containerSign">
         <div className="Signup-container">
-          <h5 className="title">
+          {/* <div className="container"> */}
+          <h5 className="title ">
             Inscrivez-vous à l'aide de votre adresse E-mail
           </h5>
-
+          {/* </div> */}
           <form className="signup" onSubmit={event => this.handleSubmit(event)}>
             <div className="form-group">
               <label htmlFor="exampleInputEmail1" className="labelForm">

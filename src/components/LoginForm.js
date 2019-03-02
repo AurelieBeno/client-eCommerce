@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import { postLogIn } from "../api.js";
 
+import "./LoginForm.css";
+
 class LoginForm extends Component {
   constructor(props) {
     super(props);
@@ -30,29 +32,37 @@ class LoginForm extends Component {
 
   render() {
     return (
-      <section className="SignupForm">
+      <section className="LoginForm-container">
+        <h5 className="titleform">Connection avec une adresse e-mail</h5>
         <form onSubmit={event => this.handleSubmit(event)}>
-          <label>
-            Email
+          <div className="form-group form-container">
+            <label htmlFor="exampleInputEmail1" className="labelForm">
+              Email :
+            </label>
             <input
               onChange={event => this.genericOnChange(event)}
               value={this.state.email}
               name="email"
               type="email"
               placeholder="blah@blah.com"
+              className="form-control controlLog"
+              id="exampleInputEmail1"
             />
-          </label>
-          <label>
-            Password
+          </div>
+          <div className="form-group form-container">
+            <label htmlFor="exampleInputPassword1" className="labelForm">
+              Password :
+            </label>
             <input
               onChange={event => this.genericOnChange(event)}
               value={this.state.originalPassword}
               name="originalPassword"
               type="password"
+              className="form-control"
+              id="exampleInputPassword1"
             />
-          </label>
-
-          <button>Log In</button>
+          </div>
+          <button className="btn signBtn submitBtn">Log In</button>
         </form>
       </section>
     );
