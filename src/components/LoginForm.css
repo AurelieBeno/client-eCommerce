@@ -1,12 +1,19 @@
 .LoginForm-container {
-  width: 600px;
+  /* width: 600px; */
   margin: 0 auto;
   background-color: #fff;
   padding: 20px 50px 0 50px;
 }
 
-.controlLog {
+.formContainer {
   background-color: red;
-  margin: 0 auto;
-  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+/* .logBtn {
+  width: 301px;
+  margin-right: 38px;
+} */

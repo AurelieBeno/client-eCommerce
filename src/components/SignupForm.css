@@ -1,21 +1,21 @@
 .Signup-container {
-  width: 600px;
+  /* width: 600px; */
   margin: 0 auto;
   background-color: #fff;
   padding: 20px 50px 0 50px;
 }
-
+/* 
 .paraSignup {
   border-bottom: 0;
   margin-top: 5px;
   text-align: center;
   padding-top: 20px;
-}
-.Signup-title {
+} */
+/* .Signup-title {
   border: 1px solid #999;
   border-bottom: 0;
   width: 50%;
-}
+} */
 .title {
   text-decoration: none;
   font-family: "futura-pt", Tahoma, Geneva, Verdana, Arial, sans-serif;
@@ -31,12 +31,13 @@
 
 .Signup-container h5 {
   padding-bottom: 5px;
-  padding-top: 20px;
+  padding-top: 60px;
+  color: #222;
 }
 
 .signBtn {
   margin: 32px 0 0 40px;
-  width: 55%;
+  /* width: 55%; */
   height: 45px;
   font-family: "futura-pt", Tahoma, Geneva, Verdana, Arial, sans-serif;
   font-style: normal;
@@ -51,7 +52,7 @@
   background: #2d2d2d;
   color: #fff;
   border: 0;
-  min-width: 200px;
+  /* min-width: 200px; */
   text-transform: uppercase;
   white-space: normal;
 }
@@ -72,15 +73,33 @@
 .containerSign {
   background-color: #eee;
 }
+.inputSignup {
+  /* background-color: yellow; */
+  outline: none;
+  border: 1px solid #999;
+  height: 45px;
+  font-family: "futura-pt", Tahoma, Geneva, Verdana, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.4px;
+}
 
-.containerLogOrSign {
+/* .containerLogOrSign {
   background-color: #eee;
   padding: 50px;
-}
+} */
 
-.containerSign2 {
-  padding: 50px;
+/* .form-group input {
+  width: 307px;
+} */
+.form-text {
+  color: #2d2d2d;
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
 }
-.form-group input {
-  width: 50%;
+.spanLogin {
+  font-weight: 700;
 }

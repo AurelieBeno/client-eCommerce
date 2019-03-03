@@ -56,6 +56,7 @@ class App extends Component {
         <HomePage />
 
         <Switch>
+          <Route exact path="/" component={HomePage} />
           <Route path="/women" component={Women} />
           <Route path="/men" component={Men} />
           <Route path="/offers" component={Offers} />

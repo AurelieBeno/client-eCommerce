@@ -1,20 +1,21 @@
 body {
   background-color: #eee;
 }
-.testContainer {
+/* .testContainer {
   /* display: flex;
   justify-content: center; */
-  width: 600px;
-  /* padding: 20px 50px 0 50px;
+
+/* padding: 20px 50px 0 50px;
   margin-top: 50px; */
-}
+
 .testRow {
   /* width: 540px; */
   height: 56px;
   /* display: flex; */
   align-items: center;
-  font-size: 19px;
+  /* font-size: 19px; */
 }
+
 .premier,
 .second {
   height: 60px;
@@ -22,11 +23,36 @@ body {
   align-items: center;
   justify-content: center;
   background-color: white;
+
+  text-decoration: none;
+  font-family: "futura-pt", Tahoma, Geneva, Verdana, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
+
 .premier {
   border: 1px solid black;
   border-bottom: 0;
 }
+.premier a {
+  color: #222;
+}
+.second a {
+  color: #222;
+  text-decoration: none;
+}
+
+.premier:active {
+  border: 1px solid black;
+}
 .second {
+  border-top: 0;
+  border-right: 1px solid black;
+  border-left: 0;
   border-bottom: 1px solid black;
 }
