@@ -6,8 +6,18 @@
   letter-spacing: 0.8px;
   border: none;
   padding: 0 10px;
-
   width: 100%;
+}
+
+/* .dropdown {
+  background-color: red;
+} */
+.dropdown-menu {
+  width: 500px;
+  background-color: #eee;
+}
+.dropdown-item {
+  background-color: violet;
 }
 
 .ListItem-page li {
@@ -17,15 +27,33 @@
   align-content: center;
   align-items: center;
 }
-.ul-container {
-  background-color: orange;
-  width: 100%;
-}
 
 .liColor {
   color: white;
-  font-size: 14px;
+  font-size: 0.775rem;
   display: flex;
   align-items: center;
   height: 50px;
+}
+
+li a {
+  text-decoration: none;
+  color: #666;
+}
+a:active {
+  color: white;
+  /* color: blueviolet; */
+  outline: none;
+  /* font-size: 50px; */
+}
+a:hover {
+  color: white;
+  text-decoration: none;
+  color: #2d2d2d;
+  background-color: #eee;
+  font-weight: 400;
+}
+
+a {
+  display: flex;
 }

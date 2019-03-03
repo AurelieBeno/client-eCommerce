@@ -8,13 +8,85 @@ class Clothing extends Component {
     return (
       <div className="ListItem-page">
         {/* <h3>SHOP BY PRODUCT</h3> */}
-        <div className="container-fluide">
+        <div className="container">
           <ul className="row">
-            <li>
-              <Link to="#" className="col liColor">
+            <div className="dropdown">
+              {/* <Link
+                class=" dropdown-toggle col liColor"
+                to="#"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
                 New in
-              </Link>
-            </li>
+              </Link> */}
+              <div class="nav-collapse">
+                <li class="dropdown">
+                  <Link
+                    to="#"
+                    className="dropdown-hove liColor"
+                    data-toggle="dropdown"
+                  >
+                    New in
+                  </Link>
+                  <li />
+                  <ul class="dropdown-menu">
+                    <li>
+                      <h5 className="title">New articles</h5>
+                    </li>
+                    <li>
+                      <a href="#">Shoes</a>
+                    </li>
+                    <li>
+                      <a href="#">Dress</a>
+                    </li>
+                    <li>
+                      <a href="#">Pant</a>
+                    </li>
+                    <li class="divider" />
+                    <li>blah</li>
+                    <li>
+                      <a href="#">blah</a>
+                    </li>
+                    <li>
+                      <a href="#">blah</a>
+                    </li>
+                  </ul>
+                </li>
+              </div>
+              <div className="container">
+                <div className="dropdown-menu">
+                  <div class="row" aria-labelledby="dropdownMenuLink">
+                    <h3>New articles</h3>
+                  </div>
+                  <div className="row">
+                    <a class="dropdown-item col-6" href="#">
+                      All the collection
+                    </a>
+                    {/* <a class="dropdown-item row" href="#">
+                      shoes
+                    </a> */}
+                  </div>
+
+                  {/* <div class="row" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item col" href="#">
+                      Another action
+                    </a>
+                  </div> */}
+                  {/* 
+                  <div class="row" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item col" href="#">
+                      Something else here
+                    </a>
+                  </div> */}
+                  {/* <div class="row " aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item col-1" href="#">
+                      Something else here 2
+                    </a>
+                  </div> */}
+                </div>
+              </div>
+            </div>
 
             <li>
               <Link to="#" className="col liColor">
@@ -59,8 +131,36 @@ class Clothing extends Component {
             </li>
           </ul>
         </div>
-        <div>
-          {/* <section>
+        <div />
+      </div>
+    );
+  }
+}
+
+export default Clothing;
+{
+  /* <section>
+          <h3>SHOP BY EDIT</h3>
+          <ul>
+            <li>
+              <img src="#" alt="Wedding guest" />
+              <p>Wedding guest</p>
+
+              <img src="#" alt="Bridesmaids" />
+              <p>Bridesmaids</p>
+
+              <img src="#" alt="Workwear" />
+              <p>Workwear</p>
+
+              <img src="#" alt="Going out-out" />
+              <p>Going out-out</p>
+
+              <img src="#" alt="Holiday" />
+              <p>Holiday</p>
+            </li>
+          </ul>
+        </section> */
+  /* <section>
             <h3>SHOP BY RANGE</h3>
             <div>
               <img src="#" alt="Curve Size" />
@@ -82,33 +182,5 @@ class Clothing extends Component {
               <p>Tall</p>
             </div>
           </section>
-          */}
-        </div>
-
-        {/* <section>
-          <h3>SHOP BY EDIT</h3>
-          <ul>
-            <li>
-              <img src="#" alt="Wedding guest" />
-              <p>Wedding guest</p>
-
-              <img src="#" alt="Bridesmaids" />
-              <p>Bridesmaids</p>
-
-              <img src="#" alt="Workwear" />
-              <p>Workwear</p>
-
-              <img src="#" alt="Going out-out" />
-              <p>Going out-out</p>
-
-              <img src="#" alt="Holiday" />
-              <p>Holiday</p>
-            </li>
-          </ul>
-        </section> */}
-      </div>
-    );
-  }
+          */
 }
-
-export default Clothing;

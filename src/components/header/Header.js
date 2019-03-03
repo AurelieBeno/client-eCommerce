@@ -12,8 +12,8 @@ class Header extends Component {
   render() {
     return (
       <div className="HeaderContainer ">
-        <nav className="navbar container-fluid navbar-expand-lg navbar-dark bg-dark nav-container ">
-          <Link className="navbar-brand logo" to="/">
+        <nav className="navbar container-fluide navbar-expand-lg navbar-dark bg-dark nav-container ">
+          <Link className="navbar-brand logo-img" to="/">
             <img className="logo" src="../images/asos.png" alt="logo" />{" "}
           </Link>
           <button
@@ -36,7 +36,7 @@ class Header extends Component {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link link-men" to="/men">
+                <NavLink className="nav-link link-men " to="/men">
                   Men
                 </NavLink>
               </li>
@@ -53,6 +53,7 @@ class Header extends Component {
                   className=" btn btn-inline-success my-2 loupe my-sm-0"
                   type="submit"
                 >
+                  {" "}
                   <i class="fas fa-search" />
                 </button>
               </div>

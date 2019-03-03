@@ -1,21 +1,6 @@
-/* .nav-container {
-  display: flex;
-  align-content: center;
-  background-color: black;
-  font-size: 0.875rem;
-  font-family: futura-pt, sans-serif;
-  letter-spacing: 0.4px;
-  color: #666;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-} */
+.nav-container {
+  height: 60px;
+}
 /* 
 .headerListContainer {
   list-style: none;
@@ -38,7 +23,7 @@
   width: 378px;
 } */
 .navbar {
-  background-color: black;
+  background-color: #2d2d2d;
   font-size: 18px;
   letter-spacing: 0.4px;
   color: #666;
@@ -55,21 +40,29 @@
 .link-woman,
 .link-men {
   color: white !important;
-  font-size: 18px;
-  font-family: "Roboto Mono", sans-serif;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 2px;
   font-weight: 900;
   box-sizing: border-box;
   text-transform: uppercase;
+  width: 130px;
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 
 .link-men {
   border-right: 1px solid #525050;
   border-bottom: none;
 }
-.nav-item {
-  padding: 10px;
+.link-men:hover,
+.link-woman:hover {
+  background-color: #525050;
 }
+/* .nav-item {
+  padding: 10px;
+} */
 .searchInput-container {
   display: flex;
   /* background-color: blueviolet; */
@@ -94,13 +87,16 @@
   width: 500px;
 }
 .logo {
-  height: 35px;
+  height: 30px;
   display: inline-block;
   vertical-align: top;
   padding-right: 12px;
   -ms-flex-item-align: start;
   align-self: flex-start;
-  padding-left: 21px;
+  padding-left: 52px;
+}
+.log-img {
+  padding-top: 33px;
 }
 
 .HeaderContainer {
