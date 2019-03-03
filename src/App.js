@@ -51,8 +51,13 @@ class App extends Component {
   render() {
     return (
       <header className="App-header">
-        <Header />
-        <Offers />
+        <div>
+          <Header />
+        </div>
+        <div>
+          <Offers />
+        </div>
+
         {/* <HomePage /> */}
 
         <Switch>
@@ -72,29 +77,6 @@ class App extends Component {
               );
             }}
           />
-          {/* <Route
-            path="/signup"
-            render={() => {
-              return (
-                <SignupForm
-                  currentUser={this.state.currentUser}
-                  // send App update user ()
-                  signupSuccess={user => this.updateUser(user)}
-                />
-              );
-            }}
-          />
-          <Route
-            path="/login"
-            render={() => {
-              return (
-                <LoginForm
-                  currentUser={this.state.currentUser}
-                  loginSuccess={user => this.updateUser(user)}
-                />
-              );
-            }}
-          /> */}
         </Switch>
 
         <Footer />

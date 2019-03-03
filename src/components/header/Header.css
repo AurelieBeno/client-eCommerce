@@ -15,9 +15,8 @@
   flex-direction: row;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-}
-
-
+} */
+/* 
 .headerListContainer {
   list-style: none;
   display: flex;
@@ -25,19 +24,19 @@
   width: 10%;
   background-color: blue;
   justify-content: space-around;
-}
+} */
 
-.headerListContainer li {
+/* .headerListContainer li {
   font-size: 18px;
-}
+} */
 
-.headerListContainer a {
+/* .headerListContainer a {
   text-decoration: none;
-}
+} */
 
-.nav-input {
+/* .nav-input {
   width: 378px;
-}
+} */
 .navbar {
   background-color: black;
   font-size: 18px;
@@ -52,8 +51,48 @@
   flex-direction: row;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-} */
+}
+.link-woman,
+.link-men {
+  color: white !important;
+  font-size: 18px;
+  font-family: "Roboto Mono", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 900;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
 
+.link-men {
+  border-right: 1px solid #525050;
+  border-bottom: none;
+}
+.nav-item {
+  padding: 10px;
+}
+.searchInput-container {
+  display: flex;
+  /* background-color: blueviolet; */
+  justify-content: space-around;
+}
+.form-container {
+  /* background-color: red; */
+  width: 700px;
+  padding-right: 50px;
+}
+.loupe {
+  color: black;
+  background-color: white;
+  font-size: 15px;
+}
+.fa-user-circle {
+  color: white;
+  font-size: 20px;
+}
+
+.searchBar {
+  width: 500px;
+}
 .logo {
   height: 35px;
   display: inline-block;
@@ -61,5 +100,9 @@
   padding-right: 12px;
   -ms-flex-item-align: start;
   align-self: flex-start;
-  padding-left: 5px;
+  padding-left: 21px;
+}
+
+.HeaderContainer {
+  background-color: #2d2d2d;
 }

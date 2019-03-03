@@ -1,0 +1,31 @@
+.ListItem-page {
+  height: 50px;
+  background-color: #525050;
+  letter-spacing: 0.4px;
+  color: #fff;
+  letter-spacing: 0.8px;
+  border: none;
+  padding: 0 10px;
+
+  width: 100%;
+}
+
+.ListItem-page li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.ul-container {
+  background-color: orange;
+  width: 100%;
+}
+
+.liColor {
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
