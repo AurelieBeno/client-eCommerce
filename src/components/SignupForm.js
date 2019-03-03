@@ -34,11 +34,12 @@ class SignupForm extends Component {
   render() {
     return (
       <div className="containerSign">
-        <div className="Signup-container">
-          <h5 className="title">
+        <div className="Signup-container container ">
+          {/* <div className="container"> */}
+          <h5 className="title ">
             Inscrivez-vous à l'aide de votre adresse E-mail
           </h5>
-
+          {/* </div> */}
           <form className="signup" onSubmit={event => this.handleSubmit(event)}>
             <div className="form-group">
               <label htmlFor="exampleInputEmail1" className="labelForm">
@@ -50,7 +51,7 @@ class SignupForm extends Component {
                 name="email"
                 type="email"
                 placeholder="blah@blah.com"
-                className="form-control"
+                className="col-7 form-control inputSignup"
                 id="exampleInputEmail1"
               />
               <small id="emailHelp" class="form-text text-muted">
@@ -66,7 +67,7 @@ class SignupForm extends Component {
                 name="firstName"
                 type="text"
                 placeholder=""
-                className="form-control"
+                className=" col-7 form-control inputSignup"
               />
             </div>
 
@@ -78,7 +79,7 @@ class SignupForm extends Component {
                 name="lastName"
                 type="text"
                 placeholder=""
-                className="form-control"
+                className="col-7 form-control inputSignup"
               />
             </div>
             <div className="form-group">
@@ -90,7 +91,7 @@ class SignupForm extends Component {
                 value={this.state.orginalPassword}
                 name="originalPassword"
                 type="password"
-                className="form-control"
+                className="col-7 form-control  inputSignup"
                 id="exampleInputPassword1"
               />
               <small id="emailHelp" class="form-text text-muted">
@@ -98,13 +99,21 @@ class SignupForm extends Component {
               </small>
             </div>
             <div>
-              <small className="form-text text-muted">
-                En créant votre compte, vous acceptez nos
-                <span> termes et condition</span>&
-                <span> politique de confidentialité</span>
+              <small className="form-text ">
+                <p>
+                  En créant votre compte, vous acceptez nos
+                  <span className="spanLogin"> termes et condition </span> &
+                  <span className="spanLogin">
+                    politique de confidentialité
+                  </span>
+                </p>
               </small>
             </div>
-            <button className="btn signBtn submitBtn"> REJOIGNEZ ASOS</button>
+            <div className="row">
+              <button className="btn signBtn submitBtn col-7">
+                REJOIGNEZ ASOS
+              </button>
+            </div>
           </form>
         </div>
       </div>

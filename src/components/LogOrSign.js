@@ -1,29 +1,54 @@
 import React, { Component } from "react";
-import "./SignupForm.css";
+import { Switch, Route, Link } from "react-router-dom";
+
+// import "./SignupForm.css";
+
+import "./LogOrSign.css";
 
 import SignupForm from "./SignupForm";
-
 import LoginForm from "./LoginForm";
-import { Switch, Route, Link } from "react-router-dom";
 
 class LogOrSign extends Component {
   render() {
     return (
-      <div className="containerLogOrSign">
-        <div className="Signup-container">
-          <div className="row">
-            <div className="Signup-title title">
-              <Link className="nav-link" to="/logOrSign/signup">
-                <p className="paraSignup"> Nouveau chez asos ?</p>{" "}
+      <div
+        className="Signup-container 
+      container"
+      >
+        <div className="testContainer container">
+          <div className="row testRow">
+            <div className="col-lg-6 col-sm-9 premier">
+              <Link className="Link" to="/logOrSign/signup">
+                Nouveau chez asos ?
               </Link>
             </div>
-            <div className="Signup-title title">
-              <Link className="nav-link" to="/logOrSign/login">
-                <p className="paraSignup"> Connectez-vous !</p>{" "}
+            <div className="col-lg-6 col-sm-9 second">
+              <Link className="Link" to="/logOrSign/login">
+                Connectez-vous !
               </Link>
             </div>
           </div>
         </div>
+
+        {/* // <div className="containerLogOrSign"> */}
+        {/* <div className="Signup-container">
+          <div className="rowContainer">
+            <div className="container">
+              <div className="row">
+                <div className="Signup-title title un col-6">
+                  <Link className="nav-link col-6" to="/logOrSign/signup">
+                    Nouveau chez asos ?
+                  </Link>
+                </div>
+                <div className="Signup-title deux title col-6">
+                  <Link className="nav-link " to="/logOrSign/login">
+                    Connectez-vous !
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> */}
 
         <Switch>
           <Route
