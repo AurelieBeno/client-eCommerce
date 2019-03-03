@@ -6,3 +6,9 @@ footer {
 .page-footer {
   margin-top: 30px;
 }
+.link-footer {
+  color: #666;
+}
+.largeScreen {
+  align-items: center;
+}

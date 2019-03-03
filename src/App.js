@@ -51,8 +51,13 @@ class App extends Component {
   render() {
     return (
       <header className="App-header">
-        <Header />
-        <Offers />
+        <div>
+          <Header />
+        </div>
+        <div>
+          <Offers />
+        </div>
+
         {/* <HomePage /> */}
 
         <Switch>

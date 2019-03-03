@@ -6,6 +6,8 @@
   letter-spacing: 0.8px;
   border: none;
   padding: 0 10px;
+
+  width: 100%;
 }
 
 .ListItem-page li {
@@ -14,6 +16,10 @@
   justify-content: center;
   align-content: center;
   align-items: center;
+}
+.ul-container {
+  background-color: orange;
+  width: 100%;
 }
 
 .liColor {

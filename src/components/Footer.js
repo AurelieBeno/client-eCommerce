@@ -19,34 +19,49 @@ class Footer extends Component {
         </div>
 
         <div className="container text-center text-md-left mt-5">
-          <div className="row mt-3">
+          <div className="row mt-3 largeScreen">
             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 className="text-uppercase font-weight-bold">
                 HELP & INFORMATION
               </h6>
               <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" />
               <p>
-                <a href="https://www.asos.com/customer-service/customer-care/help/?help=/app/home/country/gb">
+                <a
+                  className="link-footer"
+                  href="https://www.asos.com/customer-service/customer-care/help/?help=/app/home/country/gb"
+                >
                   Help
                 </a>
               </p>
               <p>
-                <a href="https://my.asos.com/identity/login?signin=d6e7771073723cdf68ceefeeeb4523e5">
+                <a
+                  className="link-footer"
+                  href="https://my.asos.com/identity/login?signin=d6e7771073723cdf68ceefeeeb4523e5"
+                >
                   Track Order
                 </a>
               </p>
               <p>
-                <a href="https://www.asos.com/customer-service/delivery/">
+                <a
+                  className="link-footer"
+                  href="https://www.asos.com/customer-service/delivery/"
+                >
                   Delivery & Returns
                 </a>
               </p>
               <p>
-                <a href="https://www.asos.com/customer-service/premier-delivery/">
+                <a
+                  className="link-footer"
+                  href="https://www.asos.com/customer-service/premier-delivery/"
+                >
                   Premier Delivery
                 </a>
               </p>
               <p>
-                <a href="https://www.asos.com/discover/students/asos-on-campus/student-validation/">
+                <a
+                  className="link-footer"
+                  href="https://www.asos.com/discover/students/asos-on-campus/student-validation/"
+                >
                   10% Student Discount
                 </a>
               </p>
@@ -56,18 +71,27 @@ class Footer extends Component {
               <h6 className="text-uppercase font-weight-bold">ABOUT ASOS</h6>
               <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" />
               <p>
-                <a href="https://www.asos.com/about/">About Us</a>
+                <a className="link-footer" href="https://www.asos.com/about/">
+                  About Us
+                </a>
               </p>
               <p>
-                <a href="https://asoscareers.asos.com/">Careers at ASOS</a>
+                <a className="link-footer" href="https://asoscareers.asos.com/">
+                  Careers at ASOS
+                </a>
               </p>
               <p>
-                <a href="https://www.asosplc.com/corporate-responsibility.aspx">
+                <a
+                  className="link-footer"
+                  href="https://www.asosplc.com/corporate-responsibility.aspx"
+                >
                   Corporate Responsibility
                 </a>
               </p>
               <p>
-                <a href="https://www.asosplc.com/">Investors Site</a>
+                <a className="link-footer" href="https://www.asosplc.com/">
+                  Investors Site
+                </a>
               </p>
             </div>
 
@@ -77,17 +101,26 @@ class Footer extends Component {
               </h6>
               <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" />
               <p>
-                <a href="https://www.asos.com/gift-vouchers/?ctaref=global%20footer|gift%20vouchers">
+                <a
+                  className="link-footer"
+                  href="https://www.asos.com/gift-vouchers/?ctaref=global%20footer|gift%20vouchers"
+                >
                   Gift vouchers
                 </a>
               </p>
               <p>
-                <a href="https://www.asos.com/discover/our-apps/">
+                <a
+                  className="link-footer"
+                  href="https://www.asos.com/discover/our-apps/"
+                >
                   Mobile and ASOS Apps
                 </a>
               </p>
               <p>
-                <a href="https://marketplace.asos.com/?ctaref=Global%20footer">
+                <a
+                  className="link-footer"
+                  href="https://marketplace.asos.com/?ctaref=Global%20footer"
+                >
                   ASOS Marketplace
                 </a>
               </p>
@@ -98,7 +131,7 @@ class Footer extends Component {
               <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" />
 
               <p>
-                <a href="#!">
+                <a className="link-footer" href="#!">
                   You're in
                   <img src="#" alt="Uk" />{" "}
                 </a>

@@ -37,7 +37,7 @@
 /* .nav-input {
   width: 378px;
 } */
-/* .navbar {
+.navbar {
   background-color: black;
   font-size: 18px;
   letter-spacing: 0.4px;
@@ -51,14 +51,34 @@
   flex-direction: row;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-} */
+}
+.link-woman,
+.link-men {
+  color: white !important;
+  font-size: 18px;
+  font-family: "Roboto Mono", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 900;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
 
+.link-men {
+  border-right: 1px solid #525050;
+  border-bottom: none;
+}
+.nav-item {
+  padding: 10px;
+}
 .searchInput-container {
-  position: absolute;
-  left: 35%;
-  width: 50%;
   display: flex;
+  /* background-color: blueviolet; */
   justify-content: space-around;
+}
+.form-container {
+  /* background-color: red; */
+  width: 700px;
+  padding-right: 50px;
 }
 .loupe {
   color: black;
@@ -80,8 +100,9 @@
   padding-right: 12px;
   -ms-flex-item-align: start;
   align-self: flex-start;
-  padding-left: 5px;
+  padding-left: 21px;
 }
+
 .HeaderContainer {
   background-color: #2d2d2d;
 }
