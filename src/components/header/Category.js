@@ -9,21 +9,6 @@ import Shoes from "./Shoes";
 class Category extends Component {
   render() {
     return (
-<<<<<<< HEAD
-      <div>
-        <nav className="Category">
-          <ul>
-            <button class="hover-button">
-              <span class="hover-button--off">Clothing</span>
-              <div class="hover-button--on">
-                <div>
-                  <li key="CategoryList">
-                    <Link to="/clothing" />
-                  </li>
-                </div>
-              </div>
-            </button>
-=======
       <nav class="navbar navbar-expand-lg navbar-dark primary-color">
         <a class="navbar-brand" href="#!">
           Navbar
@@ -64,7 +49,6 @@ class Category extends Component {
           </ul>
         </div>
       </nav>
->>>>>>> c99424a7c4ac520c98e884d31deec4b036a7688c
 
       // <div>
       //   <nav className="Category">

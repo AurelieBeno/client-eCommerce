@@ -1,31 +1,66 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+import "./Clothing.css";
+
 class Clothing extends Component {
   render() {
     return (
-      <div>
-        <div>
-          <section>
-            <h3>SHOP BY PRODUCT</h3>
-            <ul>
-              <li>
-                <Link to="#">New in</Link>
-                <Link to="#">Activewear</Link>
-                <Link to="#">Co-ords</Link>
-                <Link to="#">Coats & Jackets</Link>
-                <Link to="#">Dresses</Link>
-                <Link to="#">Exclusives at ASOS</Link>
-                <Link to="#">Hoodies & Sweatshirts</Link>
-                <Link to="#">Jeans</Link>
-                <Link to="#">Lingerie & Nightwear</Link>
-              </li>
-            </ul>
-          </section>
-        </div>
+      <div className="ListItem-page">
+        {/* <h3>SHOP BY PRODUCT</h3> */}
+        <div className="container-fluide">
+          <ul className="row">
+            <li>
+              <Link to="#" className="col liColor">
+                New in
+              </Link>
+            </li>
 
+            <li>
+              <Link to="#" className="col liColor">
+                Activewear
+              </Link>
+            </li>
+
+            <li>
+              <Link to="#" className="col liColor">
+                Co-ords
+              </Link>
+            </li>
+            <li>
+              <Link to="#" className="col liColor">
+                Coats & Jackets
+              </Link>
+            </li>
+            <li>
+              <Link to="#" className="col liColor">
+                Dresses
+              </Link>
+            </li>
+            <li>
+              <Link to="#" className="col liColor">
+                Exclusives at ASOS
+              </Link>
+            </li>
+            <li>
+              <Link to="#" className="col liColor">
+                Hoodies & Sweatshirts
+              </Link>
+            </li>
+            <li>
+              <Link to="#" className="col liColor">
+                Jeans
+              </Link>
+            </li>
+            <li>
+              <Link to="#" className="col liColor">
+                Lingerie & Nightwear
+              </Link>
+            </li>
+          </ul>
+        </div>
         <div>
-          <section>
+          {/* <section>
             <h3>SHOP BY RANGE</h3>
             <div>
               <img src="#" alt="Curve Size" />
@@ -47,9 +82,10 @@ class Clothing extends Component {
               <p>Tall</p>
             </div>
           </section>
+          */}
         </div>
 
-        <section>
+        {/* <section>
           <h3>SHOP BY EDIT</h3>
           <ul>
             <li>
@@ -69,7 +105,7 @@ class Clothing extends Component {
               <p>Holiday</p>
             </li>
           </ul>
-        </section>
+        </section> */}
       </div>
     );
   }

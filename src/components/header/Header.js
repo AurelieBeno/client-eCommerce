@@ -1,15 +1,18 @@
 import React, { Component } from "react";
 
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, Switch, Route } from "react-router-dom";
 // import { Navbar, Nav } from "react-bootstrap"
 
 import "./Header.css";
 
+import "./SearchBar.css";
+import Clothing from "./Clothing";
+
 class Header extends Component {
   render() {
     return (
-      <div>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="HeaderContainer">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark nav-container">
           <Link className="navbar-brand" to="/">
             <img className="logo" src="../images/asos.png" alt="logo" />{" "}
           </Link>
@@ -27,7 +30,7 @@ class Header extends Component {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
+              <li className="nav-item ">
                 <NavLink className="nav-link" to="/women">
                   Women
                 </NavLink>
@@ -39,26 +42,33 @@ class Header extends Component {
               </li>
             </ul>
             <form className="form-inline my-2 my-lg-0">
-              <input
-                className="form-control mr-sm-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-inline-success my-2 my-sm-0" type="submit">
-                <i class="fas fa-search" />
-              </button>
+              <div className="searchInput-container container">
+                <row>
+                  <input
+                    className=" form-control search-input mr-sm-2 searchBar"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button
+                    className=" btn btn-inline-success my-2 loupe my-sm-0"
+                    type="submit"
+                  >
+                    <i class="fas fa-search" />
+                  </button>
+                </row>
+              </div>
             </form>
-            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
-              <i class="fas fa-user-circle" />
+
+            <button class="btn  my-2 my-sm-0" type="submit">
+              <Link className="btn my-2 my-sm-0" to="/logOrSign">
+                <i class="fas fa-user-circle" />
+              </Link>
             </button>
           </div>
-          <Link className="nav-link" to="/logOrSign">
-            user
-          </Link>
         </nav>
 
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        {/* <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <button
             className="navbar-toggler"
             type="button"
@@ -72,9 +82,9 @@ class Header extends Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <a className="nav-item nav-link" href="#!">
+              <Link className="nav-item nav-link" to="/clothing">
                 Clothing
-              </a>
+              </Link>
               <a className="nav-item nav-link" href="#!">
                 Shoes
               </a>
@@ -83,7 +93,11 @@ class Header extends Component {
               </a>
             </div>
           </div>
-        </nav>
+        </nav> */}
+
+        <Switch>
+          <Route path="/clothing" component={Clothing} />
+        </Switch>
       </div>
     );
   }
