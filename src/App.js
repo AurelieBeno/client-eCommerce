@@ -18,6 +18,8 @@ import LogOrSign from "./components/LogOrSign";
 import ProductList from "./components/ProductList";
 // import ProductList from "./components/ProductList";
 
+import { getProductList } from "./api.js";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -26,7 +28,10 @@ class App extends Component {
     if (userInfo) {
       userInfo = JSON.parse(userInfo);
     }
-    this.state = { currentUser: userInfo };
+    this.state = {
+      currentUser: userInfo,
+      productArray: []
+    };
   }
   updateUser(newUser) {
     if (newUser) {
@@ -41,6 +46,13 @@ class App extends Component {
     this.setState({ currentUser: newUser });
   }
 
+  componentDidMount() {
+    getProductList().then(response => {
+      console.log("Product List", response.data);
+
+      this.setState({ productArray: response.data });
+    });
+  }
   // logoutClick() {
   //   // Logout to the backend
   //   getLogOut().then(response => {
@@ -51,6 +63,7 @@ class App extends Component {
   // }
 
   render() {
+    console.log(this.state, "hello");
     return (
       <header className="App-header">
         <div>
@@ -69,6 +82,12 @@ class App extends Component {
           <Route path="/women" component={Women} />
           <Route path="/men" component={Men} />
           <Route path="/offers" component={Offers} />
+          <Route
+            path="/product"
+            render={() => {
+              return <ProductList productArray={this.state.productArray} />;
+            }}
+          />
 
           <Route
             path="/logOrSign"

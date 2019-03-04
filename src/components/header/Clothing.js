@@ -20,17 +20,17 @@ class Clothing extends Component {
               >
                 New in
               </Link> */}
-              <div class="nav-collapse">
-                <li class="dropdown">
+              <div className="nav-collapse">
+                <li className="dropdown">
                   <Link
                     to="#"
-                    className="dropdown-hove liColor"
+                    className="dropdown-hover liColor"
                     data-toggle="dropdown"
                   >
                     New in
                   </Link>
                   <li />
-                  <ul class="dropdown-menu">
+                  <ul className="dropdown-menu">
                     <li>
                       <h5 className="title">New articles</h5>
                     </li>
@@ -43,7 +43,7 @@ class Clothing extends Component {
                     <li>
                       <a href="#">Pant</a>
                     </li>
-                    <li class="divider" />
+                    <li className="divider" />
                     <li>blah</li>
                     <li>
                       <a href="#">blah</a>
@@ -56,11 +56,11 @@ class Clothing extends Component {
               </div>
               <div className="container">
                 <div className="dropdown-menu">
-                  <div class="row" aria-labelledby="dropdownMenuLink">
+                  <div className="row" aria-labelledby="dropdownMenuLink">
                     <h3>New articles</h3>
                   </div>
                   <div className="row">
-                    <a class="dropdown-item col-6" href="#">
+                    <a className="dropdown-item col-6" href="#">
                       All the collection
                     </a>
                     {/* <a class="dropdown-item row" href="#">

@@ -1,0 +1,41 @@
+.list-container li {
+  list-style: none;
+}
+.list-container {
+  line-height: 23px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "roboto";
+}
+
+.list-img {
+  height: 390px;
+}
+.ul-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ul-container {
+  padding-left: 0;
+}
+
+.nav-ul-container {
+  display: flex;
+  width: 100%;
+  background-color: rebeccapurple;
+  height: 40px;
+  align-items: center;
+}
+
+.nav-ul-container li {
+  list-style: none;
+}
+
+.nav-productList {
+  background-color: blue;
+  height: 40px;
+  display: flex;
+  align-content: center;
+}

@@ -9,12 +9,12 @@ class Women extends Component {
     return (
       <section>
         <div>
-          <Link to="/productList">Productlist</Link>
+          <Link to="/product">Productlist</Link>
         </div>
         <div>
           <Switch>
             <Route path="/clothing" component={Clothing} />
-            <Route path="/woman/productList" component={ProductList} />
+            <Route path="/woman/product" component={ProductList} />
           </Switch>
         </div>
       </section>
