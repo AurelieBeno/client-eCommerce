@@ -24,28 +24,97 @@ class ProductDetails extends Component {
   render() {
     const { productItem } = this.state;
     return (
-      <div>
-        <div>
-          <h2>{productItem.name}</h2>
+      <div className="product-detail-container">
+        <div className="image-detail">
+          <img
+            className="detail-img"
+            src={productItem.baseImageUrl}
+            alt="First slide"
+          />
         </div>
-        <div
-          // Carousel photo of product
-          id="carouselExampleControls"
-          class="carousel slide"
-          data-ride="carousel"
-        >
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img className="d-block w-100" src="..." alt="First slide" />
-            </div>
-            <div className="carousel-item">
+
+        <section className="product-detail">
+          {/* Change with data from JSON */}
+          <div>
+            <h4>{productItem.name}</h4>
+          </div>
+
+          <div className="detail-price">
+            <span className="price"> {productItem.price} $</span>
+            <small>Free Shipping Worldwide *</small>
+          </div>
+          <div className="detail-color">
+            <p className="color">
+              <span>Colour: </span> {productItem.colour}
+            </p>
+          </div>
+          <div className="size">
+            <p className="sizeP">Size</p>
+            <small>
+              <a href="#"> Find your size</a>
+            </small>
+            {/* <p>{productItem.size}</p> */}
+          </div>
+
+          {/* Dropdown button */}
+
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Please select your size
+            </button>
+            {/* <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              {productItem.size.map()}
+              <a class="dropdown-item" href="#!">
+                {productItem.size[0]}
+              </a>
+              <a class="dropdown-item" href="#!">
+                Another action
+              </a>
+              <a class="dropdown-item" href="#!">
+                Something else here
+              </a>
+            </div> */}
+          </div>
+
+          <button type="button" class="btn btn-success">
+            ADD TO BAG
+          </button>
+          <i class="far fa-heart" />
+        </section>
+      </div>
+    );
+  }
+}
+
+export default ProductDetails;
+
+// Carousel
+
+/* <div className="carousel-inner"> */
+
+/* <div className="carousel-item active"> */
+
+// Carousel photo of product
+
+// id="carouselExampleControls"
+// class="carousel slide"
+// data-ride="carousel"
+
+/* <div className="carousel-item">
               <img className="d-block w-100" src="..." alt="Second slide" />
             </div>
             <div className="carousel-item">
               <img className="d-block w-100" src="..." alt="Third slide" />
-            </div>
-          </div>
-          <a
+            </div> */
+
+/* <a
             className="carousel-control-prev"
             href="#carouselExampleControls"
             role="button"
@@ -62,50 +131,4 @@ class ProductDetails extends Component {
           >
             <span className="carousel-control-next-icon" aria-hidden="true" />
             <span className="sr-only">Next</span>
-          </a>
-        </div>
-        <section>
-          {/* Change with data from JSON */}
-          <h1>Product Name</h1>
-          <div>Product Price</div>
-          <p>Free Shipping Worldwide</p>
-          <p>
-            <b>Colour:</b>Insert JSON
-          </p>
-          <p>Size:</p>
-          {/* Dropdown button */}
-          <div class="dropdown">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Please select
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#!">
-                Action
-              </a>
-              <a class="dropdown-item" href="#!">
-                Another action
-              </a>
-              <a class="dropdown-item" href="#!">
-                Something else here
-              </a>
-            </div>
-          </div>
-
-          <button type="button" class="btn btn-success">
-            ADD TO BAG
-          </button>
-          <i class="far fa-heart" />
-        </section>
-      </div>
-    );
-  }
-}
-
-export default ProductDetails;
+          </a> */
