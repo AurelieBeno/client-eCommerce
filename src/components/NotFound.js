@@ -10,7 +10,7 @@ class NotFound extends Component {
         <p>Sorry! The page you are looking for does not exist.</p>
 
         <div class="col-md-3 offset-md-3">
-          <img src="../public/images/NotFound.jpeg" alt="Thinking" />
+          <img src="./images/NotFound.jpeg" alt="Thinking" />
           <p>
             We sent our team out to think which page you want to go, but if you
             can't wait. Please click
