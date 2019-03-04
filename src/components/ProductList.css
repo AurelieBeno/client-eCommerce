@@ -35,7 +35,25 @@
 
 .nav-productList {
   background-color: blue;
-  height: 40px;
+  height: 45px;
   display: flex;
   align-content: center;
+}
+.btnList {
+  line-height: 1.12;
+  text-align: left;
+  padding: 3px 20px 3px 6px;
+  position: relative;
+  width: 100%;
+  height: 42px;
+  border: none;
+  border-radius: 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid rgb(190, 184, 184);
+  background-color: transparent;
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  background-color: red;
 }

@@ -1,11 +1,33 @@
 import React, { Component } from "react";
 
-import "./ProductDetail.css";
+import { getProductDetails } from "../api.js";
 
-class ProductDetail extends Component {
+import "./ProductDetails.css";
+
+class ProductDetails extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      productItem: {}
+    };
+  }
+
+  componentDidMount() {
+    const { params } = this.props.match;
+
+    getProductDetails(params.productId).then(response => {
+      console.log("Product Details", response.data);
+      this.setState({ productItem: response.data });
+    });
+  }
   render() {
+    const { productItem } = this.state;
     return (
       <div>
+        <div>
+          <h2>{productItem.name}</h2>
+        </div>
         <div
           // Carousel photo of product
           id="carouselExampleControls"
@@ -86,4 +108,4 @@ class ProductDetail extends Component {
   }
 }
 
-export default ProductDetail;
+export default ProductDetails;

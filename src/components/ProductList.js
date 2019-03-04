@@ -1,34 +1,31 @@
 import React, { Component } from "react";
 
-// import { Link } from "react-router-dom";
+import { Link, Route, Switch } from "react-router-dom";
 
 import "./ProductList.css";
 
-class ProductList extends Component {
-  constructor(props) {
-    super(props);
+function getProductAdress(product) {
+  return `/product/${product._id}`;
+}
 
-    this.state = {
-      allProduct: []
-    };
-  }
+class ProductList extends Component {
   render() {
     const { productArray } = this.props;
     console.log(this.props.productArray, "here");
 
     return (
-      <session className="product-list-container">
+      <section className="product-list-container">
         <h2>All Product </h2>
         <div className="nav-productList">
           <ul className="nav-ul-container">
             <li>
-              <button>Gamme de prix</button>
+              <button className="btnList">Gamme de prix</button>
             </li>
             <li>
-              <button>Color</button>
+              <button className="btnList">Color</button>
             </li>
             <li>
-              <button>Brand</button>
+              <button className="btnList">Brand</button>
             </li>
           </ul>
         </div>
@@ -40,11 +37,13 @@ class ProductList extends Component {
               return (
                 <li className="list-container col-3">
                   <div className="row img">
-                    <img
-                      className="list-img"
-                      src={oneProduct.baseImageUrl}
-                      alt="Item "
-                    />
+                    <Link to={getProductAdress(oneProduct)}>
+                      <img
+                        className="list-img"
+                        src={oneProduct.baseImageUrl}
+                        alt="Item "
+                      />
+                    </Link>
                   </div>
                   <div className="row name">
                     {oneProduct.name}
@@ -59,7 +58,7 @@ class ProductList extends Component {
             })}
           </ul>
         </div>
-      </session>
+      </section>
     );
   }
 }

@@ -12,12 +12,10 @@ import Women from "./components/header/Women";
 import Men from "./components/header/Men";
 import Offers from "./components/Offers";
 import HomePage from "./components/HomePage";
-// import SignupForm from "./components/SignupForm";
-// import LoginForm from "./components/LoginForm";
 import LogOrSign from "./components/LogOrSign";
 import NotFound from "./components/NotFound";
-// import ProductDetail from "./components/ProductDetail";
 import ProductList from "./components/ProductList";
+import ProductDetails from "./components/ProductDetails";
 
 import { getProductList } from "./api.js";
 
@@ -84,6 +82,7 @@ class App extends Component {
           <Route path="/women" component={Women} />
           <Route path="/men" component={Men} />
           <Route path="/offers" component={Offers} />
+          <Route path="/product/:productId" component={ProductDetails} />
           <Route
             path="/product"
             render={() => {
