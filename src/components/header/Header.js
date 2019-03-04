@@ -29,7 +29,7 @@ class Header extends Component {
           </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
+            <ul className="navbar-nav mr-auto nav-header-ul-container">
               <li className="nav-item ">
                 <NavLink className="nav-link link-woman" to="/women">
                   Women
@@ -41,10 +41,10 @@ class Header extends Component {
                 </NavLink>
               </li>
             </ul>
-            <form className="form-inline my-2 my-lg-0 form-container">
-              <div className="searchInput-container container">
+            <form className="form-inline my-2 my-lg-0 form-search-container">
+              <div className="searchInput-container">
                 <input
-                  className=" form-control search-input mr-sm-2 searchBar col-12"
+                  className=" form-control search-input mr-sm-2 searchBar col-12 search-media"
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
@@ -53,7 +53,6 @@ class Header extends Component {
                   className=" btn btn-inline-success my-2 loupe my-sm-0"
                   type="submit"
                 >
-                  {" "}
                   <i class="fas fa-search" />
                 </button>
               </div>

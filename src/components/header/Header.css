@@ -68,11 +68,15 @@
   /* background-color: blueviolet; */
   justify-content: space-around;
 }
-.form-container {
-  /* background-color: red; */
-  width: 700px;
-  padding-right: 50px;
+.nav-header-ul-container {
+  width: 25%;
+  /* background-color: orange; */
+  margin-right: 10px !important;
 }
+#navbarSupportedContent {
+  justify-content: space-between;
+}
+
 .loupe {
   color: black;
   background-color: white;
@@ -83,8 +87,23 @@
   font-size: 20px;
 }
 
-.searchBar {
-  width: 500px;
+.form-search-container {
+  width: 569px;
+  /* background-color: blue; */
+}
+
+/* .searchBar {
+  background-color: red;
+} */
+.searchInput-container {
+  /* background-color: violet; */
+  width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .search-media {
+    width: 100px;
+  }
 }
 .logo {
   height: 30px;

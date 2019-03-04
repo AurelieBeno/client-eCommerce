@@ -97,9 +97,9 @@ class HomePage extends Component {
 
         {/* Credit Card and Social Media */}
 
-        <div class="container card">
-          <div class="row">
-            <div class="col-12">
+        <div class="card">
+          <div class="row cc-img-container">
+            <div>
               <img src="./images/CreditCard.png" alt="Card" />
             </div>
           </div>
