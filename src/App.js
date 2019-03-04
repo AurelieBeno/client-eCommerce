@@ -15,7 +15,8 @@ import HomePage from "./components/HomePage";
 // import SignupForm from "./components/SignupForm";
 // import LoginForm from "./components/LoginForm";
 import LogOrSign from "./components/LogOrSign";
-import ProductList from "./components/ProductList";
+import NotFound from "./components/NotFound";
+// import ProductDetail from "./components/ProductDetail";
 // import ProductList from "./components/ProductList";
 
 class App extends Component {
@@ -60,6 +61,7 @@ class App extends Component {
           <Offers />
         </div>
 
+        {/* <ProductDetail /> */}
         {/* <ProductList /> */}
 
         {/* <HomePage /> */}
@@ -82,6 +84,10 @@ class App extends Component {
               );
             }}
           />
+
+          {/* <Route path="/product/detail" component={ProductDetail} /> */}
+
+          <Route component={NotFound} />
         </Switch>
 
         <Footer />
