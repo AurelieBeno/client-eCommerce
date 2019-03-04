@@ -1,18 +1,23 @@
 import React, { Component } from "react";
 
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 import Clothing from "./Clothing";
-
-// import clothing from "./components/Clothing.js";
+import ProductList from "../ProductList";
 
 class Women extends Component {
   render() {
     return (
-      <div>
-        <Switch>
-          <Route path="/clothing" component={Clothing} />
-        </Switch>
-      </div>
+      <section>
+        <div>
+          <Link to="/productList">Productlist</Link>
+        </div>
+        <div>
+          <Switch>
+            <Route path="/clothing" component={Clothing} />
+            <Route path="/woman/productList" component={ProductList} />
+          </Switch>
+        </div>
+      </section>
     );
   }
 }

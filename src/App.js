@@ -15,6 +15,8 @@ import HomePage from "./components/HomePage";
 // import SignupForm from "./components/SignupForm";
 // import LoginForm from "./components/LoginForm";
 import LogOrSign from "./components/LogOrSign";
+import ProductList from "./components/ProductList";
+// import ProductList from "./components/ProductList";
 
 class App extends Component {
   constructor(props) {
@@ -58,6 +60,8 @@ class App extends Component {
           <Offers />
         </div>
 
+        {/* <ProductList /> */}
+
         {/* <HomePage /> */}
 
         <Switch>
@@ -65,6 +69,7 @@ class App extends Component {
           <Route path="/women" component={Women} />
           <Route path="/men" component={Men} />
           <Route path="/offers" component={Offers} />
+
           <Route
             path="/logOrSign"
             render={() => {
