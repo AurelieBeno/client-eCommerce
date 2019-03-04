@@ -8,9 +8,9 @@ function getProductAdress(product) {
   return `/product/${product._id}`;
 }
 
-function getProductGender(product) {
-  return `/product/${product.gender}`;
-}
+// function getProductGender(product) {
+//   return `/product/${product.gender}`;
+// }
 
 class ProductList extends Component {
   render() {
