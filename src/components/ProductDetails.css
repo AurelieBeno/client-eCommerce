@@ -1,0 +1,61 @@
+.product-detail-container {
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+}
+.product-detail {
+  background-color: violet;
+  width: 300px;
+  height: 300px;
+  padding-top: 20px;
+}
+
+.product-detail h4 {
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: bold;
+  height: 58px;
+  width: 269px;
+}
+
+.detail-price {
+  /* background-color: red; */
+  display: flex;
+  font-style: normal;
+  font-weight: 700;
+  color: #555;
+}
+
+.detail-price small {
+  margin-left: 10px;
+}
+.price {
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.color {
+  margin-top: 20px;
+}
+.color span {
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-right: 10px;
+  letter-spacing: 1.8px;
+}
+
+.size {
+  display: flex;
+}
+
+.size a {
+  color: black;
+}
+.sizeP {
+  letter-spacing: 1.7px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.size small {
+  margin-left: 25px;
+}
