@@ -17,7 +17,7 @@ import HomePage from "./components/HomePage";
 import LogOrSign from "./components/LogOrSign";
 import NotFound from "./components/NotFound";
 // import ProductDetail from "./components/ProductDetail";
-// import ProductList from "./components/ProductList";
+import ProductList from "./components/ProductList";
 
 import { getProductList } from "./api.js";
 
