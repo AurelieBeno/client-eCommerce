@@ -49,7 +49,6 @@ class ProductDetails extends Component {
             alt="First slide"
           />
         </div>
-
         <section className="product-detail">
           {/* Change with data from JSON */}
           <div>
@@ -70,7 +69,6 @@ class ProductDetails extends Component {
               <a href="#!"> Find your size</a>
             </small>
           </div>
-
           <div className="drop">
             <div>
               <select
@@ -95,6 +93,9 @@ class ProductDetails extends Component {
           </button>
           {/* <i className="far fa-heart" />
            */}
+          <button type="button" className="btn btn-success add-cart">
+            CHECK OUT
+          </button>
         </section>
       </div>
     );
