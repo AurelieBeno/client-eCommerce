@@ -52,7 +52,7 @@ class Header extends Component {
             </form>
 
             <button className="btn  my-2 my-sm-0" type="submit">
-              <Link className="btn my-2 my-sm-0" to="/logOrSign">
+              <Link className="btn my-2 my-sm-0" to="/logOrSign/signup">
                 <img className="user" src="../images/user.svg" alt="logo" />{" "}
               </Link>
             </button>
