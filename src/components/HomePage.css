@@ -20,3 +20,13 @@
 .container-middle h5 {
   margin-top: 15px;
 }
+
+.cc-img-container {
+  justify-content: center;
+  align-content: center;
+  width: 1100px;
+}
+.cc-img-container img {
+  width: auto;
+  height: 55px;
+}

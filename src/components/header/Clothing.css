@@ -1,12 +1,37 @@
 .ListItem-page {
-  height: 50px;
   background-color: #525050;
   letter-spacing: 0.4px;
   color: #fff;
-  letter-spacing: 0.8px;
   border: none;
   padding: 0 10px;
   width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.myRow {
+  margin: 0 0 0 15px;
+  padding: 0;
+}
+
+.red {
+  background-color: #d01345;
+  transform: skew(-12deg);
+}
+
+.red:hover {
+  transform: skew(0);
+}
+
+.red a:hover {
+  transform: skew(0);
+}
+
+.red a {
+  transform: skew(12deg);
+  font-weight: 600;
 }
 
 /* .dropdown {
@@ -20,40 +45,30 @@
   background-color: violet;
 }
 
-.ListItem-page li {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-
 .liColor {
   color: white;
-  font-size: 0.775rem;
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
   height: 50px;
+  padding: 0 15px;
+  font-family: "FuturaPTWeb-Book";
+  letter-spacing: 2px;
 }
 
-li a {
-  text-decoration: none;
-  color: #666;
-}
-a:active {
-  color: white;
-  /* color: blueviolet; */
+.liColor:active {
   outline: none;
-  /* font-size: 50px; */
 }
-a:hover {
+.liColor:hover {
   color: white;
   text-decoration: none;
   color: #2d2d2d;
   background-color: #eee;
-  font-weight: 400;
 }
 
-a {
-  display: flex;
+@media (max-width: 1328px) {
+  .myRow {
+    justify-content: center;
+    display: flex;
+  }
 }

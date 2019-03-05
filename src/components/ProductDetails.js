@@ -4,15 +4,22 @@ import { getProductDetails } from "../api.js";
 
 import "./ProductDetails.css";
 
+var texts = ["S", "M", "L"];
 class ProductDetails extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      productItem: {}
+      productItem: {
+        size: []
+      },
+      clickedText: ""
     };
   }
 
+  handleClick = i => {
+    this.setState({ clickedText: texts[i] });
+  };
   componentDidMount() {
     const { params } = this.props.match;
 
@@ -22,9 +29,19 @@ class ProductDetails extends Component {
     });
   }
   render() {
+    const { clickedText } = this.state;
     const { productItem } = this.state;
+    console.log(productItem);
     return (
       <div className="product-detail-container">
+        <div>
+          {texts.map((text, i) => (
+            <button key={i} onClick={() => this.handleClick(i)}>
+              Click me {i + 1}
+            </button>
+          ))}
+          {clickedText && <p>I clicked on button with text: {clickedText}</p>}
+        </div>
         <div className="image-detail">
           <img
             className="detail-img"
@@ -38,7 +55,6 @@ class ProductDetails extends Component {
           <div>
             <h4>{productItem.name}</h4>
           </div>
-
           <div className="detail-price">
             <span className="price"> {productItem.price} $</span>
             <small>Free Shipping Worldwide *</small>
@@ -53,40 +69,32 @@ class ProductDetails extends Component {
             <small>
               <a href="#!"> Find your size</a>
             </small>
-            {/* <p>{productItem.size}</p> */}
           </div>
 
-          {/* Dropdown button */}
-
-          <div class="dropdown">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Please select your size
-            </button>
-            {/* <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              {productItem.size.map()}
-              <a class="dropdown-item" href="#!">
-                {productItem.size[0]}
-              </a>
-              <a class="dropdown-item" href="#!">
-                Another action
-              </a>
-              <a class="dropdown-item" href="#!">
-                Something else here
-              </a>
-            </div> */}
+          <div className="drop">
+            <div>
+              <select
+                className="selectSize btn btn-success"
+                name="sizeList"
+                form="formSize"
+                onClick={() => this.handleClick()}
+              >
+                {productItem.size.map((oneSize, index) => {
+                  console.log(index, oneSize);
+                  return (
+                    <option className="optionSize" value="text">
+                      {oneSize}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
           </div>
-
-          <button type="button" class="btn btn-success">
+          <button type="button" className="btn btn-success add-cart">
             ADD TO BAG
           </button>
-          <i class="far fa-heart" />
+          {/* <i className="far fa-heart" />
+           */}
         </section>
       </div>
     );
@@ -104,7 +112,7 @@ export default ProductDetails;
 // Carousel photo of product
 
 // id="carouselExampleControls"
-// class="carousel slide"
+// className="carousel slide"
 // data-ride="carousel"
 
 /* <div className="carousel-item">

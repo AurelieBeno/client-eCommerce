@@ -5,14 +5,15 @@ class Footer extends Component {
   render() {
     return (
       <footer className="page-footer font-small unique-color-dark">
-        <div className="top-footer">
+        <div className="top-footer medias">
           <div className="container">
-            <div className="row py-4 d-flex align-items-center">
-              <div className="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-                <h6 className="mb-0">Medias</h6>
-              </div>
-              <div className="col-md-6 col-lg-7 text-center text-md-right">
-                <h6 className="mb-0">Medias</h6>
+            <div className="row d-flex justify-content-center">
+              <div className="col-12">
+                <img
+                  src="../images/medias.png"
+                  alt="Card"
+                  className="img-medias"
+                />
               </div>
             </div>
           </div>
@@ -20,7 +21,7 @@ class Footer extends Component {
 
         <div className="container text-center text-md-left mt-5">
           <div className="row mt-3 largeScreen">
-            <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <div className="col-lg-3 col-md-6 col-sm-12 mx-auto mb-4">
               <h6 className="text-uppercase font-weight-bold">
                 HELP & INFORMATION
               </h6>
@@ -67,7 +68,7 @@ class Footer extends Component {
               </p>
             </div>
 
-            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <div className="col-lg-3 col-md-6 col-sm-12 mx-auto mb-4">
               <h6 className="text-uppercase font-weight-bold">ABOUT ASOS</h6>
               <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" />
               <p>
@@ -95,7 +96,7 @@ class Footer extends Component {
               </p>
             </div>
 
-            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <div className="col-lg-3 col-md-6 col-sm-12 mx-auto mb-4">
               <h6 className="text-uppercase font-weight-bold">
                 MORE FROM ASOS
               </h6>
@@ -126,14 +127,18 @@ class Footer extends Component {
               </p>
             </div>
 
-            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <div className="col-lg-3 col-md-6 col-sm-12 mx-auto mb-4">
               <h6 className="text-uppercase font-weight-bold">SHOPPING FROM</h6>
               <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" />
 
               <p>
                 <a className="link-footer" href="#!">
                   You're in
-                  <img src="#" alt="Uk" />{" "}
+                  <img
+                    src="../images/language.png"
+                    alt="Uk"
+                    className="user flag"
+                  />{" "}
                 </a>
               </p>
             </div>

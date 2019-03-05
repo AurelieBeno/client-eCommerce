@@ -13,42 +13,22 @@ class LogOrSign extends Component {
     return (
       <div
         className="Signup-container 
-      container"
+      container LogOrSign-container"
       >
         <div className="testContainer container">
           <div className="row testRow">
-            <div className="col-lg-6 col-sm-9 premier">
+            <div className="col-lg-6 col-sm-12 premier">
               <Link className="Link" to="/logOrSign/signup">
                 Nouveau chez asos ?
               </Link>
             </div>
-            <div className="col-lg-6 col-sm-9 second">
+            <div className="col-lg-6 col-sm-12 second">
               <Link className="Link" to="/logOrSign/login">
                 Connectez-vous !
               </Link>
             </div>
           </div>
         </div>
-
-        {/* // <div className="containerLogOrSign"> */}
-        {/* <div className="Signup-container">
-          <div className="rowContainer">
-            <div className="container">
-              <div className="row">
-                <div className="Signup-title title un col-6">
-                  <Link className="nav-link col-6" to="/logOrSign/signup">
-                    Nouveau chez asos ?
-                  </Link>
-                </div>
-                <div className="Signup-title deux title col-6">
-                  <Link className="nav-link " to="/logOrSign/login">
-                    Connectez-vous !
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
 
         <Switch>
           <Route

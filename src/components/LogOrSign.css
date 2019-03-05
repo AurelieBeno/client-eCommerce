@@ -47,12 +47,21 @@ body {
   text-decoration: none;
 }
 
-.premier:active {
-  border: 1px solid black;
-}
 .second {
   border-top: 0;
   border-right: 1px solid black;
-  border-left: 0;
+  border-left: 1px solid black;
   border-bottom: 1px solid black;
+}
+
+.LogOrSign-container {
+  margin: 50px auto !important;
+}
+
+.LogOrSign-col {
+  padding: 30px 0 40px 0;
+}
+
+.deleteHover:hover {
+  color: white;
 }
