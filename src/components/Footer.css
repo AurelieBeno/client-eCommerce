@@ -19,8 +19,14 @@ h6 {
 
 h6 {
   font-family: "FuturaPTWeb-Heavy";
+  letter-spacing: 2px;
 }
 
 .link-footer {
   font-family: "FuturaPTWeb-Book";
+  letter-spacing: 1px;
+}
+
+.flag {
+  padding: 0 10px;
 }

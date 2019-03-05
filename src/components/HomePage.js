@@ -8,7 +8,7 @@ class HomePage extends Component {
       <section id="homepage">
         {/* Top main image */}
 
-        <div className="container">
+        <div className="container-fluid p-0">
           <div className="row">
             <div className="col-12 bigImg">
               <img src="../images/Design.jpg" alt="Design" />

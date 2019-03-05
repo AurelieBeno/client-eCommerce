@@ -21,7 +21,7 @@ class Footer extends Component {
 
         <div className="container text-center text-md-left mt-5">
           <div className="row mt-3 largeScreen">
-            <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <div className="col-lg-3 col-md-6 col-sm-12 mx-auto mb-4">
               <h6 className="text-uppercase font-weight-bold">
                 HELP & INFORMATION
               </h6>
@@ -68,7 +68,7 @@ class Footer extends Component {
               </p>
             </div>
 
-            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <div className="col-lg-3 col-md-6 col-sm-12 mx-auto mb-4">
               <h6 className="text-uppercase font-weight-bold">ABOUT ASOS</h6>
               <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" />
               <p>
@@ -96,7 +96,7 @@ class Footer extends Component {
               </p>
             </div>
 
-            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <div className="col-lg-3 col-md-6 col-sm-12 mx-auto mb-4">
               <h6 className="text-uppercase font-weight-bold">
                 MORE FROM ASOS
               </h6>
@@ -127,7 +127,7 @@ class Footer extends Component {
               </p>
             </div>
 
-            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <div className="col-lg-3 col-md-6 col-sm-12 mx-auto mb-4">
               <h6 className="text-uppercase font-weight-bold">SHOPPING FROM</h6>
               <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" />
 
@@ -137,7 +137,7 @@ class Footer extends Component {
                   <img
                     src="../images/language.png"
                     alt="Uk"
-                    className="user"
+                    className="user flag"
                   />{" "}
                 </a>
               </p>
