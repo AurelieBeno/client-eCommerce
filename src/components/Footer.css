@@ -2,13 +2,25 @@ footer {
   background-color: #eeeeee;
 }
 
-/* pour donner de la marge au FORM */
-.page-footer {
-  margin-top: 30px;
-}
-.link-footer {
+.link-footer,
+h6 {
   color: #666;
 }
-.largeScreen {
-  align-items: center;
+
+.medias {
+  background-color: white;
+}
+
+.img-medias {
+  height: 50px;
+  object-fit: cover;
+  width: 100%;
+}
+
+h6 {
+  font-family: "FuturaPTWeb-Heavy";
+}
+
+.link-footer {
+  font-family: "FuturaPTWeb-Book";
 }

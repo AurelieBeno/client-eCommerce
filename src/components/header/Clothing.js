@@ -9,27 +9,13 @@ class Clothing extends Component {
     return (
       <div className="ListItem-page">
         {/* <h3>SHOP BY PRODUCT</h3> */}
-        <div className="container">
-          <ul className="row">
-            <div className="dropdown">
-              {/* <Link
-                class=" dropdown-toggle col liColor"
-                to="#"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                New in
-              </Link> */}
-              <div className="nav-collapse">
-                <li>
-                  <Link to="/product" className=" liColor">
-                    All Product
-                  </Link>
-                  <li />
-                </li>
-              </div>
-            </div>
+        <div className="container-fluid">
+          <ul className="row myRow">
+            <li>
+              <Link to="/product" className=" liColor">
+                All Product
+              </Link>
+            </li>
 
             <li>
               <Link to="#" className="col liColor">
@@ -39,12 +25,12 @@ class Clothing extends Component {
 
             <li>
               <Link to="#" className="col liColor">
-                Co-ords
+                Shoes
               </Link>
             </li>
             <li>
               <Link to="#" className="col liColor">
-                Coats & Jackets
+                Jackets
               </Link>
             </li>
             <li>
@@ -54,12 +40,7 @@ class Clothing extends Component {
             </li>
             <li>
               <Link to="#" className="col liColor">
-                Exclusives at ASOS
-              </Link>
-            </li>
-            <li>
-              <Link to="#" className="col liColor">
-                Hoodies & Sweatshirts
+                Sweatshirts
               </Link>
             </li>
             <li>
@@ -70,6 +51,26 @@ class Clothing extends Component {
             <li>
               <Link to="#" className="col liColor">
                 Lingerie & Nightwear
+              </Link>
+            </li>
+            <li class="red">
+              <Link to="#" className="col liColor">
+                Outlet
+              </Link>
+            </li>
+            <li>
+              <Link to="#" className="col liColor">
+                Discount
+              </Link>
+            </li>
+            <li>
+              <Link to="#" className="col liColor">
+                Marketplace
+              </Link>
+            </li>
+            <li>
+              <Link to="#" className="col liColor">
+                Inspiration
               </Link>
             </li>
           </ul>
@@ -85,43 +86,3 @@ class Clothing extends Component {
 }
 
 export default Clothing;
-
-{
-  /* <ul className="dropdown-menu">
-                    <li>
-                      <h5 className="title">New articles</h5>
-                    </li>
-                    <li>
-                      <a href="#">Shoes</a>
-                    </li>
-                    <li>
-                      <a href="#">Dress</a>
-                    </li>
-                    <li>
-                      <a href="#">Pant</a>
-                    </li>
-                    <li className="divider" />
-                    <li>blah</li>
-                    <li>
-                      <a href="#">blah</a>
-                    </li>
-                    <li>
-                      <a href="#">blah</a>
-                    </li>
-                  </ul> */
-}
-
-{
-  /* <div className="container">
-                <div className="dropdown-menu">
-                  <div className="row" aria-labelledby="dropdownMenuLink">
-                    <h3>New articles</h3>
-                  </div>
-                  <div className="row">
-                    <a className="dropdown-item col-6" href="#">
-                      All the collection
-                    </a>
-                  </div>
-                </div>
-              </div> */
-}

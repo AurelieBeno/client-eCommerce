@@ -14,28 +14,17 @@ class Header extends Component {
       <div className="HeaderContainer ">
         <nav className="navbar container-fluide navbar-expand-lg navbar-dark bg-dark nav-container ">
           <Link className="navbar-brand logo-img" to="/">
-            <img className="logo" src="../images/asos.png" alt="logo" />{" "}
+            <img className="logo" src="../images/logo.svg" alt="logo" />{" "}
           </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
 
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div className=" navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto nav-header-ul-container">
-              <li className="nav-item ">
+              <li className="nav-item gender">
                 <NavLink className="nav-link link-woman" to="/women">
                   Women
                 </NavLink>
               </li>
-              <li className="nav-item">
+              <li className="nav-item gender">
                 <NavLink className="nav-link link-men " to="/men">
                   Men
                 </NavLink>
@@ -53,34 +42,25 @@ class Header extends Component {
                   className=" btn btn-inline-success my-2 loupe my-sm-0"
                   type="submit"
                 >
-                  <i class="fas fa-search" />
+                  <img
+                    className="search"
+                    src="../images/search.svg"
+                    alt="search"
+                  />
                 </button>
               </div>
             </form>
 
-            <button class="btn  my-2 my-sm-0" type="submit">
+            <button className="btn  my-2 my-sm-0" type="submit">
               <Link className="btn my-2 my-sm-0" to="/logOrSign">
-                <i class="fas fa-user-circle" />
+                <img className="user" src="../images/user.svg" alt="logo" />{" "}
               </Link>
             </button>
           </div>
         </nav>
 
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <Clothing />
-          </div>
+        <nav className="navbar">
+          <Clothing />
           <div />
         </nav>
 

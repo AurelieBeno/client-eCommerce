@@ -3,22 +3,18 @@
 }
 .list-container {
   line-height: 23px;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-family: "roboto";
+  font-family: "FuturaPTWeb-Book";
+  align-items: center;
+  padding-bottom: 20px;
 }
 
 .list-img {
-  height: 390px;
+  width: 100%;
 }
+
 .ul-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-.ul-container {
-  padding-left: 0;
+  padding-inline-start: 0;
+  justify-content: center;
 }
 
 .nav-ul-container {
@@ -56,4 +52,34 @@
   font-weight: 400;
   letter-spacing: 0.3px;
   background-color: red;
+}
+
+.productListTitle {
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 15px 0 10px 0;
+}
+
+.productListTitle h2 {
+  font-family: "FuturaPTWeb-Heavy";
+  font-size: 28px;
+}
+
+.product-list-container {
+  padding: 50px !important;
+}
+
+.nameList {
+  height: 23px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 8px;
+  font-family: "FuturaPTWeb-Book";
+  font-size: 15px;
+}
+
+.priceList {
+  font-family: "FuturaPTWeb-Heavy";
+  font-size: 14px;
 }

@@ -30,26 +30,6 @@ class LogOrSign extends Component {
           </div>
         </div>
 
-        {/* // <div className="containerLogOrSign"> */}
-        {/* <div className="Signup-container">
-          <div className="rowContainer">
-            <div className="container">
-              <div className="row">
-                <div className="Signup-title title un col-6">
-                  <Link className="nav-link col-6" to="/logOrSign/signup">
-                    Nouveau chez asos ?
-                  </Link>
-                </div>
-                <div className="Signup-title deux title col-6">
-                  <Link className="nav-link " to="/logOrSign/login">
-                    Connectez-vous !
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
         <Switch>
           <Route
             path="/logOrSign/signup"

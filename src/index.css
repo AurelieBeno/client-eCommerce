@@ -12,3 +12,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@font-face {
+  font-family: "FuturaPTWeb-Book";
+  src: url("./font/FuturaPTWeb-Book.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "FuturaPTWeb-ExtraBoldObl";
+  src: url("./font/FuturaPTWeb-ExtraBoldObl.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "FuturaPTWeb-Heavy";
+  src: url("./font/FuturaPTWeb-Heavy.ttf") format("truetype");
+}

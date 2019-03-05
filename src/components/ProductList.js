@@ -15,13 +15,15 @@ function getProductAdress(product) {
 class ProductList extends Component {
   render() {
     const { productArray } = this.props;
-    console.log(this.props.productArray, "here");
+    console.log(this.props.productArray, "here on productList");
 
     return (
-      <section className="product-list-container">
-        <h2>All Product </h2>
-
-        {/*   <div class="dropdown">
+      <section>
+        <div className="productListTitle">
+          <h2>All Product </h2>
+        </div>
+        <div className="product-list-container container-fluid">
+          {/*   <div class="dropdown">
          <button
             class="btn btn-secondary dropdown-toggle"
             type="button"
@@ -69,7 +71,7 @@ class ProductList extends Component {
           </div>
         </div> */}
 
-        {/* <div className="nav-productList">
+          {/* <div className="nav-productList">
           <ul className="nav-ul-container">
             <li>
               <button className="btnList">Gender</button>
@@ -80,32 +82,33 @@ class ProductList extends Component {
           </ul>
         </div> */}
 
-        <ul className="ul-container ">
-          {productArray.map(oneProduct => {
-            console.log(productArray);
-            return (
-              <li className="list-container col-3">
-                <div className="row img">
-                  <Link to={getProductAdress(oneProduct)}>
-                    <img
-                      className="list-img"
-                      src={oneProduct.baseImageUrl}
-                      alt="Item "
-                    />
-                  </Link>
-                </div>
-                <div className="row name">
-                  {oneProduct.name}
-                  {/* <span> {oneProduct.colour} </span> */}
-                </div>
+          <ul className="row ul-container ">
+            {productArray.map(oneProduct => {
+              console.log(productArray);
+              return (
+                <li className="list-container col-lg-3 col-md-4 col-sm-6">
+                  <div className="addMargin">
+                    <div className="img">
+                      <Link to={getProductAdress(oneProduct)}>
+                        <img
+                          className="list-img"
+                          src={oneProduct.baseImageUrl}
+                          alt="Item "
+                        />
+                      </Link>
+                    </div>
+                    <div className="nameList">
+                      {oneProduct.name}
+                      {/* <span> {oneProduct.colour} </span> */}
+                    </div>
 
-                <div className="price">
-                  <b>{oneProduct.price} $</b>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
+                    <div className="priceList">{oneProduct.price} $</div>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </section>
     );
   }

@@ -1,33 +1,12 @@
 .nav-container {
   height: 60px;
 }
-/* 
-.headerListContainer {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  width: 10%;
-  background-color: blue;
-  justify-content: space-around;
-} */
 
-/* .headerListContainer li {
-  font-size: 18px;
-} */
-
-/* .headerListContainer a {
-  text-decoration: none;
-} */
-
-/* .nav-input {
-  width: 378px;
-} */
 .navbar {
   background-color: #2d2d2d;
   font-size: 18px;
   letter-spacing: 0.4px;
   color: #666;
-  height: 100%;
   margin: 0 auto;
   padding: 0;
   display: -ms-flexbox;
@@ -41,7 +20,7 @@
 .link-men {
   color: white !important;
   font-size: 16px;
-  font-family: "Roboto", sans-serif;
+  font-family: "FuturaPTWeb-Heavy";
   letter-spacing: 2px;
   font-weight: 900;
   box-sizing: border-box;
@@ -50,12 +29,9 @@
   height: 60px;
   display: flex;
   align-items: center;
-}
-
-.link-men {
-  border-right: 1px solid #525050;
   border-bottom: none;
 }
+
 .link-men:hover,
 .link-woman:hover {
   background-color: #525050;
@@ -78,9 +54,9 @@
 }
 
 .loupe {
-  color: black;
-  background-color: white;
-  font-size: 15px;
+  margin-left: -75px;
+  margin-bottom: 5px;
+  z-index: 10;
 }
 .fa-user-circle {
   color: white;
@@ -92,19 +68,16 @@
   /* background-color: blue; */
 }
 
-/* .searchBar {
-  background-color: red;
-} */
 .searchInput-container {
   /* background-color: violet; */
   width: 100%;
 }
 
-@media screen and (max-width: 576px) {
-  .search-media {
-    width: 100px;
-  }
+.gender a {
+  display: flex;
+  justify-content: center;
 }
+
 .logo {
   height: 30px;
   display: inline-block;
@@ -120,4 +93,24 @@
 
 .HeaderContainer {
   background-color: #2d2d2d;
+}
+
+.user {
+  height: 20px;
+}
+
+.search {
+  height: 20px;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 1135px) {
+  .nav-header-ul-container,
+  .form-search-container {
+    display: none !important;
+  }
+  .navbar-collapse {
+    display: flex;
+    justify-content: flex-end !important;
+  }
 }

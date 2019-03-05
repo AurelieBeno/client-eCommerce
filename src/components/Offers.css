@@ -2,8 +2,18 @@
 .offers p {
   text-align: center;
   margin: 0;
+  letter-spacing: 2px;
 }
 
 .offers .col-lg-6 {
   padding: 10px 0;
+  border: 1px solid #ddd;
+}
+
+.offers h6 {
+  font-family: "FuturaPTWeb-Heavy";
+}
+
+.offers p {
+  font-family: "FuturaPTWeb-Book";
 }

@@ -5,14 +5,15 @@ class Footer extends Component {
   render() {
     return (
       <footer className="page-footer font-small unique-color-dark">
-        <div className="top-footer">
+        <div className="top-footer medias">
           <div className="container">
-            <div className="row py-4 d-flex align-items-center">
-              <div className="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-                <h6 className="mb-0">Medias</h6>
-              </div>
-              <div className="col-md-6 col-lg-7 text-center text-md-right">
-                <h6 className="mb-0">Medias</h6>
+            <div className="row d-flex justify-content-center">
+              <div className="col-12">
+                <img
+                  src="../images/medias.png"
+                  alt="Card"
+                  className="img-medias"
+                />
               </div>
             </div>
           </div>
@@ -133,7 +134,11 @@ class Footer extends Component {
               <p>
                 <a className="link-footer" href="#!">
                   You're in
-                  <img src="#" alt="Uk" />{" "}
+                  <img
+                    src="../images/language.png"
+                    alt="Uk"
+                    className="user"
+                  />{" "}
                 </a>
               </p>
             </div>
