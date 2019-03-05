@@ -34,14 +34,14 @@ class ProductDetails extends Component {
     console.log(productItem);
     return (
       <div className="product-detail-container">
-        <div>
+        {/* <div>
           {texts.map((text, i) => (
             <button key={i} onClick={() => this.handleClick(i)}>
               Click me {i + 1}
             </button>
           ))}
           {clickedText && <p>I clicked on button with text: {clickedText}</p>}
-        </div>
+        </div> */}
         <div className="image-detail">
           <img
             className="detail-img"
@@ -79,6 +79,9 @@ class ProductDetails extends Component {
                 form="formSize"
                 onClick={() => this.handleClick()}
               >
+                <option disabled selected value>
+                  -- select your size --
+                </option>
                 {productItem.size.map((oneSize, index) => {
                   console.log(index, oneSize);
                   return (
