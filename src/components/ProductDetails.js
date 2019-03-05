@@ -71,7 +71,7 @@ class ProductDetails extends Component {
             </small>
           </div>
 
-          <div class="drop">
+          <div className="drop">
             <div>
               <select
                 className="selectSize btn btn-success"
@@ -90,10 +90,10 @@ class ProductDetails extends Component {
               </select>
             </div>
           </div>
-          <button type="button" class="btn btn-success add-cart">
+          <button type="button" className="btn btn-success add-cart">
             ADD TO BAG
           </button>
-          {/* <i class="far fa-heart" />
+          {/* <i className="far fa-heart" />
            */}
         </section>
       </div>
@@ -112,7 +112,7 @@ export default ProductDetails;
 // Carousel photo of product
 
 // id="carouselExampleControls"
-// class="carousel slide"
+// className="carousel slide"
 // data-ride="carousel"
 
 /* <div className="carousel-item">

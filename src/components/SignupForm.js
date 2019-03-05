@@ -33,15 +33,14 @@ class SignupForm extends Component {
 
   render() {
     return (
-      <div className="containerSign">
+      <section className="containerSign">
         <div className="Signup-container container ">
           <div className="LogOrSign-row">
-            {/* <div className="offset-3" /> */}
             <div className="LogOrSign-col col-6 m-auto">
               <h5 className="titleSign ">
                 Inscrivez-vous à l'aide de votre adresse E-mail
               </h5>
-              {/* </div> */}
+
               <form
                 className="signup"
                 onSubmit={event => this.handleSubmit(event)}
@@ -59,7 +58,7 @@ class SignupForm extends Component {
                     className="form-control inputSignup"
                     id="exampleInputEmail1"
                   />
-                  <small id="emailHelp" class="form-text text-muted">
+                  <small id="emailHelp" className="form-text text-muted">
                     We'll never share your email with anyone else.
                   </small>
                 </div>
@@ -99,7 +98,7 @@ class SignupForm extends Component {
                     className=" form-control  inputSignup"
                     id="exampleInputPassword1"
                   />
-                  <small id="emailHelp" class="form-text text-muted">
+                  <small id="emailHelp" className="form-text text-muted">
                     Password must contain 8 caracteres min
                   </small>
                 </div>
@@ -115,16 +114,15 @@ class SignupForm extends Component {
                   </small>
                 </div>
                 <div className="mySubBtn">
-                  <button className="btn signBtn submitBtn">
+                  <button className="btn signBtn submitBtn deleteHover">
                     REJOIGNEZ ASOS
                   </button>
                 </div>
               </form>
             </div>
-            {/* <div className="offset-3" /> */}
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }

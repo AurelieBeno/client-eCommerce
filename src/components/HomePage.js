@@ -91,7 +91,7 @@ class HomePage extends Component {
             role="button"
             data-slide="next"
           >
-            {/* <span class="carousel-control-next-icon" aria-hidden="true" /> */}
+            {/* <span className="carousel-control-next-icon" aria-hidden="true" /> */}
           </a>
         </div>
 

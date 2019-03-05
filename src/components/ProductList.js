@@ -23,9 +23,9 @@ class ProductList extends Component {
           <h2>All Product </h2>
         </div>
         <div className="product-list-container container-fluid">
-          {/*   <div class="dropdown">
+          {/*   <div className="dropdown">
          <button
-            class="btn btn-secondary dropdown-toggle"
+            className="btn btn-secondary dropdown-toggle"
             type="button"
             id="dropdownMenuButton"
             data-toggle="dropdown"
@@ -34,8 +34,8 @@ class ProductList extends Component {
           >
             Gender
           </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#!">
+          <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a className="dropdown-item" href="#!">
               <div>
                 <ul className="ul-container ">
                   {productArray.map(oneProduct => {
@@ -65,7 +65,7 @@ class ProductList extends Component {
               </div>
               Men
             </a>
-            <a class="dropdown-item" href="#!">
+            <a className="dropdown-item" href="#!">
               Women
             </a>
           </div>

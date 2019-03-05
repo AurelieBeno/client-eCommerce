@@ -53,7 +53,7 @@ class Clothing extends Component {
                 Lingerie & Nightwear
               </Link>
             </li>
-            <li class="red">
+            <li className="red">
               <Link to="#" className="col liColor">
                 Outlet
               </Link>
