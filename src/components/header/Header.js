@@ -12,7 +12,7 @@ class Header extends Component {
   render() {
     return (
       <div className="HeaderContainer ">
-        <nav className="navbar container-fluide navbar-expand-lg navbar-dark bg-dark nav-container ">
+        <nav className="navbar container-fluide navbar-expand-lg navbar-dark bg-dark nav-container lt-04">
           <Link className="navbar-brand logo-img" to="/">
             <img className="logo" src="../images/logo.svg" alt="logo" />{" "}
           </Link>

@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import { Link, Route, Switch, Redirect } from "react-router-dom";
 
-import { getProductDetails } from "../api.js";
+import { getProductDetails, addProduct } from "../api.js";
 
 import "./ProductDetails.css";
+import Order from "./Order.js";
 
 var texts = ["S", "M", "L"];
 class ProductDetails extends Component {
@@ -13,9 +15,18 @@ class ProductDetails extends Component {
       productItem: {
         size: []
       },
-      clickedText: ""
+      clickedText: "",
+      isRedirect: false
     };
   }
+
+  cartClick = () => {
+    // console.log(this.state.productItem._id);
+    addProduct(this.state.productItem._id).then(response => {
+      console.log("Add to bag", response.data);
+      this.setState({ isRedirect: true });
+    });
+  };
 
   handleClick = i => {
     this.setState({ clickedText: texts[i] });
@@ -29,52 +40,64 @@ class ProductDetails extends Component {
     });
   }
   render() {
-    const { clickedText } = this.state;
+    const { isRedirect } = this.state;
+    if (isRedirect) {
+      return <Redirect to="/product" />;
+    }
     const { productItem } = this.state;
     console.log(productItem);
     return (
       <div className="product-detail-container">
-        {/* <div>
-          {texts.map((text, i) => (
-            <button key={i} onClick={() => this.handleClick(i)}>
-              Click me {i + 1}
-            </button>
-          ))}
-          {clickedText && <p>I clicked on button with text: {clickedText}</p>}
-        </div> */}
-        <div className="image-detail">
-          <img
-            className="detail-img"
-            src={productItem.baseImageUrl}
-            alt="First slide"
-          />
+        <div
+          className="image-detail container-fluide
+        "
+        >
+          <div className="row rowT">
+            <div className="col-3">
+              <img
+                className="detail-img"
+                src={productItem.baseImageUrl}
+                alt="First slide"
+              />
+            </div>
+          </div>
         </div>
-
-        <section className="product-detail">
+        <section className="container-fluide">
           {/* Change with data from JSON */}
-          <div>
-            <h4>{productItem.name}</h4>
+          <div className="row">
+            <div className="col-10">
+              <h4>{productItem.name}</h4>
+            </div>
           </div>
-          <div className="detail-price">
-            <span className="price"> {productItem.price} $</span>
-            <small>Free Shipping Worldwide *</small>
+          <div className="row">
+            <div className="detail-price col-10">
+              <span className="price"> {productItem.price} $</span>
+              <small>Free Shipping Worldwide *</small>
+            </div>
           </div>
-          <div className="detail-color">
-            <p className="color">
-              <span>Colour: </span> {productItem.colour}
-            </p>
+          <div className="row">
+            <div className="detail-price col-10">
+              <div className="detail-color">
+                <p className="color">
+                  <span>Colour: </span> {productItem.colour}
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="size">
-            <p className="sizeP">Size</p>
-            <small>
-              <a href="#"> Find your size</a>
-            </small>
+          <div className="row">
+            <div className="detail-price col-10">
+              <div className="size">
+                <p className="sizeP">Size</p>
+                <small>
+                  <a href="#!"> Find your size</a>
+                </small>
+              </div>
+            </div>
           </div>
-
           <div className="drop">
             <div>
               <select
-                className="selectSize btn btn-success"
+                className="selectSize lt-04 btn btn-success"
                 name="sizeList"
                 form="formSize"
                 onClick={() => this.handleClick()}
@@ -93,12 +116,24 @@ class ProductDetails extends Component {
               </select>
             </div>
           </div>
-          <button type="button" className="btn btn-success add-cart">
+          <button
+            onClick={() => this.cartClick()}
+            type="button"
+            className="btn btn-success add-cart"
+          >
             ADD TO BAG
           </button>
-          {/* <i className="far fa-heart" />
-           */}
+          {/* 
+          <i className="far fa-heart" /> */}
+          <Link to="/check-out">
+            <button type="button" className="btn btn-success add-cart">
+              CHECK OUT
+            </button>
+          </Link>
         </section>
+        <Switch>
+          <Route path="/check-out" component={Order} />
+        </Switch>
       </div>
     );
   }

@@ -128,7 +128,9 @@ class Footer extends Component {
             </div>
 
             <div className="col-lg-3 col-md-6 col-sm-12 mx-auto mb-4">
-              <h6 className="text-uppercase font-weight-bold">SHOPPING FROM</h6>
+              <h6 className="text-uppercase font-weight-bold ">
+                SHOPPING FROM
+              </h6>
               <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" />
 
               <p>

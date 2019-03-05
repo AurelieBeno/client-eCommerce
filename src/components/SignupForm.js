@@ -55,7 +55,7 @@ class SignupForm extends Component {
                     name="email"
                     type="email"
                     placeholder="blah@blah.com"
-                    className="form-control inputSignup"
+                    className="form-control inputSignup lt-04"
                     id="exampleInputEmail1"
                   />
                   <small id="emailHelp" className="form-text text-muted">
@@ -71,7 +71,7 @@ class SignupForm extends Component {
                     name="firstName"
                     type="text"
                     placeholder=""
-                    className=" form-control inputSignup"
+                    className=" form-control inputSignup lt-04"
                   />
                 </div>
 
@@ -83,7 +83,7 @@ class SignupForm extends Component {
                     name="lastName"
                     type="text"
                     placeholder=""
-                    className=" form-control inputSignup"
+                    className=" form-control inputSignup lt-04"
                   />
                 </div>
                 <div className="form-group">
@@ -95,7 +95,7 @@ class SignupForm extends Component {
                     value={this.state.orginalPassword}
                     name="originalPassword"
                     type="password"
-                    className=" form-control  inputSignup"
+                    className=" form-control  inputSignup lt-04"
                     id="exampleInputPassword1"
                   />
                   <small id="emailHelp" className="form-text text-muted">

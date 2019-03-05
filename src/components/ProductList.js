@@ -27,7 +27,6 @@ class ProductList extends Component {
     super(props);
 
     this.state = {
-      name: "",
       filteredArray: [],
       gender: "",
       color: ""
@@ -67,7 +66,7 @@ class ProductList extends Component {
   };
 
   handleChange = event => {
-    const { name, value } = event.target;
+    const { value } = event.target;
     let genderArray;
     if (value === "Male") {
       genderArray = this.props.productArray.filter(function(product) {
@@ -104,20 +103,10 @@ class ProductList extends Component {
                 <option disabled selected value className="optionitem">
                   select an option
                 </option>
-                <option
-                  // onChange={event => this.genericOnChange(event)}
-                  className="optionitem"
-                  value="Male"
-                  className="text"
-                >
+                <option className="optionitem" value="Male">
                   Male
                 </option>
-                <option
-                  className="optionitem"
-                  // onChange={event => this.genericOnChange(event)}
-                  value="Female"
-                  className="test"
-                >
+                <option className="optionitem" value="Female">
                   Female
                 </option>
               </select>
@@ -134,20 +123,10 @@ class ProductList extends Component {
                 <option disabled selected value className="optionitem">
                   select an option
                 </option>
-                <option
-                  // onChange={event => this.genericOnChange(event)}
-                  className="optionitem"
-                  value="dress"
-                  className="text"
-                >
+                <option className="optionitem" value="dress">
                   Dress
                 </option>
-                <option
-                  className="optionitem"
-                  // onChange={event => this.genericOnChange(event)}
-                  value="shoes"
-                  className="test"
-                >
+                <option className="optionitem" value="shoes">
                   Shoes
                 </option>
               </select>
@@ -189,53 +168,3 @@ class ProductList extends Component {
 }
 
 export default ProductList;
-
-{
-  /*   <div className="dropdown">
-         <button
-            className="btn btn-secondary dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            Gender
-          </button>
-          <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a className="dropdown-item" href="#!">
-              <div>
-                <ul className="ul-container ">
-                  {productArray.map(oneProduct => {
-                    console.log(productArray);
-                    return (
-                      <li className="list-container col-3">
-                        <div className="row img">
-                          <Link to={getProductGender(oneProduct)}>
-                            <img
-                              className="list-img"
-                              src={oneProduct.baseImageUrl}
-                              alt="Item "
-                            />
-                          </Link>
-                        </div>
-                        <div className="row name">
-                          {oneProduct.name}
-                        </div>
-
-                        <div className="price">
-                          <b>{oneProduct.price} $</b>
-                        </div>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-              Men
-            </a>
-            <a className="dropdown-item" href="#!">
-              Women
-            </a>
-          </div>
-        </div> */
-}
