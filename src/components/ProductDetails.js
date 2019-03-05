@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import { Link, Route, Switch, Redirect } from "react-router-dom";
 
-import { getProductDetails } from "../api.js";
+import { getProductDetails, addProduct } from "../api.js";
 
 import "./ProductDetails.css";
+import Order from "./Order.js";
 
 var texts = ["S", "M", "L"];
 class ProductDetails extends Component {
@@ -13,9 +15,18 @@ class ProductDetails extends Component {
       productItem: {
         size: []
       },
-      clickedText: ""
+      clickedText: "",
+      isRedirect: false
     };
   }
+
+  cartClick = () => {
+    // console.log(this.state.productItem._id);
+    addProduct(this.state.productItem._id).then(response => {
+      console.log("Add to bag", response.data);
+      this.setState({ isRedirect: true });
+    });
+  };
 
   handleClick = i => {
     this.setState({ clickedText: texts[i] });
@@ -29,7 +40,10 @@ class ProductDetails extends Component {
     });
   }
   render() {
-    const { clickedText } = this.state;
+    const { clickedText, isRedirect } = this.state;
+    if (isRedirect) {
+      return <Redirect to="/product" />;
+    }
     const { productItem } = this.state;
     console.log(productItem);
     return (
@@ -88,15 +102,27 @@ class ProductDetails extends Component {
               </select>
             </div>
           </div>
-          <button type="button" className="btn btn-success add-cart">
+
+          <button
+            onClick={() => this.cartClick()}
+            type="button"
+            className="btn btn-success add-cart"
+          >
             ADD TO BAG
           </button>
+
           {/* <i className="far fa-heart" />
            */}
-          <button type="button" className="btn btn-success add-cart">
-            CHECK OUT
-          </button>
+          <Link to="/check-out">
+            <button type="button" className="btn btn-success add-cart">
+              CHECK OUT
+            </button>
+          </Link>
         </section>
+
+        <Switch>
+          <Route path="/check-out" component={Order} />
+        </Switch>
       </div>
     );
   }

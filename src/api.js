@@ -32,6 +32,14 @@ export function getProductDetails(productId) {
   return backendApi.get(`/api/product/${productId}`).catch(errorHandler);
 }
 
+export function addProduct(productId) {
+  return backendApi.post(`/api/add-product/${productId}`).catch(errorHandler);
+}
+
+export function getOrder(orderId) {
+  return backendApi.get(`/api/order/${orderId}`).catch(errorHandler);
+}
+
 export function postSignup(userSubmission) {
   return backendApi
     .post("/api/process-signup", userSubmission)
