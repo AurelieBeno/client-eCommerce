@@ -51,7 +51,7 @@ class ProductDetails extends Component {
           <div className="size">
             <p className="sizeP">Size</p>
             <small>
-              <a href="#"> Find your size</a>
+              <a href="#!"> Find your size</a>
             </small>
             {/* <p>{productItem.size}</p> */}
           </div>

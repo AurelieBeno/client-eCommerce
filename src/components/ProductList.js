@@ -8,9 +8,10 @@ function getProductAdress(product) {
   return `/product/${product._id}`;
 }
 
-function getProductGender(product) {
-  return `/product/${product.gender}`;
-}
+// This function for Filter Bar based on gender
+// function getProductGender(product) {
+//   return `/product/${product.gender}`;
+// }
 
 class ProductList extends Component {
   render() {
@@ -21,6 +22,7 @@ class ProductList extends Component {
       <section className="product-list-container">
         <h2>All Product </h2>
 
+        {/* This function for Filter Bar based on gender */}
         {/*   <div class="dropdown">
          <button
             class="btn btn-secondary dropdown-toggle"
