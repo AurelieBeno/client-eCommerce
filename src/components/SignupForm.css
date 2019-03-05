@@ -4,57 +4,40 @@
   background-color: #fff;
   padding: 20px 50px 0 50px;
 }
-/* 
-.paraSignup {
-  border-bottom: 0;
-  margin-top: 5px;
-  text-align: center;
-  padding-top: 20px;
-} */
-/* .Signup-title {
-  border: 1px solid #999;
-  border-bottom: 0;
-  width: 50%;
-} */
-.title {
-  text-decoration: none;
-  font-family: "Roboto ", Tahoma, Geneva, Verdana, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.4px;
-  display: block;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
 
-.Signup-container h5 {
+.titleSign {
+  text-decoration: none;
+  font-family: "FuturaPTWeb-Heavy";
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
   padding-bottom: 5px;
-  padding-top: 60px;
   color: #222;
 }
 
 .signBtn {
-  margin: 32px 0 0 40px;
-  /* width: 55%; */
   height: 45px;
-  font-family: "Roboto ", Tahoma, Geneva, Verdana, Arial, sans-serif;
+  width: 250px;
+  font-family: "FuturaPTWeb-Heavy";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 2px;
-  margin-bottom: 22px;
 }
 .submitBtn {
   border-radius: 0;
   background: #2d2d2d;
   color: #fff;
   border: 0;
-  /* min-width: 200px; */
   text-transform: uppercase;
   white-space: normal;
+}
+
+.mySubBtn {
+  text-align: center;
 }
 
 .labelForm {

@@ -13,7 +13,7 @@ class LogOrSign extends Component {
     return (
       <div
         className="Signup-container 
-      container"
+      container LogOrSign-container"
       >
         <div className="testContainer container">
           <div className="row testRow">
