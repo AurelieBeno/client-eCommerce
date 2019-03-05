@@ -86,3 +86,9 @@
 .spanLogin {
   font-weight: 700;
 }
+
+@media (max-width: 992px) {
+  .containerSign {
+    margin-top: 50px;
+  }
+}

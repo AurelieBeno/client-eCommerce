@@ -17,12 +17,12 @@ class LogOrSign extends Component {
       >
         <div className="testContainer container">
           <div className="row testRow">
-            <div className="col-lg-6 col-sm-9 premier">
+            <div className="col-lg-6 col-sm-12 premier">
               <Link className="Link" to="/logOrSign/signup">
                 Nouveau chez asos ?
               </Link>
             </div>
-            <div className="col-lg-6 col-sm-9 second">
+            <div className="col-lg-6 col-sm-12 second">
               <Link className="Link" to="/logOrSign/login">
                 Connectez-vous !
               </Link>

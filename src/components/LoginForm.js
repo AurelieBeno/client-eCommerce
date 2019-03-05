@@ -35,7 +35,7 @@ class LoginForm extends Component {
       <section className="containerSign">
         <div className="LoginForm-container container">
           <div className="LogOrSign-row">
-            <div className="LogOrSign-col col-6 m-auto">
+            <div className="LogOrSign-col col-lg-6 col-md-8 col-sm-10 m-auto">
               <h5 className="titleSign ">Connection avec une adresse e-mail</h5>
 
               <form
@@ -49,10 +49,7 @@ class LoginForm extends Component {
                 >
                   <div className="form-group ">
                     <div className="row">
-                      <label
-                        className="labelForm col-sm-6"
-                        htmlFor="exampleInputEmail1"
-                      >
+                      <label className="labelForm" htmlFor="exampleInputEmail1">
                         Email :
                       </label>
                     </div>
