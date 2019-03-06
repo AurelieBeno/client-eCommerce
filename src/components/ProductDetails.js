@@ -41,6 +41,7 @@ class ProductDetails extends Component {
   }
   render() {
     const { isRedirect } = this.state;
+    // redirect user to product list after click add to cart
     if (isRedirect) {
       return <Redirect to="/product" />;
     }

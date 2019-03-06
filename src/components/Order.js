@@ -29,6 +29,7 @@ class Order extends Component {
     console.log("HolaHalo", productItem);
     return (
       <div className="product-detail-container">
+        <h2>MY BAG</h2>
         {cart.map(oneCart => {
           return (
             <section>
