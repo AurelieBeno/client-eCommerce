@@ -32,6 +32,9 @@ export function getProductDetails(productId) {
   return backendApi.get(`/api/product/${productId}`).catch(errorHandler);
 }
 
+export function getProductByGender() {
+  return backendApi.get("/api/product/gender").catch(errorHandler);
+}
 export function addProduct(productId) {
   return backendApi.post(`/api/add-product/${productId}`).catch(errorHandler);
 }

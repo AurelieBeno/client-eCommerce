@@ -40,7 +40,7 @@ class ProductDetails extends Component {
     });
   }
   render() {
-    const { clickedText, isRedirect } = this.state;
+    const { isRedirect } = this.state;
     if (isRedirect) {
       return <Redirect to="/product" />;
     }
@@ -48,49 +48,63 @@ class ProductDetails extends Component {
     console.log(productItem);
     return (
       <div className="product-detail-container">
-        <div>
-          {texts.map((text, i) => (
-            <button key={i} onClick={() => this.handleClick(i)}>
-              Click me {i + 1}
-            </button>
-          ))}
-          {clickedText && <p>I clicked on button with text: {clickedText}</p>}
+        <div
+          className="image-detail container-fluide
+        "
+        >
+          <div className="row rowT">
+            <div className="col-3">
+              <img
+                className="detail-img"
+                src={productItem.baseImageUrl}
+                alt="First slide"
+              />
+            </div>
+          </div>
         </div>
-        <div className="image-detail">
-          <img
-            className="detail-img"
-            src={productItem.baseImageUrl}
-            alt="First slide"
-          />
-        </div>
-        <section className="product-detail">
+        <section className="container-fluide">
           {/* Change with data from JSON */}
-          <div>
-            <h4>{productItem.name}</h4>
+          <div className="row">
+            <div className="col-10">
+              <h4>{productItem.name}</h4>
+            </div>
           </div>
-          <div className="detail-price">
-            <span className="price"> {productItem.price} $</span>
-            <small>Free Shipping Worldwide *</small>
+          <div className="row">
+            <div className="detail-price col-10">
+              <span className="price"> {productItem.price} $</span>
+              <small>Free Shipping Worldwide *</small>
+            </div>
           </div>
-          <div className="detail-color">
-            <p className="color">
-              <span>Colour: </span> {productItem.colour}
-            </p>
+          <div className="row">
+            <div className="detail-price col-10">
+              <div className="detail-color">
+                <p className="color">
+                  <span>Colour: </span> {productItem.colour}
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="size">
-            <p className="sizeP">Size</p>
-            <small>
-              <a href="#!"> Find your size</a>
-            </small>
+          <div className="row">
+            <div className="detail-price col-10">
+              <div className="size">
+                <p className="sizeP">Size</p>
+                <small>
+                  <a href="#!"> Find your size</a>
+                </small>
+              </div>
+            </div>
           </div>
           <div className="drop">
             <div>
               <select
-                className="selectSize btn btn-success"
+                className="selectSize lt-04 btn btn-success"
                 name="sizeList"
                 form="formSize"
                 onClick={() => this.handleClick()}
               >
+                <option disabled selected value>
+                  -- select your size --
+                </option>
                 {productItem.size.map((oneSize, index) => {
                   console.log(index, oneSize);
                   return (
@@ -102,7 +116,6 @@ class ProductDetails extends Component {
               </select>
             </div>
           </div>
-
           <button
             onClick={() => this.cartClick()}
             type="button"
@@ -110,16 +123,14 @@ class ProductDetails extends Component {
           >
             ADD TO BAG
           </button>
-
-          {/* <i className="far fa-heart" />
-           */}
+          {/* 
+          <i className="far fa-heart" /> */}
           <Link to="/check-out">
             <button type="button" className="btn btn-success add-cart">
               CHECK OUT
             </button>
           </Link>
         </section>
-
         <Switch>
           <Route path="/check-out" component={Order} />
         </Switch>

@@ -1,10 +1,13 @@
 .ListItem-page {
   background-color: #525050;
-  letter-spacing: 0.4px;
   color: #fff;
   border: none;
   padding: 0 10px;
   width: 100%;
+}
+
+.lt-04 {
+  letter-spacing: 0.4px;
 }
 
 li {

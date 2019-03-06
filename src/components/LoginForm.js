@@ -60,7 +60,7 @@ class LoginForm extends Component {
                         name="email"
                         type="email"
                         placeholder="blah@blah.com"
-                        className="form-control inputSignup "
+                        className="form-control inputSignup lt-04 "
                         id="exampleInputEmail1"
                       />
                     </div>
@@ -78,7 +78,7 @@ class LoginForm extends Component {
                       value={this.state.originalPassword}
                       name="originalPassword"
                       type="password"
-                      className="form-control inputSignup"
+                      className="form-control inputSignup lt-04"
                       id="exampleInputPassword1"
                     />
                   </div>

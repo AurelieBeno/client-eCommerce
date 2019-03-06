@@ -7,7 +7,7 @@ import ProductList from "../ProductList";
 class Clothing extends Component {
   render() {
     return (
-      <div className="ListItem-page">
+      <div className="ListItem-page lt-04">
         {/* <h3>SHOP BY PRODUCT</h3> */}
         <div className="container-fluid">
           <ul className="row myRow">
