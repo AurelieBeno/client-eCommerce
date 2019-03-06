@@ -3,6 +3,8 @@ import React, { Component } from "react";
 
 import "./SignupForm.css";
 
+import { Redirect } from "react-router-dom";
+
 // import LoginPage from "./components/LoginForm";
 import { postSignup } from "../api.js";
 

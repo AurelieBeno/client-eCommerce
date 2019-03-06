@@ -142,7 +142,7 @@ class ProductList extends Component {
           </div>
           <ul className="row ul-container ">
             {filteredArray.map(oneProduct => {
-              console.log(filteredArray);
+              // console.log(filteredArray);
               return (
                 <li className="list-container col-lg-3 col-md-4 col-sm-6">
                   <div className="addMargin">

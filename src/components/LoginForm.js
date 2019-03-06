@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import { Redirect } from "react-router-dom";
+
 import { postLogIn } from "../api.js";
 
 import "./LoginForm.css";
@@ -10,7 +12,8 @@ class LoginForm extends Component {
 
     this.state = {
       email: "",
-      originalPassword: ""
+      originalPassword: "",
+      isSubmit: false
     };
   }
 
@@ -27,11 +30,15 @@ class LoginForm extends Component {
     postLogIn(this.state).then(response => {
       console.log("Log In", response.data);
       this.props.loginSuccess(response.data);
+      this.setState({ isSubmit: true });
     });
   }
 
   render() {
-    return (
+    console.log("coucou31", this.props);
+    return this.state.isSubmit ? (
+      <Redirect to="/" />
+    ) : (
       <section className="containerSign">
         <div className="LoginForm-container container">
           <div className="LogOrSign-row">

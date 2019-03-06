@@ -62,7 +62,7 @@ class App extends Component {
   // }
 
   render() {
-    console.log(this.state, "hello State in App.js");
+    // console.log(this.state, "hello State in App.js");
     return (
       <header className="App-header">
         <div>

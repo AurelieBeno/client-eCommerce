@@ -19,6 +19,7 @@ class Header extends Component {
   }
   handleChange = event => {
     const { value } = event.target;
+    console.log("ello ", value);
     let genderArray;
     if (value === "Men") {
       genderArray = this.props.productArray.filter(function(product) {
@@ -40,7 +41,7 @@ class Header extends Component {
   }
 
   render() {
-    // const { filteredArray } = this.state;
+    // const { filteredArray } = this.props.state;
     return (
       <div className="HeaderContainer ">
         <nav className="navbar container-fluide navbar-expand-lg navbar-dark bg-dark nav-container lt-04">
@@ -54,7 +55,7 @@ class Header extends Component {
                 <NavLink
                   className="nav-link link-woman"
                   to="/product"
-                  onChange={this.handleChange}
+                  onClick={this.handleChange}
                   value="women"
                 >
                   Women

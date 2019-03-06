@@ -28,34 +28,58 @@ class Order extends Component {
 
     console.log("HolaHalo", productItem);
     return (
-      <div className="product-detail-container">
+      <section className="cart-container container">
+        <div className="row rowTitle">
+          <div className="col-6  offset-md-4 titleCart">
+            <div className="cartTitle">
+              <h3 className="fth cartH3"> My bag</h3>
+              <small className="small">Items are reserved for 60 minutes</small>
+            </div>
+          </div>
+          <hr />
+        </div>
         {cart.map(oneCart => {
           return (
-            <section>
-              <div>
-                <img
-                  className="detail-img"
-                  src={oneCart.baseImageUrl}
-                  alt="models"
-                />
+            <div>
+              <div className="row contentdetail">
+                <div className="test col-6 offset-md-2 ">
+                  <div className="colColor">
+                    <div className="imageCart ">
+                      <img
+                        className="detail-img-cart"
+                        src={oneCart.baseImageUrl}
+                        alt="models"
+                      />
+                    </div>
+                  </div>
+                  <div className="contentContainer col-lg-4 col-sm-12">
+                    <div className="cartPrice fth">$ {oneCart.price}</div>
+                    <div className="cartName">{oneCart.name}</div>
+                    <div className="cartColor">{oneCart.colour}</div>
+                    <div className="subTotalContainer">
+                      <div className="cartSubPrice fth">
+                        Sub-total $ {totalPrice}
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div>{oneCart.name}</div>
-              <div>{oneCart.price}</div>
-              <div>{oneCart.colour}</div>
-              <div>{oneCart.size}</div>
-              <div>{oneCart.totalPrice}</div>
-            </section>
+            </div>
           );
         })}
-        <p>TOTAL {totalPrice}</p>
-        <button
-          type="button"
-          className="btn btn-success add-cart"
-          // key={}
-        >
-          PAYMENT
-        </button>
-      </div>
+        <div className="col-4 totalContainer">
+          <div className="totalPrice fth">
+            <p>TOTAL $ {totalPrice}</p>
+          </div>
+          <button
+            type="button"
+            className="btn btn-success add-cart"
+            // key={}
+          >
+            PAYMENT
+          </button>
+        </div>
+      </section>
     );
   }
 }
