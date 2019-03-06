@@ -143,6 +143,12 @@ class Footer extends Component {
                   />{" "}
                 </a>
               </p>
+
+              <p>
+                <a className="link-footer" href="#!">
+                  Log Out
+                </a>
+              </p>
             </div>
           </div>
         </div>

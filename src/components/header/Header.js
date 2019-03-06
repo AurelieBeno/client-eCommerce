@@ -9,7 +9,38 @@ import "./SearchBar.css";
 import Clothing from "./Clothing";
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      filteredArray: [],
+      gender: ""
+    };
+  }
+  handleChange = event => {
+    const { value } = event.target;
+    let genderArray;
+    if (value === "Men") {
+      genderArray = this.props.productArray.filter(function(product) {
+        return product.gender === "Male";
+      });
+    } else if (value === "women") {
+      genderArray = this.props.productArray.filter(function(product) {
+        return product.gender === "Female";
+      });
+    }
+
+    this.setState({ gender: value, filteredArray: genderArray });
+  };
+
+  componentDidMount() {
+    this.setState({
+      filteredArray: this.props.productArray
+    });
+  }
+
   render() {
+    // const { filteredArray } = this.state;
     return (
       <div className="HeaderContainer ">
         <nav className="navbar container-fluide navbar-expand-lg navbar-dark bg-dark nav-container lt-04">
@@ -19,12 +50,17 @@ class Header extends Component {
 
           <div className=" navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto nav-header-ul-container">
-              <li className="nav-item gender">
-                <NavLink className="nav-link link-woman" to="/women">
+              <li className="nav-item genderHeader">
+                <NavLink
+                  className="nav-link link-woman"
+                  to="/product"
+                  onChange={this.handleChange}
+                  value="women"
+                >
                   Women
                 </NavLink>
               </li>
-              <li className="nav-item gender">
+              <li className="nav-item genderHeader">
                 <NavLink className="nav-link link-men " to="/men">
                   Men
                 </NavLink>

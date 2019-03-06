@@ -8,21 +8,41 @@
   padding-bottom: 20px;
 }
 /* ********************************************** */
-.gender,
-.optionitem {
-  font-family: "FuturaPTWeb-Book";
-  letter-spacing: 1px;
+
+.rowFilter {
+  background-color: #eee;
 }
+.selectFilter {
+  /* background-color: blue; */
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-family: "FuturaPTWeb-Book";
+}
+/*
 .filter-container {
   background-color: orange;
   /* height: 50px; */
-  display: flex;
-  flex-direction: column;
-}
+/* display: flex; */
+/* flex-direction: column; */
+*/
+/* }
 .genderList {
   background-color: violet;
   width: 8%;
+} */
+
+.filter-container {
+  background-color: red;
+  height: 100px;
+  width: 500px;
 }
+/* .gender {
+  background-color: blue;
+} */
+.genderList {
+  background-color: orange;
+}
+
 /********************************************* */
 .list-img {
   width: 100%;
