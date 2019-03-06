@@ -39,8 +39,8 @@ export function addProduct(productId) {
   return backendApi.post(`/api/add-product/${productId}`).catch(errorHandler);
 }
 
-export function getOrder(orderId) {
-  return backendApi.get(`/api/order/${orderId}`).catch(errorHandler);
+export function getOrder() {
+  return backendApi.get("/api/check-out").catch(errorHandler);
 }
 
 export function postSignup(userSubmission) {

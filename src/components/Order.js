@@ -7,67 +7,56 @@ import "./Order.css";
 class Order extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      productItem: [],
+      cart: [],
+      totalPrice: ""
+    };
   }
 
   componentDidMount() {
-    const { params } = this.props.match;
-
-    getOrder(params.productId).then(response => {
-      console.log("Product Details", response.data);
+    getOrder().then(response => {
+      console.log("Order Details", response.data);
+      this.setState(response.data);
     });
   }
   render() {
-    const { productId } = this.params;
-    console.log(productId);
+    const { productItem, cart, totalPrice } = this.state;
+    console.log(this.state, "show me the state  ");
+
+    console.log("Show me the cart", cart);
+
+    console.log("HolaHalo", productItem);
     return (
-      <div>
-        <div className="product-detail-container">
-          <section className="product-detail">
-            <div className="image-detail">
-              <img
-                className="detail-img"
-                src={productId.baseImageUrl}
-                alt="First slide"
-              />
-            </div>
-            <div>
-              <h4>{productId.name}</h4>
-            </div>
-            <div className="detail-price">
-              <span className="price"> {productId.price} $</span>
-            </div>
-            <div className="detail-color">
-              <p className="color">
-                <span>{productId.colour}</span>
-              </p>
-            </div>
-            <div className="size">
-              <p className="sizeP">Size</p>
-            </div>
-
-            <div className="product-detail-container">
-              <section className="product-detail">
-                <div className="image-detail">
-                  <h2>TOTAL</h2>
-                </div>
-              </section>
-            </div>
-
-            <button
-              type="button"
-              className="btn btn-success add-cart"
-              // key={}
-            >
-              PAYMENT
-            </button>
-            {/* <i className="far fa-heart" />
-             */}
-          </section>
-        </div>
+      <div className="product-detail-container">
+        {cart.map(oneCart => {
+          return (
+            <section>
+              <div>
+                <img
+                  className="detail-img"
+                  src={oneCart.baseImageUrl}
+                  alt="models"
+                />
+              </div>
+              <div>{oneCart.name}</div>
+              <div>{oneCart.price}</div>
+              <div>{oneCart.colour}</div>
+              <div>{oneCart.size}</div>
+              <div>{oneCart.totalPrice}</div>
+            </section>
+          );
+        })}
+        <p>TOTAL {totalPrice}</p>
+        <button
+          type="button"
+          className="btn btn-success add-cart"
+          // key={}
+        >
+          PAYMENT
+        </button>
       </div>
     );
   }
 }
-
 export default Order;
