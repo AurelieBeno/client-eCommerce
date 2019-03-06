@@ -16,6 +16,7 @@ import LogOrSign from "./components/LogOrSign";
 import NotFound from "./components/NotFound";
 import ProductList from "./components/ProductList";
 import ProductDetails from "./components/ProductDetails";
+import Order from "./components/Order";
 
 import { getProductList } from "./api.js";
 
@@ -83,6 +84,7 @@ class App extends Component {
           <Route path="/men" component={Men} />
           <Route path="/offers" component={Offers} />
           <Route path="/product/:productId" component={ProductDetails} />
+          <Route path="/check-out" component={Order} />
           <Route
             path="/product"
             render={() => {
