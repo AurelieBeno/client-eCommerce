@@ -92,47 +92,49 @@ class ProductList extends Component {
           <h2>All Product </h2>
         </div>
         <div className="product-list-container container-fluid">
-          <div className="filter-container container-fluid ">
-            <div className="gender row">Gender</div>
-            <div className="genderList col-lg-2 col-sm-12">
-              <select
-                // className=""
-                onChange={this.handleChange}
-                name="gender"
-              >
-                <option disabled selected value className="optionitem">
-                  select an option
-                </option>
-                <option className="optionitem" value="Male">
-                  Male
-                </option>
-                <option className="optionitem" value="Female">
-                  Female
-                </option>
-              </select>
-            </div>
-          </div>
-          <div className="gender row">Product type</div>
-          <div className="genderList col-lg-2 col-sm-12">
-            <div>
-              <select
-                // className=""
-                onChange={this.handleChangeColor}
-                name="gender"
-              >
-                <option disabled selected value className="optionitem">
-                  select an option
-                </option>
-                <option className="optionitem" value="dress">
-                  Dress
-                </option>
-                <option className="optionitem" value="shoes">
-                  Shoes
-                </option>
-              </select>
-            </div>
-          </div>
+          <div className="row rowFilter">
+            <div className="col-6 m-auto d-flex">
+              <div className="col-lg-6 col-sm-12 w-100">
+                {/* <div className="gender ">Gender</div> */}
+                <select
+                  className="selectFilter text-center  "
+                  onChange={this.handleChange}
+                  name="gender"
+                >
+                  <option disabled selected value className="optionitem">
+                    sort by gender
+                  </option>
+                  <option className="optionitem" value="Male">
+                    Male
+                  </option>
+                  <option className="optionitem" value="Female">
+                    Female
+                  </option>
+                </select>
+              </div>
 
+              <div className="col-lg-6 col-sm-12 w-100 ">
+                {/* <div className="gender">Product type</div> */}
+
+                <select
+                  className="selectFilter"
+                  onChange={this.handleChangeColor}
+                  name="gender"
+                >
+                  <option disabled selected value className="optionitem">
+                    Sort by type
+                  </option>
+                  <option className="optionitem" value="dress">
+                    Dress
+                  </option>
+                  <option className="optionitem" value="shoes">
+                    Shoes
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+          {/* productList */}
           <div className="nav-productList">
             {/* <ul className="nav-ul-container"> */}
 
@@ -140,7 +142,7 @@ class ProductList extends Component {
           </div>
           <ul className="row ul-container ">
             {filteredArray.map(oneProduct => {
-              // console.log(productArray);
+              console.log(filteredArray);
               return (
                 <li className="list-container col-lg-3 col-md-4 col-sm-6">
                   <div className="addMargin">

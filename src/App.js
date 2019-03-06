@@ -3,7 +3,6 @@ import React, { Component } from "react";
 // import axios from "axios";
 
 import { Switch, Route } from "react-router-dom";
-// import { Button } from "react-bootstrap";
 
 import "./App.css";
 import Header from "./components/header/Header";
@@ -91,6 +90,13 @@ class App extends Component {
               return <ProductList productArray={this.state.productArray} />;
             }}
           />
+          <Route path="/women/product" component={ProductList} />
+          {/* <Route
+            path="/women/product"
+            render={() => {
+              return <ProductList productArray={this.state.productArray} />;
+            }}
+          /> */}
 
           <Route
             path="/logOrSign"
