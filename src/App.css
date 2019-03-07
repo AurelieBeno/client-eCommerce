@@ -8,3 +8,7 @@ body {
 /*    */
 
 /* #f1f1f1e6 */
+
+button:hover {
+  text-transform: none;
+}

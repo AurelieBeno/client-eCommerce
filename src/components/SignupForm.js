@@ -38,7 +38,7 @@ class SignupForm extends Component {
       <section className="containerSign">
         <div className="Signup-container container ">
           <div className="LogOrSign-row">
-            <div className="LogOrSign-col col-lg-6 col-md-8 col-sm-10 m-auto">
+            <div className="LogOrSign-col col-lg-8 col-md-8 col-sm-10 m-auto">
               <h5 className="titleSign ">
                 Inscrivez-vous à l'aide de votre adresse E-mail
               </h5>

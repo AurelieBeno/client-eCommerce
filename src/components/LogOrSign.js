@@ -16,23 +16,21 @@ class LogOrSign extends Component {
     console.log(currentUser);
 
     return (
-      <div>
-        <div
-          className="Signup-container 
-        container LogOrSign-container"
-        >
-          <div className="testContainer container">
-            <div className="row testRow">
-              <div className="col-lg-6 col-sm-12 premier ">
-                <Link className="Link" to="/logOrSign/signup">
-                  Nouveau chez asos ?
-                </Link>
-              </div>
-              <div className="col-lg-6 col-sm-12 second">
-                <Link className="Link" to="/logOrSign/login">
-                  Connectez-vous !
-                </Link>
-              </div>
+      <div
+        className="Signup-container 
+      container LogOrSign-container col-lg-8 col-md-10 col-sm-12 m-auto"
+      >
+        <div className="testContainer container">
+          <div className="row testRow">
+            <div className="col-lg-6 col-sm-12 premier ">
+              <Link className="Link" to="/logOrSign/signup">
+                Nouveau chez asos ?
+              </Link>
+            </div>
+            <div className="col-lg-6 col-sm-12 second">
+              <Link className="Link" to="/logOrSign/login">
+                Connectez-vous !
+              </Link>
             </div>
           </div>
         </div>

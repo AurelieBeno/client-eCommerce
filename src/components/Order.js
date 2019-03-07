@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Switch, Route, Link, Redirect } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 
 import { getOrder, deleteProduct } from "../api.js";
 
@@ -18,106 +18,82 @@ class Order extends Component {
       isPayed: false
     };
   }
-  // handleClick(e) {
-  //   e.preventDefault();
-
-  //   console.log("The link was clicked.");
-  //   this.setState({ isPayed: true });
-  // }
-
-  // deleteClick = () => {
-  //   console.log(
-  //     "Check now",
-  //     this.state.cart.find(function(element) {
-  //       return (element.productId = 1398013);
-  //     })
-  //   );
-  //   deleteProduct(this.state.cart._id).then(response => {
-  //     console.log("Delete from bag", response.data);
-  //     // this.setState({ isRedirect: true });
-  //   });
-  // };
-
-  // deleteClick(productIndex) {
-  //   console.log(productIndex);
-  //   const cart = this.state.cart;
-  //   console.log(cart[productIndex]._id);
-  //   deleteProduct(cart[productIndex]._id);
-
-  //   this.setState({ cartArray: cart });
-  // }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     getOrder().then(response => {
       console.log("Order Details", response.data);
       this.setState(response.data);
     });
   }
+
+  // function to create delete button
+  deleteClick(product) {
+    deleteProduct(product._id).then(response => {
+      console.log("Delete Product", response.data);
+      this.setState(response.data);
+    });
+  }
+
   render() {
-    const { productItem, cart, totalPrice } = this.state;
+    const { cart, totalPrice } = this.state;
     // console.log(this.state, "show me the state  ");
 
-    // console.log("Show me the cart", cart);
-
-    // console.log("HolaHalo", productItem);
     return (
       <section className="cart-container container">
-        <div className="row rowTitle">
-          <div className="col-6  offset-md-4 titleCart">
-            <div className="cartTitle">
+        <div className="row rowTitle m-auto w-100">
+          <div className="col-12 titleCart">
+            <div className="col-12 text-center titleCartNew">
               <h3 className="fth cartH3"> My bag</h3>
               <small className="small">Items are reserved for 60 minutes</small>
             </div>
           </div>
           <hr />
-        </div>
-        {cart.map((oneCart, index) => {
-          return (
-            <div>
-              <div className="row contentdetail">
-                <div className="test col-6 offset-md-2 ">
-                  <div className="colColor">
-                    <div className="imageCart ">
-                      <button
-                        onClick={() => this.deleteClick(index)}
-                        type="button"
-                        className="bag-remove"
-                      >
-                        <i className="fas fa-times" />
-                      </button>
-                      <img
-                        className="detail-img-cart"
-                        src={oneCart.baseImageUrl}
-                        alt="models"
-                      />
-                    </div>
+          <div className="col-lg-10 col-md-10 col-sm-12 row">
+            {cart.map(oneCart => {
+              return (
+                <div className="col-lg-4 col-md-6 col-sm-12 d-flex oneCart">
+                  <button
+                    onClick={() => this.deleteClick(oneCart)}
+                    type="button"
+                    className="bag-remove"
+                  >
+                    <i className="fas fa-times" />
+                  </button>
+
+                  <div className="contentImg">
+                    <img
+                      className="detail-img-cart"
+                      src={oneCart.baseImageUrl}
+                      alt="models"
+                    />
                   </div>
-                  <div className="contentContainer col-lg-4 col-sm-12">
+                  <div className="contentContainer contentText">
                     <div className="cartPrice fth">$ {oneCart.price}</div>
                     <div className="cartName">{oneCart.name}</div>
                     <div className="cartColor">{oneCart.colour}</div>
                   </div>
                 </div>
-              </div>
-            </div>
-          );
-        })}
-        <div className="col-4 totalContainer">
-          <div className="totalPrice fth">
-            <p>TOTAL $ {totalPrice}</p>
+              );
+            })}
           </div>
-          <button
-            type="button"
-            className="btn btn-success add-cart"
+          <div className=" totalContainer col-lg-2 col-md-2 col-sm-12">
+            <div className="totalPrice fth">
+              <p>TOTAL $ {totalPrice}</p>
+            </div>
+            <button
+              type="button"
+              className="btn btn-success add-cart"
 
-            // key={}
-          >
-            <Link to="/afterPayement">PAYMENT</Link>
-          </button>
+              // key={}
+            >
+              <Link to="/afterPayement">PAYMENT</Link>
+            </button>
+          </div>
+          <Switch>
+            <Route path=" /afterPayement" component={AfterPayement} />
+          </Switch>
         </div>
-        <Switch>
-          <Route path=" /afterPayement" component={AfterPayement} />
-        </Switch>
       </section>
     );
   }

@@ -1,10 +1,12 @@
 .detail-img-cart {
   width: 140px;
   height: 160px;
+  object-fit: contain;
   /* background-color: violet; */
 }
 .cart-container {
   margin-top: 50px;
+  margin-bottom: 50px;
   background-color: #eee;
 }
 .imageCart {
@@ -13,12 +15,13 @@
 }
 .rowTitle {
   background-color: white;
+  padding-bottom: 40px;
 }
 
 .contentdetail {
   background-color: #fff;
-  height: 80%;
   justify-content: center;
+  margin: 10px;
 }
 .cartDetailItem {
   display: flex;
@@ -31,7 +34,7 @@
   /* position: relative;
   top: 100px;
   left: 100px; */
-  background-color: blue;
+  /* background-color: blue; */
   width: 100%;
 }
 .totalPrice {
@@ -41,7 +44,11 @@
 .totalContainer {
   /* background-color: orange; */
   margin: 0 auto;
+  padding: 20px 0;
   text-align: center;
+  position: sticky;
+  top: 0;
+  height: 80px;
 }
 
 .cartTitle {
@@ -98,4 +105,17 @@
 }
 .fth {
   font-family: "FuturaPTWeb-Heavy";
+}
+
+.contentText,
+.contentImg {
+  margin: 0 5px;
+}
+
+.titleCartNew {
+  margin: 10px 0 30px 0;
+}
+
+.oneCart {
+  margin-bottom: 20px;
 }
