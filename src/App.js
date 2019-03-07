@@ -16,8 +16,9 @@ import NotFound from "./components/NotFound";
 import ProductList from "./components/ProductList";
 import ProductDetails from "./components/ProductDetails";
 import Order from "./components/Order";
+import UserAccount from "./components/UserAccount";
 
-import { getProductList } from "./api.js";
+import { getProductList, getLogOut } from "./api.js";
 
 class App extends Component {
   constructor(props) {
@@ -52,14 +53,17 @@ class App extends Component {
       this.setState({ productArray: response.data });
     });
   }
-  // logoutClick() {
-  //   // Logout to the backend
-  //   getLogOut().then(response => {
-  //     console.log("Log out", response.data);
-  //     // set the currentUser state to empty
-  //     this.updateUser(null);
-  //   });
-  // }
+
+  logoutClick() {
+    // Logout to the backend
+    console.log("something happened");
+
+    getLogOut().then(response => {
+      console.log("Log out", response.data);
+      // set the currentUser state to empty
+      this.updateUser(null);
+    });
+  }
 
   render() {
     // console.log(this.state, "hello State in App.js");
@@ -68,6 +72,11 @@ class App extends Component {
         <div>
           <Header />
         </div>
+
+        {/* Emergency Log Out, will be deleted once Logout UserAccount is working */}
+        {this.state.currentUser ? (
+          <button onClick={() => this.logoutClick()}>log out</button>
+        ) : null}
         <div>
           <Offers />
         </div>
@@ -97,6 +106,18 @@ class App extends Component {
               return <ProductList productArray={this.state.productArray} />;
             }}
           /> */}
+          <Route
+            path="/user-account"
+            component={UserAccount}
+            render={() => {
+              return (
+                <UserAccount
+                  currentUser={this.state.currentUser}
+                  logoutSuccess={user => this.updateUser(null)}
+                />
+              );
+            }}
+          />
 
           <Route
             path="/logOrSign"
@@ -106,6 +127,7 @@ class App extends Component {
                   currentUser={this.state.currentUser}
                   signupSuccess={user => this.updateUser(user)}
                   loginSuccess={user => this.updateUser(user)}
+                  logoutClick={event => this.logoutClick(event)}
                 />
               );
             }}
