@@ -27,7 +27,6 @@ class Order extends Component {
     });
   }
 
-  // function to create delete button
   deleteClick(product) {
     deleteProduct(product._id).then(response => {
       console.log("Delete Product", response.data);
@@ -53,14 +52,6 @@ class Order extends Component {
             {cart.map(oneCart => {
               return (
                 <div className="col-lg-4 col-md-6 col-sm-12 d-flex oneCart">
-                  <button
-                    onClick={() => this.deleteClick(oneCart)}
-                    type="button"
-                    className="bag-remove"
-                  >
-                    <i className="fas fa-times" />
-                  </button>
-
                   <div className="contentImg">
                     <img
                       className="detail-img-cart"
@@ -73,6 +64,13 @@ class Order extends Component {
                     <div className="cartName">{oneCart.name}</div>
                     <div className="cartColor">{oneCart.colour}</div>
                   </div>
+                  <button
+                    onClick={() => this.deleteClick(oneCart)}
+                    type="button"
+                    className="bag-remove"
+                  >
+                    <i className="fas fa-times" />
+                  </button>
                 </div>
               );
             })}
