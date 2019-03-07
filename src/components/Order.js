@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route, Link, Redirect } from "react-router-dom";
 
 import { getOrder, deleteProduct } from "../api.js";
 
@@ -35,9 +35,15 @@ class Order extends Component {
   }
 
   render() {
+    console.log("CURRENT USER", currentUser);
+
     const { cart, totalPrice } = this.state;
     // console.log(this.state, "show me the state  ");
-
+    const { currentUser } = this.props;
+    console.log("CURRENT USER", currentUser);
+    if (currentUser === undefined) {
+      return <Redirect to="/LogOrSign" />;
+    }
     return (
       <section className="cart-container container">
         <div className="row rowTitle m-auto w-100">
