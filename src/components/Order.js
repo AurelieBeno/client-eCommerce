@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 
+import { Switch, Route, Link, Redirect } from "react-router-dom";
+
 import { getOrder } from "../api.js";
+
+import AfterPayement from "../components/AfterPayement.js";
 
 import "./Order.css";
 
@@ -10,9 +14,16 @@ class Order extends Component {
     this.state = {
       productItem: [],
       cart: [],
-      totalPrice: ""
+      totalPrice: "",
+      isPayed: false
     };
   }
+  // handleClick(e) {
+  //   e.preventDefault();
+
+  //   console.log("The link was clicked.");
+  //   this.setState({ isPayed: true });
+  // }
 
   componentDidMount() {
     getOrder().then(response => {
@@ -22,11 +33,11 @@ class Order extends Component {
   }
   render() {
     const { productItem, cart, totalPrice } = this.state;
-    console.log(this.state, "show me the state  ");
+    // console.log(this.state, "show me the state  ");
 
-    console.log("Show me the cart", cart);
+    // console.log("Show me the cart", cart);
 
-    console.log("HolaHalo", productItem);
+    // console.log("HolaHalo", productItem);
     return (
       <section className="cart-container container">
         <div className="row rowTitle">
@@ -77,11 +88,15 @@ class Order extends Component {
 
             // key={}
           >
-            PAYMENT
+            <Link to="/afterPayement">PAYMENT</Link>
           </button>
         </div>
+        <Switch>
+          <Route path=" /afterPayement" component={AfterPayement} />
+        </Switch>
       </section>
     );
   }
 }
+
 export default Order;

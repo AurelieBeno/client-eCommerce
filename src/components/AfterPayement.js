@@ -20,4 +20,5 @@ class AfterPayement extends Component {
     );
   }
 }
+
 export default AfterPayement;
