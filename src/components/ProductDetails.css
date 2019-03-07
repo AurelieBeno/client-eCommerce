@@ -42,6 +42,9 @@
   letter-spacing: 2px;
   /* background-color: blue; */
 }
+.contentdetail {
+  width: 60%;
+}
 
 .color {
   margin-top: 20px;
@@ -73,7 +76,13 @@
 .rowT {
   background-color: red;
 }
+.rowTitle {
+  width: 60%;
+}
 
+.floatR {
+  background-color: violet;
+}
 .btn-container {
   display: flex;
   flex-direction: column;

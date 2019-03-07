@@ -65,6 +65,18 @@ class ProductList extends Component {
     this.setState({ gender: value, filteredArray: typeArray });
   };
 
+  handleSort = event => {
+    const { value } = event.target;
+
+    const { sortArray } = this.state;
+    if (value === "Croissant") {
+      const sortItem = sortArray.sort((a, b) => {
+        return a.price.localeCompare(b.price);
+      });
+      this.setState({ sortArray: sortItem });
+    }
+  };
+
   handleChange = event => {
     const { value } = event.target;
     let genderArray;
@@ -93,8 +105,8 @@ class ProductList extends Component {
         </div>
         <div className="product-list-container container-fluid">
           <div className="row rowFilter">
-            <div className="col-6 m-auto d-flex">
-              <div className="col-lg-6 col-sm-12 w-100">
+            <div className="col-6 m-auto d-flex aaa">
+              <div className="col-lg-3 col-sm-12 w-100">
                 {/* <div className="gender ">Gender</div> */}
                 <select
                   className="selectFilter text-center  "
@@ -102,7 +114,7 @@ class ProductList extends Component {
                   name="gender"
                 >
                   <option disabled selected value className="optionitem">
-                    sort by gender
+                    By Gender
                   </option>
                   <option className="optionitem" value="Male">
                     Male
@@ -113,7 +125,7 @@ class ProductList extends Component {
                 </select>
               </div>
 
-              <div className="col-lg-6 col-sm-12 w-100 ">
+              <div className="col-lg-3 col-sm-12 w-100 ">
                 {/* <div className="gender">Product type</div> */}
 
                 <select
@@ -122,13 +134,47 @@ class ProductList extends Component {
                   name="gender"
                 >
                   <option disabled selected value className="optionitem">
-                    Sort by type
+                    By Type
                   </option>
                   <option className="optionitem" value="dress">
                     Dress
                   </option>
                   <option className="optionitem" value="shoes">
                     Shoes
+                  </option>
+                </select>
+              </div>
+              <div className="col-lg-3 col-sm-12 w-100 ">
+                <select
+                  className="selectFilter"
+                  onChange={this.handleSort}
+                  name="gender"
+                >
+                  <option disabled selected value className="optionitem">
+                    By Price
+                  </option>
+                  <option className="optionitem" value="dress">
+                    Croissant
+                  </option>
+                  <option className="optionitem" value="shoes">
+                    Decroissant
+                  </option>
+                </select>
+              </div>
+              <div className="col-lg-3 col-sm-12 w-100 ">
+                <select
+                  className="selectFilter"
+                  onChange={this.handleSort}
+                  name="gender"
+                >
+                  <option disabled selected value className="optionitem">
+                    By Brand
+                  </option>
+                  <option className="optionitem" value="dress">
+                    Croissant
+                  </option>
+                  <option className="optionitem" value="shoes">
+                    Decroissant
                   </option>
                 </select>
               </div>

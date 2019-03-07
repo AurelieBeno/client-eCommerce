@@ -17,6 +17,7 @@ import ProductList from "./components/ProductList";
 import ProductDetails from "./components/ProductDetails";
 import Order from "./components/Order";
 import UserAccount from "./components/UserAccount";
+import AfterPayement from "./components/AfterPayement.js";
 
 import { getProductList, getLogOut } from "./api.js";
 
@@ -93,6 +94,8 @@ class App extends Component {
           <Route path="/offers" component={Offers} />
           <Route path="/product/:productId" component={ProductDetails} />
           <Route path="/check-out" component={Order} />
+          <Route path="/afterPayement" component={AfterPayement} />
+
           <Route
             path="/product"
             render={() => {
@@ -132,7 +135,6 @@ class App extends Component {
               );
             }}
           />
-
           {/* <Route path="/product/detail" component={ProductDetail} /> */}
 
           <Route component={NotFound} />
