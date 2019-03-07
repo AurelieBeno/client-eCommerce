@@ -64,7 +64,11 @@ class Header extends Component {
                 </NavLink>
               </li>
               <li className="nav-item genderHeader">
-                <NavLink className="nav-link link-men " to="/men">
+                <NavLink
+                  className="nav-link link-men "
+                  to="/product"
+                  onClick={this.handleChange}
+                >
                   Men
                 </NavLink>
               </li>

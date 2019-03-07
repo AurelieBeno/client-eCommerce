@@ -17,60 +17,90 @@ class Clothing extends Component {
             </li>
 
             <li>
-              <Link to="#" className="col liColor">
+              <a
+                href="https://www.asos.com/women/activewear/cat/?cid=26091&nlid=ww|activewear|shop+by+product"
+                className="col liColor"
+              >
                 Activewear
-              </Link>
+              </a>
             </li>
 
             <li>
-              <Link to="#" className="col liColor">
+              <a
+                href="https://www.asos.com/women/shoes/cat/?cid=4172&nlid=ww|shoes|shop+by+product"
+                className="col liColor"
+              >
                 Shoes
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="#" className="col liColor">
+              <a
+                href="https://www.asos.com/women/coats-jackets/cat/?cid=2641&nlid=ww|clothing|shop+by+product"
+                className="col liColor"
+              >
                 Jackets
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="#" className="col liColor">
+              <a
+                href="https://www.asos.com/women/dresses/cat/?cid=8799&nlid=ww|clothing|shop+by+product"
+                className="col liColor"
+              >
                 Dresses
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="#" className="col liColor">
+              <a
+                href="https://www.asos.com/search/?q=sweatshirt"
+                className="col liColor"
+              >
                 Sweatshirts
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="#" className="col liColor">
+              <a
+                href="https://www.asos.com/search/?q=jeans"
+                className="col liColor"
+              >
                 Jeans
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="#" className="col liColor">
+              <a
+                href="https://www.asos.com/women/lingerie-nightwear/cat/?cid=6046&nlid=ww|clothing|shop+by+product"
+                className="col liColor"
+              >
                 Lingerie & Nightwear
-              </Link>
+              </a>
             </li>
             <li className="red">
-              <Link to="#" className="col liColor">
+              <a
+                href="https://www.asos.com/women/outlet/cat/?cid=27391&nlid=ww|outlet|shop+by+product"
+                className="col liColor"
+              >
                 Outlet
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="#" className="col liColor">
+              <a href="#!" className="col liColor">
                 Discount
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="#" className="col liColor">
+              <a
+                href="https://marketplace.asos.com/women?nlid=ww|marketplace|ctasHomepage&nlid=ww|marketplace|ctas"
+                className="col liColor"
+              >
                 Marketplace
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="#" className="col liColor">
+              <a
+                href="https://www.asos.com/women/fashion-feed/?nlid=ww|inspiration|ctas"
+                className="col liColor"
+              >
                 Inspiration
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
