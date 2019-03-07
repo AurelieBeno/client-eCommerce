@@ -64,7 +64,11 @@ class Header extends Component {
                 </NavLink>
               </li>
               <li className="nav-item genderHeader">
-                <NavLink className="nav-link link-men " to="/men">
+                <NavLink
+                  className="nav-link link-men "
+                  to="/product"
+                  onClick={this.handleChange}
+                >
                   Men
                 </NavLink>
               </li>
@@ -89,6 +93,19 @@ class Header extends Component {
                 </button>
               </div>
             </form>
+
+            <button className="btn  my-2 my-sm-0" type="submit">
+              {currentUser ? (
+                <Link to="/check-out">
+                  {" "}
+                  <i class="fas fa-shopping-bag" />{" "}
+                </Link>
+              ) : (
+                <Link className="btn my-2 my-sm-0" to="/logOrSign/signup">
+                  <i class="fas fa-shopping-bag" />{" "}
+                </Link>
+              )}
+            </button>
 
             <button className="btn  my-2 my-sm-0" type="submit">
               {currentUser ? (
