@@ -18,6 +18,7 @@ import ProductDetails from "./components/ProductDetails";
 import Order from "./components/Order";
 
 import { getProductList } from "./api.js";
+import AfterPayement from "./AfterPayement";
 
 class App extends Component {
   constructor(props) {
@@ -110,7 +111,7 @@ class App extends Component {
               );
             }}
           />
-
+          <Route path="/AfterPayement" component={AfterPayement} />
           {/* <Route path="/product/detail" component={ProductDetail} /> */}
 
           <Route component={NotFound} />

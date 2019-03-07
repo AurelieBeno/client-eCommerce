@@ -52,7 +52,7 @@ class ProductDetails extends Component {
         <div className="row">
           <div className="image-detail  col-lg-6 col-md-12 col-sm-12">
             <img
-              className="detail-img w-100"
+              className="w-100"
               src={productItem.baseImageUrl}
               alt="First slide"
             />

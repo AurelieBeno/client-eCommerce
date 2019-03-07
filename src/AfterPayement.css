@@ -1,0 +1,20 @@
+.AfterPayement {
+}
+
+.AfterPayement-title {
+  font-family: "FuturaPTWeb-Heavy";
+  font-size: 30px;
+}
+.AfterPayement-para {
+  font-family: "FuturaPTWeb-Bold";
+  font-size: 16px;
+}
+
+.text-container {
+  /* background-color: violet; */
+  text-align: center;
+  margin-top: 50px;
+}
+.endImage {
+  width: 100%;
+}
