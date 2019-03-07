@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 import { getProductDetails, addProduct } from "../api.js";
 
@@ -41,8 +41,9 @@ class ProductDetails extends Component {
   }
   render() {
     const { isRedirect } = this.state;
+    // redirect user to product list after click add to cart
     if (isRedirect) {
-      return <Redirect to="/product" />;
+      return <Redirect to="/check-out" />;
     }
     const { productItem } = this.state;
     console.log(productItem);
@@ -105,9 +106,9 @@ class ProductDetails extends Component {
                 ADD TO BAG
               </button>
 
-              <button type="button" className="btn btn-success add-cart">
+              {/* <button type="button" className="btn btn-success add-cart">
                 <Link to="/check-out">CHECK OUT</Link>
-              </button>
+              </button> */}
             </div>
           </div>
           <Switch>

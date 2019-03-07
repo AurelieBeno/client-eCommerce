@@ -43,6 +43,12 @@ export function getOrder() {
   return backendApi.get("/api/check-out").catch(errorHandler);
 }
 
+export function deleteProduct(cartId) {
+  return backendApi
+    .delete(`/api/check-out/${cartId}/delete`)
+    .catch(errorHandler);
+}
+
 export function postSignup(userSubmission) {
   return backendApi
     .post("/api/process-signup", userSubmission)
