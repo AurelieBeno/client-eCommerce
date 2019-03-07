@@ -114,6 +114,32 @@ class ProductDetails extends Component {
           <Switch>
             <Route path="/check-out" component={Order} />
           </Switch>
+          <div className="container">
+            <div className=" row secondRowTest">
+              <div className="col-4 second-detailUn">
+                <h4>Product Details</h4>
+                <p> {productItem.brand}</p>
+                <ul>
+                  <li>blahblahblah</li>
+                  <li>blahblahblah</li>
+                  <li>blahblahblah</li>
+                </ul>
+              </div>
+              <div className="col-4 second-detailDe">
+                <h4>product code</h4>
+                <p className="productCode"> {productItem.productId} </p>
+                <h4>brand</h4>
+                <p>Blahblahblhablha</p>
+              </div>
+              <div className="col-4 second-detailTrois">
+                <h4>look after me</h4>
+                <p>Blahblhablha</p>
+
+                <h4>About me</h4>
+                <p>blahblhablhablhablhablhablhablhablha</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     );

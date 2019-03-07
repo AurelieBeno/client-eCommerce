@@ -84,11 +84,13 @@
   background-color: violet;
 }
 .btn-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 30px;
   height: 115px;
-  justify-content: space-evenly;
+  width: 250px;
+  margin-top: 30px;
+}
+
+.btn-container .btn {
+  width: 100%;
 }
 
 .add-cart {
@@ -124,4 +126,27 @@
   .description-detail {
     margin: 50px 0;
   }
+}
+
+.secondRowTest {
+  /* background-color: red; */
+  margin-top: 20px;
+}
+
+.secondRowTest h4 {
+  color: #888585;
+  letter-spacing: 1.3px;
+  font-family: "FuturaPTWeb-Bold";
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-align: center;
+}
+.secondRowTest li,
+.secondRowTest p {
+  color: #888585;
+  font-family: "FuturaPTWeb-Book";
+  font-size: 15px;
+  letter-spacing: 1.7px;
+  text-align: center;
 }

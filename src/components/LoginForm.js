@@ -42,7 +42,7 @@ class LoginForm extends Component {
       <section className="containerSign">
         <div className="LoginForm-container container">
           <div className="LogOrSign-row">
-            <div className="LogOrSign-col col-lg-6 col-md-8 col-sm-10 m-auto">
+            <div className="LogOrSign-col col-lg-8 col-md-8 col-sm-10 m-auto">
               <h5 className="titleSign ">Connection avec une adresse e-mail</h5>
 
               <form

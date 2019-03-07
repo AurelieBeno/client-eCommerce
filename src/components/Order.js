@@ -40,60 +40,56 @@ class Order extends Component {
     // console.log("HolaHalo", productItem);
     return (
       <section className="cart-container container">
-        <div className="row rowTitle">
-          <div className="col-6  offset-md-4 titleCart">
-            <div className="cartTitle">
+        <div className="row rowTitle m-auto w-100">
+          <div className="col-12 titleCart">
+            <div className="col-12 text-center titleCartNew">
               <h3 className="fth cartH3"> My bag</h3>
               <small className="small">Items are reserved for 60 minutes</small>
             </div>
           </div>
           <hr />
-        </div>
-        {cart.map(oneCart => {
-          return (
-            <div>
-              <div className="row contentdetail">
-                <div className="test col-6 offset-md-2 ">
-                  <div className="colColor">
-                    <div className="imageCart ">
-                      <img
-                        className="detail-img-cart"
-                        src={oneCart.baseImageUrl}
-                        alt="models"
-                      />
-                    </div>
+          <div className="col-lg-10 col-md-10 col-sm-12 row">
+            {cart.map(oneCart => {
+              return (
+                <div className="col-lg-4 col-md-6 col-sm-12 d-flex oneCart">
+                  <div className="contentImg">
+                    <img
+                      className="detail-img-cart"
+                      src={oneCart.baseImageUrl}
+                      alt="models"
+                    />
                   </div>
-                  <div className="contentContainer col-lg-4 col-sm-12">
+                  <div className="contentContainer contentText">
                     <div className="cartPrice fth">$ {oneCart.price}</div>
                     <div className="cartName">{oneCart.name}</div>
                     <div className="cartColor">{oneCart.colour}</div>
-                    <div className="subTotalContainer">
+                    {/* <div className="subTotalContainer">
                       <div className="cartSubPrice fth">
                         Sub-total $ {totalPrice}
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
-              </div>
-            </div>
-          );
-        })}
-        <div className="col-4 totalContainer">
-          <div className="totalPrice fth">
-            <p>TOTAL $ {totalPrice}</p>
+              );
+            })}
           </div>
-          <button
-            type="button"
-            className="btn btn-success add-cart"
+          <div className=" totalContainer col-lg-2 col-md-2 col-sm-12">
+            <div className="totalPrice fth">
+              <p>TOTAL $ {totalPrice}</p>
+            </div>
+            <button
+              type="button"
+              className="btn btn-success add-cart"
 
-            // key={}
-          >
-            <Link to="/afterPayement">PAYMENT</Link>
-          </button>
+              // key={}
+            >
+              <Link to="/afterPayement">PAYMENT</Link>
+            </button>
+          </div>
+          <Switch>
+            <Route path=" /afterPayement" component={AfterPayement} />
+          </Switch>
         </div>
-        <Switch>
-          <Route path=" /afterPayement" component={AfterPayement} />
-        </Switch>
       </section>
     );
   }
