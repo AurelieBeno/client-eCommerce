@@ -90,11 +90,6 @@ class Order extends Component {
                     <div className="cartPrice fth">$ {oneCart.price}</div>
                     <div className="cartName">{oneCart.name}</div>
                     <div className="cartColor">{oneCart.colour}</div>
-                    <div className="subTotalContainer">
-                      <div className="cartSubPrice fth">
-                        Sub-total $ {totalPrice}
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
