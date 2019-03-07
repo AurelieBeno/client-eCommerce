@@ -1,3 +1,7 @@
 .start {
   font: black;
 }
+
+.marginAround {
+  margin: 15px;
+}

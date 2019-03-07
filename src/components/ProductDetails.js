@@ -33,6 +33,7 @@ class ProductDetails extends Component {
   };
   componentDidMount() {
     const { params } = this.props.match;
+    window.scrollTo(0, 0);
 
     getProductDetails(params.productId).then(response => {
       console.log("Product Details", response.data);

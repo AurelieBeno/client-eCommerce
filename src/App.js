@@ -71,13 +71,9 @@ class App extends Component {
     return (
       <header className="App-header">
         <div>
-          <Header />
+          <Header currentUser={this.state.currentUser} />
         </div>
 
-        {/* Emergency Log Out, will be deleted once Logout UserAccount is working */}
-        {this.state.currentUser ? (
-          <button onClick={() => this.logoutClick()}>log out</button>
-        ) : null}
         <div>
           <Offers />
         </div>
@@ -111,16 +107,20 @@ class App extends Component {
           /> */}
           <Route
             path="/user-account"
-            component={UserAccount}
             render={() => {
               return (
                 <UserAccount
+                  logoutClick={() => this.logoutClick()}
                   currentUser={this.state.currentUser}
                   logoutSuccess={user => this.updateUser(null)}
                 />
               );
             }}
           />
+
+          {/* {this.state.currentUser ? (
+          <button onClick={() => this.logoutClick()}>log out</button>
+        ) : null} */}
 
           <Route
             path="/logOrSign"

@@ -34,6 +34,7 @@ class ProductList extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.setState({
       filteredArray: this.props.productArray
     });

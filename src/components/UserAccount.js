@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./UserAccount.css";
 
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 class UserAccount extends Component {
   // handleLogout(event) {
@@ -15,6 +15,10 @@ class UserAccount extends Component {
   //   });
   // }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   logOutClick(event) {
     console.log(this.state);
 
@@ -22,6 +26,12 @@ class UserAccount extends Component {
   }
   render() {
     const { currentUser } = this.props;
+    console.log("CURRENT USER", currentUser);
+
+    if (currentUser === null) {
+      return <Redirect to="/" />;
+    }
+
     return (
       <div>
         <div className="container-fluid p-0">
@@ -33,42 +43,33 @@ class UserAccount extends Component {
         </div>
 
         <div className="container container-middle">
-          <div className="row justify-content-around">
+          <div className="row">
             {/* <div className="offset-2" /> */}
-            <div className="col-lg-4">
+            <div className="col-12 text-center">
               <h3>WELCOME, {currentUser.firstName} :)</h3>
 
               <h6>
                 Happy Shopping with ASOS <span>❤️</span>
               </h6>
-
-              <div className="container">
-                <div className="row">
-                  <div className="col">
-                    <button
-                      type="button"
-                      className=" start btn btn-outline-dark signBtn deleteHover"
-                    >
-                      <Link to="/">Start Shopping</Link>
-                    </button>
-                  </div>
-                  <div className="col">
-                    <button
-                      type="button"
-                      className="btn signBtn submitBtn deleteHover"
-                      // btn-dark
-                      onClick={() => this.logOutClick()}
-                    >
-                      Log out
-                    </button>
-                  </div>
+              <div className="row text-center d-flex justify-content-center m-auto">
+                <div className="col-lg-3 col-sm-12 marginAround">
+                  <button
+                    type="button"
+                    className=" start btn btn-outline-dark signBtn deleteHover"
+                  >
+                    <Link to="/product">Start Shopping</Link>
+                  </button>
                 </div>
-              </div>
-
-              <div>
-                <div />
-
-                <div />
+                <div className="col-lg-3 col-sm-12  marginAround">
+                  <button
+                    type="button"
+                    className="btn signBtn submitBtn deleteHover"
+                    // btn-dark
+                    onClick={() => this.props.logoutClick()}
+                  >
+                    Log out
+                  </button>
+                </div>
               </div>
             </div>
             {/* <div className="offset-2" /> */}

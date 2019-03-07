@@ -43,9 +43,9 @@ export function getOrder() {
   return backendApi.get("/api/check-out").catch(errorHandler);
 }
 
-export function deleteProduct(cartId) {
+export function deleteProduct(productId) {
   return backendApi
-    .delete(`/api/check-out/${cartId}/delete`)
+    .delete(`/api/check-out/${productId}/delete`)
     .catch(errorHandler);
 }
 
