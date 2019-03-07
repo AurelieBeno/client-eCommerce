@@ -5,9 +5,8 @@ import "./NotFound.css";
 class NotFound extends Component {
   render() {
     return (
-      <section className="NotFound">
-        <h2>404 Not Found</h2>
-        <p>Sorry! The page you are looking for does not exist.</p>
+      <div class="container container-middle">
+        <h2>Sorry! The page you are looking for does not exist.</h2>
 
         <div className="col-md-3 offset-md-3">
           <img src="./images/NotFound.jpeg" alt="Thinking" />
@@ -19,7 +18,7 @@ class NotFound extends Component {
             Home
           </a>
         </div>
-      </section>
+      </div>
     );
   }
 }

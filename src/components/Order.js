@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { Switch, Route, Link, Redirect } from "react-router-dom";
 
-import { getOrder } from "../api.js";
+import { getOrder, deleteProduct } from "../api.js";
 
 import AfterPayement from "../components/AfterPayement.js";
 
@@ -23,6 +23,28 @@ class Order extends Component {
 
   //   console.log("The link was clicked.");
   //   this.setState({ isPayed: true });
+  // }
+
+  // deleteClick = () => {
+  //   console.log(
+  //     "Check now",
+  //     this.state.cart.find(function(element) {
+  //       return (element.productId = 1398013);
+  //     })
+  //   );
+  //   deleteProduct(this.state.cart._id).then(response => {
+  //     console.log("Delete from bag", response.data);
+  //     // this.setState({ isRedirect: true });
+  //   });
+  // };
+
+  // deleteClick(productIndex) {
+  //   console.log(productIndex);
+  //   const cart = this.state.cart;
+  //   console.log(cart[productIndex]._id);
+  //   deleteProduct(cart[productIndex]._id);
+
+  //   this.setState({ cartArray: cart });
   // }
 
   componentDidMount() {
@@ -49,13 +71,20 @@ class Order extends Component {
           </div>
           <hr />
         </div>
-        {cart.map(oneCart => {
+        {cart.map((oneCart, index) => {
           return (
             <div>
               <div className="row contentdetail">
                 <div className="test col-6 offset-md-2 ">
                   <div className="colColor">
                     <div className="imageCart ">
+                      <button
+                        onClick={() => this.deleteClick(index)}
+                        type="button"
+                        className="bag-remove"
+                      >
+                        <i className="fas fa-times" />
+                      </button>
                       <img
                         className="detail-img-cart"
                         src={oneCart.baseImageUrl}

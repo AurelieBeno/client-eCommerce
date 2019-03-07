@@ -41,6 +41,7 @@ class Header extends Component {
   }
 
   render() {
+    const { currentUser } = this.props;
     // const { filteredArray } = this.props.state;
     return (
       <div className="HeaderContainer ">
@@ -89,9 +90,13 @@ class Header extends Component {
             </form>
 
             <button className="btn  my-2 my-sm-0" type="submit">
-              <Link className="btn my-2 my-sm-0" to="/logOrSign/signup">
-                <img className="user" src="../images/user.svg" alt="logo" />{" "}
-              </Link>
+              {currentUser ? (
+                <Link to="/user-account" />
+              ) : (
+                <Link className="btn my-2 my-sm-0" to="/logOrSign/signup">
+                  <img className="user" src="../images/user.svg" alt="logo" />{" "}
+                </Link>
+              )}
             </button>
           </div>
         </nav>
