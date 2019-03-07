@@ -96,6 +96,19 @@ class Header extends Component {
 
             <button className="btn  my-2 my-sm-0" type="submit">
               {currentUser ? (
+                <Link to="/check-out">
+                  {" "}
+                  <i class="fas fa-shopping-bag" />{" "}
+                </Link>
+              ) : (
+                <Link className="btn my-2 my-sm-0" to="/logOrSign/signup">
+                  <i class="fas fa-shopping-bag" />{" "}
+                </Link>
+              )}
+            </button>
+
+            <button className="btn  my-2 my-sm-0" type="submit">
+              {currentUser ? (
                 <Link to="/user-account">
                   {" "}
                   <img
