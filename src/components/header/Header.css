@@ -114,7 +114,9 @@
   }
 }
 
-.bagItem {
-  color: white;
+.bagItem,
+.user {
+  color: #fff !important;
   height: 20px;
+  margin: 20px;
 }

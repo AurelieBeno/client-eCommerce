@@ -94,7 +94,8 @@ class Header extends Component {
               </div>
             </form>
 
-            <button className="btn  my-2 my-sm-0" type="submit">
+            <div>
+              {/* <button className="btn  my-2 my-sm-0" type="submit"> */}
               {currentUser ? (
                 <Link to="/check-out">
                   <i class="fas fa-shopping-bag bagItem" />
@@ -104,9 +105,9 @@ class Header extends Component {
                   <i class="fas fa-shopping-bag bagItems" />
                 </Link>
               )}
-            </button>
+              {/* </button> */}
 
-            <button className="btn  my-2 my-sm-0" type="submit">
+              {/* <button className="btn  my-2 my-sm-0" type="submit"> */}
               {currentUser ? (
                 <Link to="/user-account">
                   {" "}
@@ -121,7 +122,8 @@ class Header extends Component {
                   <img className="user" src="../images/user.svg" alt="logo" />{" "}
                 </Link>
               )}
-            </button>
+              {/* </button> */}
+            </div>
           </div>
         </nav>
 
