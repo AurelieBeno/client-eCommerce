@@ -35,15 +35,15 @@ class Order extends Component {
   }
 
   render() {
-    console.log("CURRENT USER", currentUser);
+    // console.log("CURRENT USER", currentUser);
 
     const { cart, totalPrice } = this.state;
     // console.log(this.state, "show me the state  ");
-    const { currentUser } = this.props;
-    console.log("CURRENT USER", currentUser);
-    if (currentUser === undefined) {
-      return <Redirect to="/LogOrSign" />;
-    }
+    // const { currentUser } = this.props;
+    // console.log("CURRENT USER", currentUser);
+    // if (currentUser === undefined) {
+    //   return <Redirect to="/LogOrSign" />;
+    // }
     return (
       <section className="cart-container container">
         <div className="row rowTitle m-auto w-100">

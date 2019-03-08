@@ -113,3 +113,8 @@
     justify-content: flex-end !important;
   }
 }
+
+.bagItem {
+  color: white;
+  height: 20px;
+}
