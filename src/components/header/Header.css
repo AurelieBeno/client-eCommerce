@@ -116,7 +116,11 @@
 
 .bagItem,
 .user {
-  color: #fff !important;
+  color: #fff;
   height: 20px;
   margin: 20px;
+}
+
+.cartwhite {
+  color: white !important;
 }

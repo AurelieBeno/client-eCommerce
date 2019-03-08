@@ -97,12 +97,12 @@ class Header extends Component {
             <div>
               {/* <button className="btn  my-2 my-sm-0" type="submit"> */}
               {currentUser ? (
-                <Link to="/check-out">
-                  <i class="fas fa-shopping-bag bagItem" />
+                <Link className="cartwhite my-2 my-sm-0" to="/check-out">
+                  <i class="cartwhite fas fa-shopping-bag bagItem" />
                 </Link>
               ) : (
-                <Link className="btn my-2 my-sm-0" to="/logOrSign/signup">
-                  <i class="fas fa-shopping-bag bagItems" />
+                <Link className="cartwhite my-2 my-sm-0" to="/logOrSign/signup">
+                  <i class="cartwhite fas fa-shopping-bag bagItems" />
                 </Link>
               )}
               {/* </button> */}
