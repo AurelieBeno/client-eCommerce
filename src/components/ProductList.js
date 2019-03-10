@@ -29,7 +29,8 @@ class ProductList extends Component {
     this.state = {
       filteredArray: [],
       gender: "",
-      color: ""
+      color: "",
+      price: ""
     };
   }
 
@@ -51,7 +52,7 @@ class ProductList extends Component {
     }
   }
 
-  handleChangeColor = event => {
+  handleChangeType = event => {
     const { value } = event.target;
     let typeArray;
     if (value === "dress") {
@@ -66,17 +67,20 @@ class ProductList extends Component {
     this.setState({ gender: value, filteredArray: typeArray });
   };
 
-  handleSort = event => {
-    const { value } = event.target;
-
-    const { sortArray } = this.state;
-    if (value === "Croissant") {
-      const sortItem = sortArray.sort((a, b) => {
-        return a.price.localeCompare(b.price);
-      });
-      this.setState({ sortArray: sortItem });
-    }
-  };
+  // handleSort = event => {
+  //   const { value } = event.target;
+  //   let priceArray;
+  //   if (value === "Croissant") {
+  //     priceArray = this.props.productArray.sort(function(a, b) {
+  //       return a.productArray.price - b.productArray.price;
+  //     });
+  //   } else if (value === "Decroissant") {
+  //     priceArray = this.props.productArray.sort(function(a, b) {
+  //       return b.productArray.price - a.productArray.price;
+  //     });
+  //   }
+  //   this.setState({ price: value, filteredArray: priceArray });
+  // };
 
   handleChange = event => {
     const { value } = event.target;
@@ -94,10 +98,51 @@ class ProductList extends Component {
     this.setState({ gender: value, filteredArray: genderArray });
   };
 
+  handleSort = event => {
+    const { value } = event.target;
+
+    // console.log("VALUE SORT", value);
+    // console.log("HandleSort ", this.props.productArray);
+    let priceArray;
+    // let SortArray;
+    if (value === "Ascending") {
+      priceArray = this.props.productArray
+        .filter(product => product.price)
+        .sort((a, b) => a.price - b.price);
+    } else if (value === "Descending") {
+      priceArray = this.props.productArray
+        .filter(product => product.price)
+        .sort((a, b) => b.price - a.price);
+    }
+    //*********  FILTER PRICE OK *********** */
+    // priceArray = this.props.productArray.filter(function(product) {
+    //   console.log("PRODUCT PRICE", product.price);
+
+    //   return product.price;
+    // });
+    //*************************************************** */
+    // SortArray = priceArray.sort((a, b) => {
+    //   console.log("SORT ARRAY", SortArray);
+    //   return a - b;
+    // });
+
+    // ************** sort ok ********
+    // priceArray = this.props.productArray.map(function(oneProduct) {
+    //   return oneProduct.price;
+    // });
+    // priceArray.sort((a, b) => {
+    //   return a - b;
+    // });
+
+    console.log("PRICE ARRAY", priceArray);
+    this.setState({ filteredArray: priceArray });
+  };
+
   render() {
     const { filteredArray } = this.state;
+
     //console.log(this.props.productArray, "here on productList");
-    console.log(this.state);
+    // console.log(this.state);
 
     return (
       <section>
@@ -131,7 +176,7 @@ class ProductList extends Component {
 
                 <select
                   className="selectFilter"
-                  onChange={this.handleChangeColor}
+                  onChange={this.handleChangeType}
                   name="gender"
                 >
                   <option disabled selected value className="optionitem">
@@ -154,15 +199,16 @@ class ProductList extends Component {
                   <option disabled selected value className="optionitem">
                     By Price
                   </option>
-                  <option className="optionitem" value="dress">
-                    Croissant
+                  <option className="optionitem" value="Ascending">
+                    Ascending
                   </option>
-                  <option className="optionitem" value="shoes">
-                    Decroissant
+                  <option className="optionitem" value="Descending">
+                    Descending
                   </option>
                 </select>
               </div>
-              <div className="col-lg-3 col-sm-12 w-100 ">
+
+              {/* <div className="col-lg-3 col-sm-12 w-100 ">
                 <select
                   className="selectFilter"
                   onChange={this.handleSort}
@@ -178,7 +224,7 @@ class ProductList extends Component {
                     Decroissant
                   </option>
                 </select>
-              </div>
+              </div> */}
             </div>
           </div>
           {/* productList */}
