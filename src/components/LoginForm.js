@@ -28,14 +28,14 @@ class LoginForm extends Component {
 
     // Submit login info to the backend
     postLogIn(this.state).then(response => {
-      console.log("Log In", response.data);
+      // console.log("Log In", response.data);
       this.props.loginSuccess(response.data);
       this.setState({ isSubmit: true });
     });
   }
 
   render() {
-    console.log("coucou31", this.props);
+    // console.log("coucou31", this.props);
     return this.state.isSubmit ? (
       <Redirect to="/" />
     ) : (

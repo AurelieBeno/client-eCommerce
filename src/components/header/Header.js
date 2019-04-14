@@ -17,22 +17,6 @@ class Header extends Component {
       gender: ""
     };
   }
-  handleChange = event => {
-    const { value } = event.target;
-    console.log("ello ", value);
-    let genderArray;
-    if (value === "Men") {
-      genderArray = this.props.productArray.filter(function(product) {
-        return product.gender === "Male";
-      });
-    } else if (value === "women") {
-      genderArray = this.props.productArray.filter(function(product) {
-        return product.gender === "Female";
-      });
-    }
-
-    this.setState({ gender: value, filteredArray: genderArray });
-  };
 
   componentDidMount() {
     this.setState({
@@ -40,9 +24,32 @@ class Header extends Component {
     });
   }
 
+  handleChangeWoman() {
+    // const { productArray } = this.state;
+
+    let genderType = this.props.productArray;
+
+    genderType = this.props.productArray.filter(type => {
+      return type.gender === "Female";
+    });
+
+    this.setState({ filteredArray: genderType });
+  }
+
+  handleChangeMen() {
+    // const { productArray } = this.state;
+
+    let genderType = this.props.productArray;
+    genderType = this.props.productArray.filter(type => {
+      return type.gender === "Male";
+    });
+    this.setState({ filteredArray: genderType });
+  }
+
   render() {
     const { currentUser } = this.props;
 
+    // console.log("hello state header" + this.state);
     // const { filteredArray } = this.props.state;
     return (
       <div className="HeaderContainer ">
@@ -57,8 +64,8 @@ class Header extends Component {
                 <NavLink
                   className="nav-link link-woman"
                   to="/product"
-                  onClick={this.handleChange}
-                  value="women"
+                  onClick={this.handleChangeWoman.bind(this)}
+                  // value="women"
                 >
                   Women
                 </NavLink>
@@ -67,7 +74,8 @@ class Header extends Component {
                 <NavLink
                   className="nav-link link-men "
                   to="/product"
-                  onClick={this.handleChange}
+                  // value="men"
+                  onClick={this.handleChangeMen.bind(this)}
                 >
                   Men
                 </NavLink>
@@ -98,11 +106,11 @@ class Header extends Component {
               {/* <button className="btn  my-2 my-sm-0" type="submit"> */}
               {currentUser ? (
                 <Link className="cartwhite my-2 my-sm-0" to="/check-out">
-                  <i class="cartwhite fas fa-shopping-bag bagItem" />
+                  <i className="cartwhite fas fa-shopping-bag bagItem" />
                 </Link>
               ) : (
                 <Link className="cartwhite my-2 my-sm-0" to="/logOrSign/signup">
-                  <i class="cartwhite fas fa-shopping-bag bagItems" />
+                  <i className="cartwhite fas fa-shopping-bag bagItems" />
                 </Link>
               )}
               {/* </button> */}

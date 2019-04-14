@@ -18,12 +18,6 @@ class ProductList extends Component {
       color: "",
       price: ""
     };
-
-    this.onChange = this.onChange.bind(this);
-
-    // this.handleChange = this.handleChange.bind(this);
-    // this.handleChangeType = this.handleChangeType.bind(this);
-    // this.handleSort = this.handleSort.bind(this);
   }
 
   componentDidMount() {
@@ -34,7 +28,7 @@ class ProductList extends Component {
   }
 
   componentDidUpdate(oldProps) {
-    console.log(JSON.stringify(oldProps));
+    // console.log(JSON.stringify(oldProps));
 
     if (
       oldProps.productArray.length === 0 &&
@@ -46,83 +40,57 @@ class ProductList extends Component {
     }
   }
 
-  // handleChangeType = event => {
-  //   const { value } = event.target;
-  //   let typeArray;
-  //   if (value === "dress") {
-  //     typeArray = this.props.productArray.filter(function(product) {
-  //       return product.productType === "dress";
-  //     });
-  //   } else if (value === "shoes") {
-  //     typeArray = this.props.productArray.filter(function(product) {
-  //       return product.productType === "shoes";
-  //     });
-  //   }
-  //   this.setState({ gender: value, filteredArray: typeArray });
-  // };
-
-  // handleChange = event => {
-  //   const { value } = event.target;
-  //   let genderArray;
-  //   if (value === "Male") {
-  //     genderArray = this.props.productArray.filter(function(product) {
-  //       return product.gender === "Male";
-  //     });
-  //   } else if (value === "Female") {
-  //     genderArray = this.props.productArray.filter(function(product) {
-  //       return product.gender === "Female";
-  //     });
-  //   }
-
-  //   this.setState({ gender: value, filteredArray: genderArray });
-  // };
-
-  // handleSort = event => {
-  //   const { value } = event.target;
-
-  //   let priceArray;
-  //   // let SortArray;
-  //   if (value === "Ascending") {
-  //     priceArray = this.props.productArray
-  //       .filter(product => product.price)
-  //       .sort((a, b) => a.price - b.price);
-  //   } else if (value === "Descending") {
-  //     priceArray = this.props.productArray
-  //       .filter(product => product.price)
-  //       .sort((a, b) => b.price - a.price);
-  //   }
-
-  //   console.log("PRICE ARRAY", priceArray);
-  //   this.setState({ filteredArray: priceArray });
-  // };
-  onChange = e => {
+  onChangePrice = e => {
     const { value } = e.target;
-    let priceArray = this.props.productArray;
-    console.log("here value" + value);
+    const { filteredArray } = this.state;
+    let priceArray = "";
+    // console.log("here value" + value);
     if (value === "Ascending") {
-      priceArray = this.props.productArray
+      priceArray = filteredArray
         .filter(product => product.price)
         .sort((a, b) => a.price - b.price);
     } else if (value === "Descending") {
-      priceArray = this.props.productArray
+      priceArray = filteredArray
         .filter(product => product.price)
         .sort((a, b) => b.price - a.price);
     }
+    this.setState({ filteredArray: priceArray });
+  };
+  onChangeType = e => {
+    const { value } = e.target;
+    let typeArray = this.props.productArray;
+
+    if (value === "Shoes") {
+      typeArray = this.props.productArray.filter(product => {
+        return product.productType === "shoes";
+      });
+    } else if (value === "Dress") {
+      typeArray = this.props.productArray.filter(product => {
+        return product.productType === "dress";
+      });
+    }
+    this.setState({ filteredArray: typeArray });
+    console.log("hello typeArray" + typeArray);
+  };
+
+  onChangeGender = e => {
+    const { value } = e.target;
+    let genderArray = this.props.productArray;
+
     if (value === "Male") {
-      priceArray = this.props.productArray.filter(
+      genderArray = this.props.productArray.filter(
         product => product.gender === "Male"
       );
     }
     if (value === "Female") {
-      console.log("Hello Female");
-      priceArray = this.props.productArray.filter(
+      genderArray = this.props.productArray.filter(
         product => product.gender === "Female"
       );
     }
-    this.setState({ filteredArray: priceArray });
-  };
+    this.setState({ filteredArray: genderArray });
 
-  // this.setState({ [e.target.gender]: e.target.value });
+    console.log("hello genderList" + genderArray);
+  };
 
   render() {
     const { filteredArray } = this.state;
@@ -138,7 +106,7 @@ class ProductList extends Component {
               <div className="col-lg-3 col-sm-12 w-100">
                 <select
                   className="selectFilter text-center  "
-                  onChange={this.onChange.bind(this)}
+                  onChange={this.onChangeGender.bind(this)}
                   name="gender"
                 >
                   <option disabled selected value className="optionitem">
@@ -158,16 +126,16 @@ class ProductList extends Component {
 
                 <select
                   className="selectFilter"
-                  onChange={this.onChange.bind(this)}
+                  onChange={this.onChangeType.bind(this)}
                   name="gender"
                 >
                   <option disabled selected value className="optionitem">
                     By Type
                   </option>
-                  <option className="optionitem" value="dress">
+                  <option className="optionitem" value="Dress">
                     Dress
                   </option>
-                  <option className="optionitem" value="shoes">
+                  <option className="optionitem" value="Shoes">
                     Shoes
                   </option>
                 </select>
@@ -175,7 +143,7 @@ class ProductList extends Component {
               <div className="col-lg-3 col-sm-12 w-100 ">
                 <select
                   className="selectFilter"
-                  onChange={this.onChange.bind(this)}
+                  onChange={this.onChangePrice.bind(this)}
                   name="gender"
                 >
                   <option disabled selected value className="optionitem">
@@ -194,7 +162,7 @@ class ProductList extends Component {
           {/* productList */}
           <div className="nav-productList" />
           <ul className="row ul-container ">
-            {filteredArray.map(oneProduct => {
+            {filteredArray.map((oneProduct, index) => {
               return (
                 <li className="list-container col-lg-3 col-md-4 col-sm-6">
                   <div className="addMargin">
@@ -202,14 +170,19 @@ class ProductList extends Component {
                       <Link to={getProductAdress(oneProduct)}>
                         <img
                           className="list-img"
+                          key={index}
                           src={oneProduct.baseImageUrl}
                           alt="Item "
                         />
                       </Link>
                     </div>
-                    <div className="nameList">{oneProduct.name}</div>
+                    <div key={oneProduct.name} className="nameList">
+                      {oneProduct.name}
+                    </div>
 
-                    <div className="priceList">{oneProduct.price} $</div>
+                    <div key={oneProduct.index} className="priceList">
+                      {oneProduct.price} $
+                    </div>
                   </div>
                 </li>
               );

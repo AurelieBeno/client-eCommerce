@@ -47,7 +47,7 @@ class ProductDetails extends Component {
       return <Redirect to="/check-out" />;
     }
     const { productItem } = this.state;
-    console.log(productItem);
+    // console.log(productItem);
     return (
       <section className="product-detail-container container">
         <div className="row">
@@ -90,7 +90,7 @@ class ProductDetails extends Component {
                   {productItem.size.map((oneSize, index) => {
                     console.log(index, oneSize);
                     return (
-                      <option className="optionSize" value="text">
+                      <option key={index} className="optionSize" value="text">
                         {oneSize}
                       </option>
                     );

@@ -130,20 +130,3 @@ class SignupForm extends Component {
 }
 
 export default SignupForm;
-
-/* <Link className="nav-link" to="/login">
-          Login
-        </Link>
-        <Switch>
-          <Route
-            path="/login-page"
-            render={() => {
-              return (
-                <LoginPage
-                  currentUser={this.state.currentUser}
-                  loginSuccess={user => this.updateUser(user)}
-                />
-              );
-            }}
-          />
-        </Switch> */

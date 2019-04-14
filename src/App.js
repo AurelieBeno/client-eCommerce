@@ -49,8 +49,6 @@ class App extends Component {
 
   componentDidMount() {
     getProductList().then(response => {
-      console.log("Product List", response.data);
-
       this.setState({ productArray: response.data });
     });
   }
@@ -67,7 +65,7 @@ class App extends Component {
   }
 
   render() {
-    // console.log(this.state, "hello State in App.js");
+    console.log(this.state.productArray, "hello State in App.js");
     return (
       <header className="App-header">
         <div>
