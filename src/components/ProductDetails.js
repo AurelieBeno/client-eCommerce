@@ -3,7 +3,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 import { getProductDetails, addProduct } from "../api.js";
 
-import "./ProductDetails.css";
+import "./Style/ProductDetails.css";
 import Order from "./Order.js";
 
 var texts = ["S", "M", "L"];
@@ -21,7 +21,6 @@ class ProductDetails extends Component {
   }
 
   cartClick = () => {
-    // console.log(this.state.productItem._id);
     addProduct(this.state.productItem._id).then(response => {
       console.log("Add to bag", response.data);
       this.setState({ isRedirect: true });
@@ -47,7 +46,6 @@ class ProductDetails extends Component {
       return <Redirect to="/check-out" />;
     }
     const { productItem } = this.state;
-    // console.log(productItem);
     return (
       <section className="product-detail-container container">
         <div className="row">

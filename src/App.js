@@ -65,7 +65,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.productArray, "hello State in App.js");
     return (
       <header className="App-header">
         <div>

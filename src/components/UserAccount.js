@@ -1,27 +1,14 @@
 import React, { Component } from "react";
-import "./UserAccount.css";
+import "./Style/UserAccount.css";
 
 import { Link, Redirect } from "react-router-dom";
 
 class UserAccount extends Component {
-  // handleLogout(event) {
-  //   event.preventDefault();
-
-  //   // Submit logout info to the backend
-  //   postLogOut(this.state).then(response => {
-  //     console.log("Log Out", response.data);
-  //     this.state.logoutSuccess(response.data);
-  //     this.setState({ isSubmit: true });
-  //   });
-  // }
-
   componentDidMount() {
     window.scrollTo(0, 0);
   }
 
   logOutClick(event) {
-    console.log(this.state);
-
     this.setState({ currentUser: null });
   }
   render() {
@@ -72,9 +59,7 @@ class UserAccount extends Component {
                 </div>
               </div>
             </div>
-            {/* <div className="offset-2" /> */}
           </div>
-          {/* </div> */}
         </div>
       </div>
     );

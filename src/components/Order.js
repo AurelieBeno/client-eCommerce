@@ -6,7 +6,7 @@ import { getOrder, deleteProduct } from "../api.js";
 
 import AfterPayement from "../components/AfterPayement.js";
 
-import "./Order.css";
+import "./Style/Order.css";
 
 class Order extends Component {
   constructor(props) {
@@ -35,15 +35,8 @@ class Order extends Component {
   }
 
   render() {
-    // console.log("CURRENT USER", currentUser);
-
     const { cart, totalPrice } = this.state;
-    // console.log(this.state, "show me the state  ");
-    // const { currentUser } = this.props;
-    // console.log("CURRENT USER", currentUser);
-    // if (currentUser === undefined) {
-    //   return <Redirect to="/LogOrSign" />;
-    // }
+
     return (
       <section className="cart-container container">
         <div className="row rowTitle m-auto w-100">

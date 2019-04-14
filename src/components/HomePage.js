@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "./HomePage.css";
+import "./Style/HomePage.css";
 
 class HomePage extends Component {
   componentDidMount() {

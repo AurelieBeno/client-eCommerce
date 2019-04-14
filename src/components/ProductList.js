@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { Link } from "react-router-dom";
 
-import "./ProductList.css";
+import "./Style/ProductList.css";
 
 function getProductAdress(product) {
   return `/product/${product._id}`;
@@ -44,7 +44,6 @@ class ProductList extends Component {
     const { value } = e.target;
     const { filteredArray } = this.state;
     let priceArray = "";
-    // console.log("here value" + value);
     if (value === "Ascending") {
       priceArray = filteredArray
         .filter(product => product.price)
@@ -70,7 +69,6 @@ class ProductList extends Component {
       });
     }
     this.setState({ filteredArray: typeArray });
-    console.log("hello typeArray" + typeArray);
   };
 
   onChangeGender = e => {
@@ -88,8 +86,6 @@ class ProductList extends Component {
       );
     }
     this.setState({ filteredArray: genderArray });
-
-    console.log("hello genderList" + genderArray);
   };
 
   render() {

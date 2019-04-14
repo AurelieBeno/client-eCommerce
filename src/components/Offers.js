@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "./Offers.css";
+import "./Style/Offers.css";
 
 class Offers extends Component {
   render() {

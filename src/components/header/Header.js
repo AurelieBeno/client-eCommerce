@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 
 import { NavLink, Link, Switch, Route } from "react-router-dom";
-// import { Navbar, Nav } from "react-bootstrap"
 
-import "./Header.css";
+import "../Style/Header.css";
 
-import "./SearchBar.css";
+import "../Style/SearchBar.css";
 import Clothing from "./Clothing";
 
 class Header extends Component {
@@ -49,8 +48,6 @@ class Header extends Component {
   render() {
     const { currentUser } = this.props;
 
-    // console.log("hello state header" + this.state);
-    // const { filteredArray } = this.props.state;
     return (
       <div className="HeaderContainer ">
         <nav className="navbar container-fluide navbar-expand-lg navbar-dark bg-dark nav-container lt-04">
@@ -65,7 +62,6 @@ class Header extends Component {
                   className="nav-link link-woman"
                   to="/product"
                   onClick={this.handleChangeWoman.bind(this)}
-                  // value="women"
                 >
                   Women
                 </NavLink>
@@ -74,7 +70,6 @@ class Header extends Component {
                 <NavLink
                   className="nav-link link-men "
                   to="/product"
-                  // value="men"
                   onClick={this.handleChangeMen.bind(this)}
                 >
                   Men
@@ -103,7 +98,6 @@ class Header extends Component {
             </form>
 
             <div>
-              {/* <button className="btn  my-2 my-sm-0" type="submit"> */}
               {currentUser ? (
                 <Link className="cartwhite my-2 my-sm-0" to="/check-out">
                   <i className="cartwhite fas fa-shopping-bag bagItem" />
@@ -113,9 +107,7 @@ class Header extends Component {
                   <i className="cartwhite fas fa-shopping-bag bagItems" />
                 </Link>
               )}
-              {/* </button> */}
 
-              {/* <button className="btn  my-2 my-sm-0" type="submit"> */}
               {currentUser ? (
                 <Link to="/user-account">
                   {" "}
@@ -130,7 +122,6 @@ class Header extends Component {
                   <img className="user" src="../images/user.svg" alt="logo" />{" "}
                 </Link>
               )}
-              {/* </button> */}
             </div>
           </div>
         </nav>

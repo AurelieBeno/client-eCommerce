@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import { Switch, Route, Link } from "react-router-dom";
 
-import "./SignupForm.css";
+import "./Style/SignupForm.css";
 
 import { Redirect } from "react-router-dom";
 

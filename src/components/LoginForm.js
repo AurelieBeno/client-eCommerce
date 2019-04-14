@@ -4,7 +4,7 @@ import { Redirect } from "react-router-dom";
 
 import { postLogIn } from "../api.js";
 
-import "./LoginForm.css";
+import "./Style/LoginForm.css";
 
 class LoginForm extends Component {
   constructor(props) {
@@ -28,14 +28,12 @@ class LoginForm extends Component {
 
     // Submit login info to the backend
     postLogIn(this.state).then(response => {
-      // console.log("Log In", response.data);
       this.props.loginSuccess(response.data);
       this.setState({ isSubmit: true });
     });
   }
 
   render() {
-    // console.log("coucou31", this.props);
     return this.state.isSubmit ? (
       <Redirect to="/" />
     ) : (

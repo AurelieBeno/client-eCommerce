@@ -3,11 +3,10 @@ import { Switch, Route, Link } from "react-router-dom";
 
 // import "./SignupForm.css";
 
-import "./LogOrSign.css";
+import "./Style/LogOrSign.css";
 
 import SignupForm from "./SignupForm";
 import LoginForm from "./LoginForm";
-// import UserAccount from "./UserAccount";
 
 class LogOrSign extends Component {
   render() {

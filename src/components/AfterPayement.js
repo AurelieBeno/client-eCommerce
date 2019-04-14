@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "./AfterPayement.css";
+import "./Style/AfterPayement.css";
 
 class AfterPayement extends Component {
   render() {
