@@ -6,7 +6,7 @@ class NotFound extends Component {
   render() {
     return (
       <section className="AfterPayement ">
-        <div class="container container-middle">
+        <div className="container container-middle">
           <div className="text-container">
             <h2>Sorry! The page you are looking for does not exist.</h2>
           </div>

@@ -1,8 +1,14 @@
 import React, { Component } from "react";
+import axios from "axios";
+import StripeCheckout from "react-stripe-checkout";
 
-import { Switch, Route, Link, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
-import { getOrder, deleteProduct } from "../api.js";
+import {
+  getOrder,
+  deleteProduct,
+  postPayement
+} from "../api.js";
 
 import AfterPayement from "../components/AfterPayement.js";
 
@@ -33,62 +39,104 @@ class Order extends Component {
       this.setState(response.data);
     });
   }
+  handleToken(token) {
+    postPayement(token).then(response => {
+      if (response === "success") {
+        this.setState({ isPayed: true });
+        return alert("Success ");
+      } else {
+        return alert("something went wrong");
+      }
+    });
+    // const response = axios.post(
+    //   "http://localhost:8000/checkout",
+    //   {
+    //     token
+    //   }
+    // );
+    // const { status } = response.data;
+    // if (status === "success") {
+    //   return <h1>Success !! check email for details</h1>;
+    // } else {
+    //   return "Something went wrong";
+    // }
+  }
 
   render() {
     const { cart, totalPrice } = this.state;
 
     return (
-      <section className="cart-container container">
-        <div className="row rowTitle m-auto w-100">
-          <div className="col-12 titleCart">
-            <div className="col-12 text-center titleCartNew">
-              <h3 className="fth cartH3"> My bag</h3>
-              <small className="small">Items are reserved for 60 minutes</small>
+      <section className='cart-container container'>
+        <div className='row rowTitle m-auto w-100'>
+          <div className='col-12 titleCart'>
+            <div className='col-12 text-center titleCartNew'>
+              <h3 className='fth cartH3'> My bag</h3>
+              <small className='small'>
+                Items are reserved for 60 minutes
+              </small>
             </div>
           </div>
           <hr />
-          <div className="col-lg-10 col-md-10 col-sm-12 row">
+          <div className='col-lg-10 col-md-10 col-sm-12 row'>
             {cart.map(oneCart => {
               return (
-                <div className="col-lg-4 col-md-6 col-sm-12 d-flex oneCart">
-                  <div className="contentImg">
+                <div className='col-lg-4 col-md-6 col-sm-12 d-flex oneCart'>
+                  <div className='contentImg'>
                     <img
-                      className="detail-img-cart"
+                      className='detail-img-cart'
                       src={oneCart.baseImageUrl}
-                      alt="models"
+                      alt='models'
                     />
                   </div>
-                  <div className="contentContainer contentText">
-                    <div className="cartPrice fth">$ {oneCart.price}</div>
-                    <div className="cartName">{oneCart.name}</div>
-                    <div className="cartColor">{oneCart.colour}</div>
+                  <div className='contentContainer contentText'>
+                    <div className='cartPrice fth'>
+                      $ {oneCart.price}
+                    </div>
+                    <div className='cartName'>
+                      {oneCart.name}
+                    </div>
+                    <div className='cartColor'>
+                      {oneCart.colour}
+                    </div>
                   </div>
                   <button
-                    onClick={() => this.deleteClick(oneCart)}
-                    type="button"
-                    className="bag-remove"
+                    onClick={() =>
+                      this.deleteClick(oneCart)
+                    }
+                    type='button'
+                    className='bag-remove'
                   >
-                    <i className="fas fa-times" />
+                    <i className='fas fa-times' />
                   </button>
                 </div>
               );
             })}
           </div>
-          <div className=" totalContainer col-lg-2 col-md-2 col-sm-12">
-            <div className="totalPrice fth">
+          <div className=' totalContainer col-lg-2 col-md-2 col-sm-12'>
+            <div className='totalPrice fth'>
               <p>TOTAL $ {totalPrice}</p>
             </div>
-            <button
+            <StripeCheckout
+              stripeKey='pk_test_RD2hsckN1XwsTxFjASz3HWSE006tbbT9fM'
+              token={this.handleToken}
+              billingAddress
+              shippingAddress
+              amount={totalPrice * 100}
+              name={cart}
+            />
+            {/* <button
               type="button"
               className="btn btn-success add-cart"
 
-              // key={}
             >
               <Link to="/afterPayement">PAYMENT</Link>
-            </button>
+            </button> */}
           </div>
           <Switch>
-            <Route path=" /afterPayement" component={AfterPayement} />
+            <Route
+              path=' /afterPayement'
+              component={AfterPayement}
+            />
           </Switch>
         </div>
       </section>

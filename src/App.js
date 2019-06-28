@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-// import axios from "axios";
-
 import { Switch, Route } from "react-router-dom";
 
 import "./App.css";
@@ -17,7 +15,8 @@ import ProductList from "./components/ProductList";
 import ProductDetails from "./components/ProductDetails";
 import Order from "./components/Order";
 import UserAccount from "./components/UserAccount";
-import AfterPayement from "./components/AfterPayement.js";
+
+import AfterPayement from "./components/AfterPayement";
 
 import { getProductList, getLogOut } from "./api.js";
 
@@ -38,7 +37,10 @@ class App extends Component {
     if (newUser) {
       // save the user info in localStorage if we are login in4
       //( Turn it into a JSON string before we save)
-      localStorage.setItem("currentUser", JSON.stringify(newUser));
+      localStorage.setItem(
+        "currentUser",
+        JSON.stringify(newUser)
+      );
     } else {
       // Delete the user info from localStorage if we are logging off
       localStorage.removeItem("currentUser");
@@ -66,7 +68,7 @@ class App extends Component {
 
   render() {
     return (
-      <header className="App-header">
+      <header className='App-header'>
         <div>
           <Header currentUser={this.state.currentUser} />
         </div>
@@ -75,27 +77,35 @@ class App extends Component {
           <Offers />
         </div>
 
-        {/* <ProductDetail /> */}
-        {/* <ProductList /> */}
-
-        {/* <HomePage /> */}
-
         <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/women" component={Women} />
-          <Route path="/men" component={Men} />
-          <Route path="/offers" component={Offers} />
-          <Route path="/product/:productId" component={ProductDetails} />
-          <Route path="/check-out" component={Order} />
-          <Route path="/afterPayement" component={AfterPayement} />
+          <Route exact path='/' component={HomePage} />
+          <Route path='/women' component={Women} />
+          <Route path='/men' component={Men} />
+          <Route path='/offers' component={Offers} />
+          <Route
+            path='/product/:productId'
+            component={ProductDetails}
+          />
+          <Route path='/check-out' component={Order} />
+          <Route
+            path='/payment'
+            component={AfterPayement}
+          />
 
           <Route
-            path="/product"
+            path='/product'
             render={() => {
-              return <ProductList productArray={this.state.productArray} />;
+              return (
+                <ProductList
+                  productArray={this.state.productArray}
+                />
+              );
             }}
           />
-          <Route path="/women/product" component={ProductList} />
+          <Route
+            path='/women/product'
+            component={ProductList}
+          />
           {/* <Route
             path="/women/product"
             render={() => {
@@ -103,13 +113,15 @@ class App extends Component {
             }}
           /> */}
           <Route
-            path="/user-account"
+            path='/user-account'
             render={() => {
               return (
                 <UserAccount
                   logoutClick={() => this.logoutClick()}
                   currentUser={this.state.currentUser}
-                  logoutSuccess={user => this.updateUser(null)}
+                  logoutSuccess={user =>
+                    this.updateUser(null)
+                  }
                 />
               );
             }}
@@ -120,14 +132,20 @@ class App extends Component {
         ) : null} */}
 
           <Route
-            path="/logOrSign"
+            path='/logOrSign'
             render={() => {
               return (
                 <LogOrSign
                   currentUser={this.state.currentUser}
-                  signupSuccess={user => this.updateUser(user)}
-                  loginSuccess={user => this.updateUser(user)}
-                  logoutClick={event => this.logoutClick(event)}
+                  signupSuccess={user =>
+                    this.updateUser(user)
+                  }
+                  loginSuccess={user =>
+                    this.updateUser(user)
+                  }
+                  logoutClick={event =>
+                    this.logoutClick(event)
+                  }
                 />
               );
             }}

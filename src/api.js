@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Create an axios Object with pre-configured setting
 const backendApi = axios.create({
-  baseURL: process.env.REACT_APP_BACKEND_URL,
+  baseURL: "http://localhost:5555",
   // send cookies to the backend on every request
 
   withCredentials: true
@@ -29,23 +29,43 @@ export function getProductList() {
 }
 
 export function getProductDetails(productId) {
-  return backendApi.get(`/api/product/${productId}`).catch(errorHandler);
+  return backendApi
+    .get(`/api/product/${productId}`)
+    .catch(errorHandler);
+}
+
+export function postPayement(token) {
+  return backendApi
+    .post("/api/checkout", token)
+    .catch(errorHandler);
 }
 
 export function getProductByGender() {
-  return backendApi.get("/api/product/gender").catch(errorHandler);
+  return backendApi
+    .get("/api/product/gender")
+    .catch(errorHandler);
 }
 export function addProduct(productId) {
-  return backendApi.post(`/api/add-product/${productId}`).catch(errorHandler);
+  return backendApi
+    .post(`/api/add-product/${productId}`)
+    .catch(errorHandler);
 }
 
 export function getOrder() {
-  return backendApi.get("/api/check-out").catch(errorHandler);
+  return backendApi
+    .get("/api/check-out")
+    .catch(errorHandler);
 }
 
 export function deleteProduct(productId) {
   return backendApi
     .delete(`/api/check-out/${productId}/delete`)
+    .catch(errorHandler);
+}
+
+export function postPayment(token) {
+  return backendApi
+    .post("/api/check-out", token)
     .catch(errorHandler);
 }
 

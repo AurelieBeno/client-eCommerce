@@ -28,8 +28,6 @@ class ProductList extends Component {
   }
 
   componentDidUpdate(oldProps) {
-    // console.log(JSON.stringify(oldProps));
-
     if (
       oldProps.productArray.length === 0 &&
       this.props.productArray.length > 0
@@ -60,13 +58,17 @@ class ProductList extends Component {
     let typeArray = this.props.productArray;
 
     if (value === "Shoes") {
-      typeArray = this.props.productArray.filter(product => {
-        return product.productType === "shoes";
-      });
+      typeArray = this.props.productArray.filter(
+        product => {
+          return product.productType === "shoes";
+        }
+      );
     } else if (value === "Dress") {
-      typeArray = this.props.productArray.filter(product => {
-        return product.productType === "dress";
-      });
+      typeArray = this.props.productArray.filter(
+        product => {
+          return product.productType === "dress";
+        }
+      );
     }
     this.setState({ filteredArray: typeArray });
   };
@@ -93,62 +95,95 @@ class ProductList extends Component {
 
     return (
       <section>
-        <div className="productListTitle">
+        <div className='productListTitle'>
           <h2>All Product </h2>
         </div>
-        <div className="product-list-container container-fluid">
-          <div className="row rowFilter">
-            <div className="col-6 m-auto d-flex aaa">
-              <div className="col-lg-3 col-sm-12 w-100">
+        <div className='product-list-container container-fluid'>
+          <div className='row rowFilter'>
+            <div className='col-6 m-auto d-flex aaa'>
+              <div className='col-lg-3 col-sm-12 w-100'>
                 <select
-                  className="selectFilter text-center  "
+                  className='selectFilter text-center  '
                   onChange={this.onChangeGender.bind(this)}
-                  name="gender"
+                  name='gender'
                 >
-                  <option disabled selected value className="optionitem">
+                  <option
+                    disabled
+                    selected
+                    value
+                    className='optionitem'
+                  >
                     By Gender
                   </option>
-                  <option className="optionitem" value="Male">
+                  <option
+                    className='optionitem'
+                    value='Male'
+                  >
                     Male
                   </option>
-                  <option className="optionitem" value="Female">
+                  <option
+                    className='optionitem'
+                    value='Female'
+                  >
                     Female
                   </option>
                 </select>
               </div>
 
-              <div className="col-lg-3 col-sm-12 w-100 ">
+              <div className='col-lg-3 col-sm-12 w-100 '>
                 {/* <div className="gender">Product type</div> */}
 
                 <select
-                  className="selectFilter"
+                  className='selectFilter'
                   onChange={this.onChangeType.bind(this)}
-                  name="gender"
+                  name='gender'
                 >
-                  <option disabled selected value className="optionitem">
+                  <option
+                    disabled
+                    selected
+                    value
+                    className='optionitem'
+                  >
                     By Type
                   </option>
-                  <option className="optionitem" value="Dress">
+                  <option
+                    className='optionitem'
+                    value='Dress'
+                  >
                     Dress
                   </option>
-                  <option className="optionitem" value="Shoes">
+                  <option
+                    className='optionitem'
+                    value='Shoes'
+                  >
                     Shoes
                   </option>
                 </select>
               </div>
-              <div className="col-lg-3 col-sm-12 w-100 ">
+              <div className='col-lg-3 col-sm-12 w-100 '>
                 <select
-                  className="selectFilter"
+                  className='selectFilter'
                   onChange={this.onChangePrice.bind(this)}
-                  name="gender"
+                  name='gender'
                 >
-                  <option disabled selected value className="optionitem">
+                  <option
+                    disabled
+                    selected
+                    value
+                    className='optionitem'
+                  >
                     By Price
                   </option>
-                  <option className="optionitem" value="Ascending">
+                  <option
+                    className='optionitem'
+                    value='Ascending'
+                  >
                     Ascending
                   </option>
-                  <option className="optionitem" value="Descending">
+                  <option
+                    className='optionitem'
+                    value='Descending'
+                  >
                     Descending
                   </option>
                 </select>
@@ -156,27 +191,35 @@ class ProductList extends Component {
             </div>
           </div>
           {/* productList */}
-          <div className="nav-productList" />
-          <ul className="row ul-container ">
+          <div className='nav-productList' />
+          <ul className='row ul-container '>
             {filteredArray.map((oneProduct, index) => {
               return (
-                <li className="list-container col-lg-3 col-md-4 col-sm-6">
-                  <div className="addMargin">
-                    <div className="img">
-                      <Link to={getProductAdress(oneProduct)}>
+                <li className='list-container col-lg-3 col-md-4 col-sm-6'>
+                  <div className='addMargin'>
+                    <div className='img'>
+                      <Link
+                        to={getProductAdress(oneProduct)}
+                      >
                         <img
-                          className="list-img"
+                          className='list-img'
                           key={index}
                           src={oneProduct.baseImageUrl}
-                          alt="Item "
+                          alt='Item '
                         />
                       </Link>
                     </div>
-                    <div key={oneProduct.name} className="nameList">
+                    <div
+                      key={oneProduct.name}
+                      className='nameList'
+                    >
                       {oneProduct.name}
                     </div>
 
-                    <div key={oneProduct.index} className="priceList">
+                    <div
+                      key={oneProduct.index}
+                      className='priceList'
+                    >
                       {oneProduct.price} $
                     </div>
                   </div>
