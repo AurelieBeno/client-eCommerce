@@ -100,7 +100,7 @@ class ProductList extends Component {
         </div>
         <div className='product-list-container container-fluid'>
           <div className='row rowFilter'>
-            <div className='col-6 m-auto d-flex aaa'>
+            <div className='col-12 m-auto d-flex aaa'>
               <div className='col-lg-3 col-sm-12 w-100'>
                 <select
                   className='selectFilter text-center  '
