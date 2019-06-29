@@ -40,14 +40,17 @@ class Order extends Component {
     });
   }
   handleToken(token) {
-    postPayement(token).then(response => {
-      if (response === "success") {
-        this.setState({ isPayed: true });
-        return alert("Success ");
-      } else {
-        return alert("something went wrong");
-      }
-    });
+    console.log("token ", token);
+    // let cart = this.state.cart;
+
+    // postPayement(token, cart).then(response => {
+    //   if (response === "success") {
+    //     this.setState({ isPayed: true });
+    //     return alert("Success ");
+    //   } else {
+    //     return alert("something went wrong");
+    //   }
+    // });
     // const response = axios.post(
     //   "http://localhost:8000/checkout",
     //   {
@@ -64,7 +67,7 @@ class Order extends Component {
 
   render() {
     const { cart, totalPrice } = this.state;
-
+    console.log("cart", cart);
     return (
       <section className='cart-container container'>
         <div className='row rowTitle m-auto w-100'>
@@ -122,7 +125,7 @@ class Order extends Component {
               billingAddress
               shippingAddress
               amount={totalPrice * 100}
-              name={cart}
+              name={"payement panier"}
             />
             {/* <button
               type="button"
@@ -130,7 +133,7 @@ class Order extends Component {
 
             >
               <Link to="/afterPayement">PAYMENT</Link>
-            </button> */}
+            </buttonP> */}
           </div>
           <Switch>
             <Route
