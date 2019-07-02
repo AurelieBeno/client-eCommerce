@@ -105,7 +105,7 @@ const Order = props => {
             <p>TOTAL $ {totalPrice}</p>
           </div>
           <StripeCheckout
-            stripeKey='pk_test_RD2hsckN1XwsTxFjASz3HWSE006tbbT9fM'
+            stripeKey={process.env.local.STRIPE_KEY}
             token={onToken(totalPrice)}
             billingAddress
             shippingAddress
