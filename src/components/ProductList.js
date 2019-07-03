@@ -100,8 +100,8 @@ class ProductList extends Component {
         </div>
         <div className='product-list-container container-fluid'>
           <div className='row rowFilter'>
-            <div className='col-12 m-auto d-flex aaa'>
-              <div className='col-lg-3 col-sm-12 w-100'>
+            <div className=' d-flex aaa'>
+              <div className='col-lg-3 col-sm-3 w-100'>
                 <select
                   className='selectFilter text-center  '
                   onChange={this.onChangeGender.bind(this)}
@@ -130,7 +130,7 @@ class ProductList extends Component {
                 </select>
               </div>
 
-              <div className='col-lg-3 col-sm-12 w-100 '>
+              <div className='col-lg-3 col-sm-3 w-100 '>
                 {/* <div className="gender">Product type</div> */}
 
                 <select
@@ -160,7 +160,7 @@ class ProductList extends Component {
                   </option>
                 </select>
               </div>
-              <div className='col-lg-3 col-sm-12 w-100 '>
+              <div className='col-lg-3 col-sm-3 w-100 '>
                 <select
                   className='selectFilter'
                   onChange={this.onChangePrice.bind(this)}

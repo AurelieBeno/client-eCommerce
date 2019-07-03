@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import StripeCheckout from "react-stripe-checkout";
+import { Switch, Route, Redirect } from "react-router-dom";
 
-import { Switch, Route } from "react-router-dom";
+// import { keyS } from "/process.env.STRIPE_KEY";
 
 import { getOrder, deleteProduct } from "../api.js";
-
 import AfterPayement from "../components/AfterPayement.js";
 
 import "./Style/Order.css";
 
 const Order = props => {
-  const [productItem, setProductItem] = useState([]);
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState([]);
   const [isPayed, setIsPayed] = useState(false);
@@ -19,10 +18,11 @@ const Order = props => {
   function deleteClick(product) {
     deleteProduct(product._id).then(response => {
       console.log("Delete Product", response.data);
-      setCart(response.data);
+      setCart(response.data.cart);
+      setTotalPrice(response.data.totalPrice);
     });
   }
-
+  // useEffect(() => {});
   const onToken = totalPrice => token => {
     // console.log("token ", token);
     axios
@@ -36,10 +36,11 @@ const Order = props => {
         { withCredentials: true }
       )
       .then(response => {
-        console.log(response.data);
-        response === "success "
-          ? alert("success")
-          : alert("faillure");
+        console.log(response.data.status);
+        setIsPayed(response.data.status);
+        // isPayed === "success "
+        //   ? alert("success")
+        //   : alert("faillure");
       });
   };
 
@@ -105,7 +106,9 @@ const Order = props => {
             <p>TOTAL $ {totalPrice}</p>
           </div>
           <StripeCheckout
-            stripeKey={process.env.local.STRIPE_KEY}
+            stripeKey={
+              "pk_test_RD2hsckN1XwsTxFjASz3HWSE006tbbT9fM"
+            }
             token={onToken(totalPrice)}
             billingAddress
             shippingAddress
@@ -120,6 +123,7 @@ const Order = props => {
               <Link to="/afterPayement">PAYMENT</Link>
             </buttonP> */}
         </div>
+        {isPayed && <Redirect to='/' />}
         <Switch>
           <Route
             path=' /afterPayement'
